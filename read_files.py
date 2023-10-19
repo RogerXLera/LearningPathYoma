@@ -49,13 +49,15 @@ def read_path(file_path):
         fi = []
         h = []
         fa = 0
-        #detect_act = "Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0"
+        init_act = "Initial Activity "
         detect_act = "Activity:"
         detect_fa = "Job affinity:"
         for row in f_lines:
             if row[:len(detect_act)] == detect_act:
                 print(row)
                 nam,s,fi_,h_ = process_line(row)
+                if nam == init_act:
+                    continue
                 name += [nam]
                 st += [s]
                 fi += [fi_]
