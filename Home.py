@@ -79,7 +79,7 @@ if 'dedication' in st.session_state.keys() and 'field' in st.session_state.keys(
 
     st.write(f"#### Skill Learning: {fa:.0f} %")
 
-    df_fa = pd.DataFrame({'name':['Yes','No'],'percentage':[fa,100-fa]})
+    df_fa = pd.DataFrame({'name':['Learnt','Not learnt'],'percentage':[fa,100-fa]})
     pie = px.pie(df_fa, values='percentage', names='name', title='Skill Learning')
     st.plotly_chart(pie)
 
