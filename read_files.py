@@ -63,4 +63,4 @@ def read_path(file_path):
                 fa = float(row.split(detect_fa)[1].split(' ')[1])
                 
     
-    return pd.DataFrame({'Course':name[0:],'Start Week':st[0:],"End Week":fi[0:],"Dedication (h)":h[0:]}),fa
+    return pd.DataFrame({'Course':name[1:],'Start Week':st[1:],"End Week":fi[1:],"Dedication (h)":h[1:]}),fa
