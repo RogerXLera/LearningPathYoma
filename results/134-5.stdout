@@ -1,0 +1,223 @@
+Read instances: 0.18 s
+Generate matrices: 6.74 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 18 08:20:43 PM: Your problem has 4061 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 18 08:20:43 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 18 08:20:43 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 18 08:20:43 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:20:43 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 18 08:20:43 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 18 08:20:43 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 18 08:20:43 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 18 08:20:43 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 18 08:20:43 PM: Applying reduction CPLEX
+(CVXPY) Oct 18 08:20:43 PM: Finished problem compilation (took 7.233e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:20:43 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 6728 rows and 3871 columns.
+MIP Presolve modified 8300 coefficients.
+Aggregator did 39 substitutions.
+Reduced MIP has 1197 rows, 957 columns, and 12229 nonzeros.
+Reduced MIP has 956 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.07 sec. (99.94 ticks)
+Found incumbent of value 0.990000 after 0.08 sec. (102.73 ticks)
+Probing fixed 63 vars, tightened 0 bounds.
+Probing changed sense of 63 constraints.
+Probing time = 0.02 sec. (27.16 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 372 rows and 67 columns.
+MIP Presolve modified 805 coefficients.
+Aggregator did 12 substitutions.
+Reduced MIP has 813 rows, 656 columns, and 9615 nonzeros.
+Reduced MIP has 655 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (24.72 ticks)
+Probing time = 0.01 sec. (6.93 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 813 rows, 656 columns, and 9615 nonzeros.
+Reduced MIP has 655 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (7.03 ticks)
+Probing time = 0.00 sec. (6.93 ticks)
+Clique table members: 408.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.00 sec. (6.85 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.5898            40.43%
+      0     0        0.7986    81        0.9900        0.7986      110   19.34%
+*     0+    0                            0.9504        0.7986            15.97%
+*     0+    0                            0.8265        0.7986             3.38%
+*     0+    0                            0.8054        0.7986             0.85%
+      0     0        0.8005   140        0.8054     Cuts: 116      206    0.61%
+      0     0        0.8020   138        0.8054      Cuts: 29      233    0.43%
+      0     0        cutoff              0.8054        0.8054      233    0.00%
+Elapsed time = 0.20 sec. (226.43 ticks, tree = 0.01 MB, solutions = 4)
+
+GUB cover cuts applied:  27
+Cover cuts applied:  1
+Implied bound cuts applied:  10
+Mixed integer rounding cuts applied:  7
+Zero-half cuts applied:  10
+Gomory fractional cuts applied:  2
+
+Root node processing (before b&c):
+  Real time             =    0.20 sec. (226.70 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.20 sec. (226.70 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:20:43 PM: Problem status: optimal
+(CVXPY) Oct 18 08:20:43 PM: Optimal value: 8.054e-01
+(CVXPY) Oct 18 08:20:43 PM: Compilation took 7.233e-02 seconds
+(CVXPY) Oct 18 08:20:43 PM: Solver (including time spent in interface) took 2.790e-01 seconds
+The optimal value is 0.8054255319148935
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Get Started with SAP Emarsys Customer Engagement (1.0) 	 Start Period: 1 	 End Period: 1
+Activity: Intrapreneurship – Employee-driven Innovation (4.0) 	 Start Period: 1 	 End Period: 2
+Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.20
+Job affinity: 19.149
+Skills per Unit
+	 Initial Activity:
+	 Get Started with SAP Emarsys Customer Engagement:
+		 Develop promotional materials
+	 Discover SAP S/4HANA Asset Management and SAP S/4HANA Service:
+		 Direct administrative or support services
+		 Direct facility maintenance or repair activities
+		 Direct organisational operations, projects or services
+		 Inspect condition, or functioning, of facilities or equipment
+		 Manage operations, research or logistics projects
+		 Monitor facilities or operational systems
+		 Manage health care operations
+		 Develop operating strategies, plans or procedures
+		 Advise others on business or operational matters
+		 Prepare operational budgets
+		 Determine resource needs
+		 Prepare operational progress or status reports
+		 Hire staff
+		 Manage outreach activities
+	 Intrapreneurship – Employee-driven Innovation:
+		 Establish interpersonal business relationships to facilitate work activities
+		 Conduct employee training programs
+		 Develop operating strategies, plans or procedures
+		 Confer with co-workers or internal stakeholders to coordinate operational activities
+		 Advise others on business or operational matters
+Skills for Job 134
+Supervise employees
+Advise others on career or personal development
+Develop educational goals, standards, policies or procedures
+Direct facility maintenance or repair activities
+Evaluate program effectiveness
+Determine operational compliance with regulations or standards
+Teach in area of specialisation
+Manage outreach activities
+Serve on institutional or departmental committees
+Develop operating strategies, plans or procedures
+Advise others on business or operational matters
+Conduct employee training programs
+Prepare operational progress or status reports
+Maintain staff records
+Approve expenditures
+Prepare operational budgets
+Coordinate special events or programs
+Develop organisational policies or programs
+Establish interpersonal business relationships to facilitate work activities
+Analyse data to inform operational decisions or activities
+Evaluate student work
+Develop safety standards, policies or procedures
+Develop promotional materials
+Recommend organisational process or policy changes
+Prepare forms or applications
+Conduct opinion surveys or needs assessments
+Promote goods, services, or programs
+Prepare financial documents, reports or budgets
+Prepare proposals or grant applications to obtain project funding
+Hire staff
+Recruit staff
+Coordinate operational activities with external stakeholders
+Maintain knowledge of current developments in area of expertise
+Maintain operational records
+Evaluate employee performance
+Implement organisational process or policy changes
+Direct financial operations
+Advise others on health care issues
+Collaborate with health care professionals to plan or provide treatment
+Maintain a working understanding of the cultural, diversity and accessibility needs of others, and how this applies to the role
+Train medical providers
+Manage health care operations
+Manage human resources activities
+Prepare staff schedules or work assignments
+Liaise between departments or other groups to improve function or communication
+Develop organisational goals or objectives
+Develop procedures to evaluate organisational activities
+Monitor resources
+Analyse risks to minimise losses or damages
+Monitor facilities or operational systems
+Advise others on legal or regulatory compliance matters
+Inspect condition, or functioning, of facilities or equipment
+Manage operations, research or logistics projects
+Teach classes in area of specialisation
+Direct organisational operations, projects or services
+Monitor performance of organisational members or partners
+Maintain regulatory or compliance documentation
+Estimate labour requirements
+Determine resource needs
+Manage organisational or project budgets
+Communicate with government agencies
+Present information to the public
+Direct administrative or support services
+Represent the organisation in external relations
+Conduct financial or regulatory audits
+Confer with peers to accomplish work
+Schedule activities or facility use
+Prepare operational reports or records
+Prepare reports detailing student activities or performance
+Develop programs, policies or services that are culturally appropriate
+Supervise medical support staff
+Assess individual or community needs for educational or social services
+Direct health care delivery programs
+Research social issues
+Coordinate and administer community or social service programs
+Confer with co-workers or internal stakeholders to coordinate operational activities
+Provide mentorship and guidance to staff
+Provide leadership to align operational activities with the organisation’s vision and goals
+Maintain data in information systems or databases
+Establish nursing policies or standards
+Advise educators on curricula, instructional methods or policies
+Prepare tests
+Administer tests to assess educational needs or progress
+Process medical billing information
+Maintain client records
+Verify accuracy of patient information
+Schedule appointments
+Attend training sessions or events to develop or maintain professional knowledge
+Collaborate with other teaching professionals to develop educational programs
+Develop strategies or programs for students with accessibility needs
+Discuss student progress with parents or guardians
+Enforce rules or policies governing student behaviour
+Establish rules or policies governing student behaviour
+Evaluate performance of educational staff

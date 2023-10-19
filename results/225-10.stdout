@@ -1,0 +1,259 @@
+Read instances: 0.18 s
+Generate matrices: 6.80 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 18 08:24:33 PM: Your problem has 4055 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 18 08:24:33 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 18 08:24:33 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 18 08:24:33 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:24:33 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 18 08:24:33 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 18 08:24:33 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 18 08:24:33 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 18 08:24:33 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 18 08:24:33 PM: Applying reduction CPLEX
+(CVXPY) Oct 18 08:24:33 PM: Finished problem compilation (took 7.100e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:24:33 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 5649 rows and 2996 columns.
+MIP Presolve modified 11688 coefficients.
+Aggregator did 61 substitutions.
+Reduced MIP has 2236 rows, 1638 columns, and 30352 nonzeros.
+Reduced MIP has 1637 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.09 sec. (113.33 ticks)
+Found incumbent of value 0.990000 after 0.09 sec. (117.50 ticks)
+Probing fixed 135 vars, tightened 0 bounds.
+Probing changed sense of 144 constraints.
+Probing time = 0.07 sec. (105.51 ticks)
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 291 rows and 139 columns.
+MIP Presolve modified 1479 coefficients.
+Aggregator did 12 substitutions.
+Reduced MIP has 1933 rows, 1475 columns, and 27018 nonzeros.
+Reduced MIP has 1474 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (47.26 ticks)
+Probing time = 0.01 sec. (10.72 ticks)
+Clique table members: 763.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.03 sec. (23.70 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.4093            58.65%
+      0     0        0.6109    26        0.9900        0.6109      269   38.29%
+*     0+    0                            0.6142        0.6109             0.54%
+      0     0        cutoff              0.6142        0.6142      294    0.00%
+Elapsed time = 0.30 sec. (359.20 ticks, tree = 0.01 MB, solutions = 2)
+
+GUB cover cuts applied:  2
+Clique cuts applied:  1
+Cover cuts applied:  1
+Mixed integer rounding cuts applied:  2
+Zero-half cuts applied:  15
+Lift and project cuts applied:  4
+Gomory fractional cuts applied:  12
+
+Root node processing (before b&c):
+  Real time             =    0.30 sec. (359.46 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.30 sec. (359.46 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:24:33 PM: Problem status: optimal
+(CVXPY) Oct 18 08:24:33 PM: Optimal value: 6.142e-01
+(CVXPY) Oct 18 08:24:33 PM: Compilation took 7.100e-02 seconds
+(CVXPY) Oct 18 08:24:33 PM: Solver (including time spent in interface) took 3.810e-01 seconds
+The optimal value is 0.6142307692307692
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Discover SAP Sales Cloud (6.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 2
+Activity: Get Started with SAP Emarsys Customer Engagement (1.0) 	 Start Period: 2 	 End Period: 2
+Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 2 	 End Period: 2
+Activity: Introducing SAP S/4HANA Cloud for Group Reporting (1.0) 	 Start Period: 2 	 End Period: 2
+Activity: Be Visual! Sketching Basics for IT Business (Editi (1.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.30
+Job affinity: 38.462
+Skills per Unit
+	 Initial Activity:
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
+		 Recommend organisational process or policy changes
+		 Develop sustainable organisational policies or practices
+		 Monitor external affairs or events affecting business operations
+		 Develop performance metrics or standards related to information technology
+		 Maintain operational records
+		 Maintain data in information systems or databases
+		 Analyse data to inform operational decisions or activities
+	 Get Started with SAP Emarsys Customer Engagement:
+		 Contact current or potential customers to promote goods or services
+		 Develop promotional materials
+		 Develop promotional strategies or plans
+		 Develop marketing plans or strategies
+		 Implement advertising or marketing initiatives
+		 Identify potential customers
+		 Deliver promotional presentations to current or prospective customers
+		 Coordinate sales campaigns
+	 Discover SAP Sales Cloud:
+		 Recommend goods or services to customers
+		 Prepare sales or other contracts
+		 Direct sales, marketing or customer service activities
+		 Analyse data to inform operational decisions or activities
+		 Gather customer or product information to determine customer needs
+		 Process sales or other transactions
+		 Advise customers on the use of goods or services
+		 Monitor sales activities
+		 Answer customer questions about goods or services
+		 Identify potential customers
+		 Coordinate sales campaigns
+		 Provide customers with general information or assistance
+		 Develop content for sales presentations or other materials
+		 Negotiate prices or other sales terms
+		 Study product information to acquire professional knowledge
+		 Develop proposals for current or prospective customers
+		 Analyse market research data
+		 Share sales-related or market information with colleagues
+		 Negotiate contracts for transportation, distribution or logistics services
+		 Develop promotional strategies or plans
+		 Develop promotional materials
+		 Develop pricing forecasts and models
+		 Explain technical product or service information to customers
+		 Evaluate potential of products, technologies or resources
+		 Conduct market research
+	 Discover SAP S/4HANA Asset Management and SAP S/4HANA Service:
+		 Arrange delivery of goods or services
+		 Provide customers with general information or assistance
+		 Communicate with customers to resolve complaints or ensure satisfaction
+		 Advise customers on the use of goods or services
+		 Answer customer questions about goods or services
+		 Advise others on business or operational matters
+	 Introducing SAP S/4HANA Cloud for Group Reporting:
+		 Reconcile records of sales or other financial transactions
+	 Be Visual! Sketching Basics for IT Business (Edition Q4/2022):
+		 Prepare graphics or other visual representations of information
+Skills for Job 225
+Develop marketing plans or strategies
+Confer with peers to accomplish work
+Direct sales, marketing or customer service activities
+Supervise employees
+Evaluate program effectiveness
+Compile operational data
+Determine pricing or monetary policies
+Analyse market research data
+Deliver, publish, broadcast or distribute final audio or visual media product
+Analyse data to inform operational decisions or activities
+Estimate cost or material requirements
+Advise others on business or operational matters
+Develop social media materials
+Monitor external affairs or events affecting business operations
+Develop marketing plans or strategies for environmental initiatives
+Conduct opinion surveys or needs assessments
+Coordinate special events or programs
+Design websites or applications
+Negotiate contracts for transportation, distribution or logistics services
+Develop sustainable organisational policies or practices
+Recommend organisational process or policy changes
+Prepare research reports
+Measure effectiveness of business strategies or practices
+Analyse consumer trends
+Analyse industry trends
+Monitor business indicators
+Analyse market conditions or trends
+Conduct surveys in organisations
+Establish interpersonal business relationships to facilitate work activities
+Discuss business strategies, practices or policies with managers
+Represent the organisation in external relations
+Develop business or market strategies
+Evaluate potential of products, technologies or resources
+Estimate costs or terms of sales
+Explain technical product or service information to customers
+Maintain records of customer accounts
+Advise customers on the use of goods or services
+Contact current or potential customers to promote goods or services
+Answer customer questions about goods or services
+Negotiate prices or other sales terms
+Arrange delivery of goods or services
+Sell goods or services
+Discuss design or technical features of goods or services with technical staff
+Identify potential customers
+Recommend goods or services to customers
+Demonstrate products to consumers
+Gather customer or product information to determine customer needs
+Develop content for sales presentations or other materials
+Prepare sales or other contracts
+Process sales or other transactions
+Monitor sales activities
+Study product information to acquire professional knowledge
+Maintain records of sales or other business transactions
+Coordinate sales campaigns
+Distribute promotional literature or samples to customers
+Stock products or parts
+Deliver promotional presentations to current or prospective customers
+Develop proposals for current or prospective customers
+Attend events to develop professional knowledge
+Prepare financial documents, reports or budgets
+Write advertising or promotional material
+Develop promotional strategies or plans
+Provide educational information to the public
+Manage content of broadcasts or presentations
+Collaborate with others in marketing activities
+Write informational material
+Coach others
+Edit written materials
+Coordinate logistics for productions or events
+Operate still or video cameras or related equipment
+Promote products, activities, or organisations
+Inform viewers, listeners or audiences
+Conduct market research
+Monitor market conditions or trends
+Share sales-related or market information with colleagues
+Verify customer credit information
+Explain financial information to customers
+Confer with clients to determine needs
+Reconcile records of sales or other financial transactions
+Issue money, credit or vouchers
+Visit establishments to evaluate needs or to promote products or service sales
+Report information to managers or other staff
+Provide customers with general information or assistance
+Communicate with customers to resolve complaints or ensure satisfaction
+Review laws or regulations to maintain professional knowledge
+Coordinate project activities with other staff or departments
+Maintain data in information systems or databases
+Apply and maintain information security controls as required by policies or risk assessments
+Analyse website or related online data to track trends or usage
+Implement advertising or marketing initiatives
+Collaborate with others to develop or implement marketing strategies
+Develop performance metrics or standards related to information technology
+Prepare graphics or other visual representations of information
+Develop pricing forecasts and models
+Maintain knowledge of current developments in area of expertise
+Maintain operational records
+Coordinate operational activities with external stakeholders
+Develop promotional materials
+Publish content on digital platforms or social media sites
+Monitor current trends
+Schedule release of marketing content
+Present information to the public
+Determine how best to represent a concept visually
+Present work to clients for approval

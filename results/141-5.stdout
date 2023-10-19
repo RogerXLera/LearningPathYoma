@@ -1,0 +1,231 @@
+Read instances: 0.19 s
+Generate matrices: 7.01 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 18 08:21:39 PM: Your problem has 4041 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 18 08:21:39 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 18 08:21:39 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 18 08:21:39 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:21:39 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 18 08:21:39 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 18 08:21:39 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 18 08:21:39 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 18 08:21:39 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 18 08:21:39 PM: Applying reduction CPLEX
+(CVXPY) Oct 18 08:21:39 PM: Finished problem compilation (took 7.223e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:21:39 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 6664 rows and 3829 columns.
+MIP Presolve modified 8300 coefficients.
+Aggregator did 51 substitutions.
+Reduced MIP has 1189 rows, 949 columns, and 12198 nonzeros.
+Reduced MIP has 948 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.07 sec. (99.30 ticks)
+Found incumbent of value 0.990000 after 0.08 sec. (102.08 ticks)
+Probing fixed 63 vars, tightened 0 bounds.
+Probing changed sense of 63 constraints.
+Probing time = 0.02 sec. (26.92 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 364 rows and 67 columns.
+MIP Presolve modified 805 coefficients.
+Aggregator did 12 substitutions.
+Reduced MIP has 813 rows, 656 columns, and 9615 nonzeros.
+Reduced MIP has 655 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (24.73 ticks)
+Probing time = 0.01 sec. (6.93 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 813 rows, 656 columns, and 9615 nonzeros.
+Reduced MIP has 655 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (7.03 ticks)
+Probing time = 0.01 sec. (6.93 ticks)
+Clique table members: 408.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.00 sec. (7.71 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.4744            52.08%
+      0     0        0.7232    41        0.9900        0.7232      128   26.95%
+*     0+    0                            0.7553        0.7232             4.25%
+*     0+    0                            0.7269        0.7232             0.50%
+      0     0        cutoff              0.7269        0.7269      150    0.00%
+Elapsed time = 0.18 sec. (207.66 ticks, tree = 0.01 MB, solutions = 3)
+
+GUB cover cuts applied:  2
+Clique cuts applied:  1
+Cover cuts applied:  1
+Implied bound cuts applied:  6
+Mixed integer rounding cuts applied:  2
+Zero-half cuts applied:  10
+Lift and project cuts applied:  2
+Gomory fractional cuts applied:  7
+
+Root node processing (before b&c):
+  Real time             =    0.18 sec. (207.90 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.18 sec. (207.90 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:21:40 PM: Problem status: optimal
+(CVXPY) Oct 18 08:21:40 PM: Optimal value: 7.269e-01
+(CVXPY) Oct 18 08:21:40 PM: Compilation took 7.223e-02 seconds
+(CVXPY) Oct 18 08:21:40 PM: Solver (including time spent in interface) took 2.615e-01 seconds
+The optimal value is 0.7268749999999999
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Introducing SAP S/4HANA Cloud for Group Reporting (1.0) 	 Start Period: 1 	 End Period: 1
+Activity: Intrapreneurship – Employee-driven Innovation (4.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.18
+Job affinity: 27.083
+Skills per Unit
+	 Initial Activity:
+	 Discover SAP S/4HANA Asset Management and SAP S/4HANA Service:
+		 Direct administrative or support services
+		 Supervise service workers
+		 Manage food service operations
+		 Direct facility maintenance or repair activities
+		 Manage budgets for personal services operations
+		 Manage guest services
+		 Perform basic equipment maintenance
+		 Report maintenance or equipment problems to appropriate personnel
+		 Perform manual service or maintenance tasks
+		 Coordinate operational activities
+		 Inspect condition, or functioning, of facilities or equipment
+		 Coordinate activities of food service staff
+		 Resolve customer complaints or problems
+		 Monitor facilities or operational systems
+		 Maintain knowledge of business operations
+		 Monitor operational quality or safety
+		 Develop operating strategies, plans or procedures
+		 Develop plans for programs or services
+		 Inspect facilities, equipment or supplies to ensure conformance to standards
+		 Determine resource needs
+		 Distribute resources to patrons or employees
+		 Hire staff
+		 Respond to customer problems or complaints
+	 Introducing SAP S/4HANA Cloud for Group Reporting:
+		 Prepare operational reports or records
+	 Intrapreneurship – Employee-driven Innovation:
+		 Conduct employee training programs
+		 Develop operating strategies, plans or procedures
+		 Confer with co-workers or internal stakeholders to coordinate operational activities
+Skills for Job 141
+Monitor activities of individuals to ensure safety or compliance with rules
+Monitor resources
+Monitor flow of cash or other resources
+Communicate organisational policies and procedures
+Maintain knowledge of current developments in area of expertise
+Determine pricing or monetary policies
+Manage guest services
+Collect payments for goods or services
+Resolve customer complaints or problems
+Promote goods, services, or programs
+Compile operational data
+Develop organisational policies or programs
+Conduct financial or regulatory audits
+Maintain staff records
+Prepare staff schedules or work assignments
+Evaluate employee performance
+Conduct employee training programs
+Interview employees, customers or others to collect information
+Hire staff
+Coordinate activities of food service staff
+Determine prices for menu items
+Inspect facilities, equipment or supplies to ensure conformance to standards
+Maintain food, drink or equipment inventories
+Manage food service operations
+Order materials, supplies, or equipment
+Plan menu options
+Record operational or production data
+Serve food or drinks
+Train food preparation or food service staff
+Provide basic information to guests, visitors, or clients
+Manage organisational or project budgets
+Confer with peers to accomplish work
+Monitor facilities or operational systems
+Coordinate operational activities with external stakeholders
+Direct administrative or support services
+Inspect condition, or functioning, of facilities or equipment
+Recruit staff
+Schedule product or material transportation
+Maintain operational records
+Develop operating strategies, plans or procedures
+Document organisational or operational procedures
+Implement organisational process or policy changes
+Perform manual service or maintenance tasks
+Monitor performance of organisational members or partners
+Procure materials, equipment or other resources
+Enforce rules or policies governing student behaviour
+Monitor organisational procedures to ensure proper functioning
+Evaluate quality of materials or products
+Analyse data to inform operational decisions or activities
+Maintain regulatory or compliance documentation
+Monitor organisational compliance with regulations
+Direct facility maintenance or repair activities
+Manage inventories of products or organisational resources
+Estimate cost or material requirements
+Recommend organisational process or policy changes
+Determine resource needs
+Schedule activities or facility use
+Negotiate sales or lease agreements for goods or services
+Manage human resources activities
+Supervise clerical or administrative staff
+Explain regulations, policies or procedures
+Train staff
+Respond to customer problems or complaints
+Examine documents to verify adherence to requirements
+Administer staff recruitment or hiring activities
+Compile data or documentation
+Prepare research or technical reports
+Calculate financial data
+Analyse financial information
+Coordinate operational activities
+Perform administrative or clerical tasks
+Provide information to co-workers
+Maintain inventory records
+Record personnel information
+Confer with co-workers or internal stakeholders to coordinate operational activities
+Maintain current knowledge related to work activities
+Monitor inventories
+Report maintenance or equipment problems to appropriate personnel
+Monitor operational quality or safety
+Communicate with management or other staff to resolve problems
+Conduct gaming transactions
+Maintain financial or account records
+Operate gaming equipment
+Monitor patron activities to identify problems or potential problems
+Supervise service workers
+Greet customers, patrons or visitors
+Perform basic equipment maintenance
+Respond to customer inquiries
+Distribute resources to patrons or employees
+Assign duties or work schedules to employees
+Prepare operational reports or records
+Maintain knowledge of business operations
+Clean equipment or facilities
+Manage budgets for personal services operations
+Develop plans for programs or services
+Enforce rules or regulations

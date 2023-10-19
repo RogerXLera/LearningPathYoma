@@ -1,0 +1,394 @@
+Read instances: 0.18 s
+Generate matrices: 6.84 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 18 08:25:10 PM: Your problem has 4115 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 18 08:25:10 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 18 08:25:10 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 18 08:25:10 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:25:10 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 18 08:25:10 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 18 08:25:10 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 18 08:25:10 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 18 08:25:10 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 18 08:25:10 PM: Applying reduction CPLEX
+(CVXPY) Oct 18 08:25:10 PM: Finished problem compilation (took 7.160e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:25:10 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 4934 rows and 2522 columns.
+MIP Presolve modified 15083 coefficients.
+Aggregator did 76 substitutions.
+Reduced MIP has 3116 rows, 2212 columns, and 44896 nonzeros.
+Reduced MIP has 2211 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.12 sec. (159.43 ticks)
+Found incumbent of value 0.990000 after 0.13 sec. (164.90 ticks)
+Probing fixed 52 vars, tightened 0 bounds.
+Probing changed sense of 61 constraints.
+Probing time = 0.10 sec. (98.12 ticks)
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 131 rows and 56 columns.
+MIP Presolve modified 315 coefficients.
+Aggregator did 12 substitutions.
+Reduced MIP has 2973 rows, 2128 columns, and 43695 nonzeros.
+Reduced MIP has 2127 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.06 sec. (77.79 ticks)
+Probing time = 0.02 sec. (13.17 ticks)
+Clique table members: 2255.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.04 sec. (38.22 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.4884            50.67%
+*     0+    0                            0.9793        0.4884            50.13%
+      0     0        0.7563    47        0.9793        0.7563      282   22.77%
+*     0+    0                            0.7640        0.7563             1.01%
+      0     0        0.7575   138        0.7640      Cuts: 40      343    0.85%
+      0     0        0.7587    99        0.7640      Cuts: 99      392    0.70%
+
+Repeating presolve.
+Tried aggregator 2 times.
+MIP Presolve eliminated 2303 rows and 1542 columns.
+MIP Presolve modified 2417 coefficients.
+Aggregator did 1 substitutions.
+Reduced MIP has 668 rows, 471 columns, and 7924 nonzeros.
+Reduced MIP has 470 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.03 sec. (31.55 ticks)
+Probing fixed 79 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (5.08 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 214 rows and 121 columns.
+MIP Presolve modified 861 coefficients.
+Aggregator did 1 substitutions.
+Reduced MIP has 453 rows, 349 columns, and 5298 nonzeros.
+Reduced MIP has 348 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (11.66 ticks)
+Probing time = 0.00 sec. (2.25 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 4 rows and 0 columns.
+Reduced MIP has 449 rows, 349 columns, and 5268 nonzeros.
+Reduced MIP has 348 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (3.35 ticks)
+Represolve time = 0.06 sec. (61.31 ticks)
+Probing time = 0.00 sec. (2.24 ticks)
+Clique table members: 2018.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.00 sec. (5.00 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.7640        0.7587             0.70%
+      0     0        0.7590    68        0.7640        0.7590      527    0.66%
+      0     0        0.7590    58        0.7640     Cuts: 136      565    0.65%
+      0     0        0.7591    64        0.7640      Cuts: 16      617    0.64%
+      0     0        0.7592    83        0.7640      Cuts: 12      634    0.63%
+      0     0        0.7593    68        0.7640      Cuts: 13      646    0.62%
+      0     0        0.7593    72        0.7640      Cuts: 19      660    0.61%
+
+Repeating presolve.
+Tried aggregator 1 time.
+MIP Presolve eliminated 111 rows and 98 columns.
+MIP Presolve modified 170 coefficients.
+Reduced MIP has 336 rows, 251 columns, and 3554 nonzeros.
+Reduced MIP has 250 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (4.41 ticks)
+Probing time = 0.00 sec. (1.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 14 rows and 12 columns.
+Reduced MIP has 322 rows, 239 columns, and 3483 nonzeros.
+Reduced MIP has 238 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.80 ticks)
+Probing time = 0.00 sec. (1.41 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 322 rows, 239 columns, and 3483 nonzeros.
+Reduced MIP has 238 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.01 ticks)
+Represolve time = 0.02 sec. (17.20 ticks)
+Probing time = 0.00 sec. (1.41 ticks)
+Clique table members: 1072.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.00 sec. (5.63 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.7640        0.7595             0.59%
+      0     0        0.7593    69        0.7640        0.7595      856    0.59%
+      0     0        0.7598    74        0.7640      Cuts: 20      904    0.55%
+      0     0        0.7602    66        0.7640      Cuts: 33      939    0.50%
+      0     0        0.7602    65        0.7640      Cuts: 14      952    0.50%
+      0     0        0.7602    67        0.7640       Cuts: 2      955    0.50%
+      0     2        0.7602    67        0.7640        0.7602      955    0.50%
+Elapsed time = 0.83 sec. (741.75 ticks, tree = 0.02 MB, solutions = 3)
+
+GUB cover cuts applied:  18
+Clique cuts applied:  18
+Cover cuts applied:  347
+Implied bound cuts applied:  4
+Flow cuts applied:  2
+Mixed integer rounding cuts applied:  3
+Zero-half cuts applied:  14
+Lift and project cuts applied:  14
+Gomory fractional cuts applied:  6
+
+Root node processing (before b&c):
+  Real time             =    0.83 sec. (741.69 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.20 sec. (123.78 ticks)
+  Sync time (average)   =    0.03 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.04 sec. (865.47 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:25:11 PM: Problem status: optimal
+(CVXPY) Oct 18 08:25:11 PM: Optimal value: 7.640e-01
+(CVXPY) Oct 18 08:25:11 PM: Compilation took 7.160e-02 seconds
+(CVXPY) Oct 18 08:25:11 PM: Solver (including time spent in interface) took 1.117e+00 seconds
+The optimal value is 0.764
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Compose and automate with SAP Build the No-Code Wa (4.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 1
+Activity: Business Success with Climate Action (9.0) 	 Start Period: 1 	 End Period: 2
+Activity: Explore Product Engineering in SAP S/4HANA (4.0) 	 Start Period: 2 	 End Period: 2
+Activity: Get Started with SAP Emarsys Customer Engagement (1.0) 	 Start Period: 2 	 End Period: 2
+Activity: Implement SAP Service Cloud (5.0) 	 Start Period: 2 	 End Period: 2
+Activity: Databases Course (3.0) 	 Start Period: 2 	 End Period: 2
+Activity: Intrapreneurship – Employee-driven Innovation (4.0) 	 Start Period: 2 	 End Period: 2
+Activity: Be Visual! Sketching Basics for IT Business (Editi (1.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 1.04
+Job affinity: 23.333
+Skills per Unit
+	 Initial Activity:
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
+		 Prepare technical or operational reports
+		 Train staff on proper operational procedures
+		 Develop computer or information security policies or procedures
+		 Recommend technical design or process changes to improve efficiency, quality or performance
+		 Implement design or process improvements
+		 Manage operations, research or logistics projects
+		 Implement security measures for computer or information systems
+		 Develop environmental sustainability plans or projects
+		 Advise others on health and safety issues
+		 Develop diagrams or flow charts of system operation
+	 Explore Product Engineering in SAP S/4HANA:
+		 Plan and manage, and analyse costs and benefits of, proposed designs or projects
+		 Determine technical requirements of productions or projects
+		 Analyse project data to determine specifications or requirements
+		 Document technical design details
+		 Develop diagrams or flow charts of system operation
+		 Confer with technical staff to prepare designs or operational plans
+		 Study scripts to determine project requirements
+		 Implement design or process improvements
+		 Recommend technical design or process changes to improve efficiency, quality or performance
+		 Direct design or development activities
+		 Prepare technical or operational reports
+		 Document design or development procedures
+		 Determine operational criteria or specifications
+	 Get Started with SAP Emarsys Customer Engagement:
+		 Develop promotional strategies or plans
+		 Perform marketing activities
+	 Implement SAP Service Cloud:
+		 Maintain inventories of materials, equipment or products
+		 Train staff on proper operational procedures
+		 Advise customers on the use of goods or services
+		 Develop diagrams or flow charts of system operation
+		 Develop computer or information security policies or procedures
+		 Confer with technical staff to prepare designs or operational plans
+		 Provide customer service to clients or users
+		 Update technical knowledge
+	 Compose and automate with SAP Build the No-Code Way:
+		 Build models, patterns or templates
+	 Databases Course:
+		 Create databases to store electronic data
+	 Be Visual! Sketching Basics for IT Business (Edition Q4/2022):
+		 Prepare graphics or other visual representations of information
+		 Develop diagrams or flow charts of system operation
+		 Plan and manage, and analyse costs and benefits of, proposed designs or projects
+		 Draw detailed or technical illustrations
+		 Review art or design materials
+	 Business Success with Climate Action:
+		 Develop environmental sustainability plans or projects
+		 Promote environmental sustainability or conservation initiatives
+		 Incorporate green features into the design of structures or facilities
+		 Investigate the environmental impact of projects
+	 Intrapreneurship – Employee-driven Innovation:
+		 Conduct employee training programs
+		 Advise others on business or operational matters
+Skills for Job 232
+Assign duties or work schedules to employees
+Conduct employee training programs
+Evaluate employee performance
+Implement design or process improvements
+Manage human resources activities
+Manage operations, research or logistics projects
+Prepare detailed work plans
+Prepare scientific or technical reports or presentations
+Report information to managers or other staff
+Supervise scientific or technical staff
+Review plans or proposals for environmental conservation
+Review professional literature to maintain professional knowledge
+Communicate with the public on environmental issues
+Communicate with government agencies
+Advise others on business or operational matters
+Research impacts of environmental conservation initiatives
+Develop environmental sustainability plans or projects
+Mediate disputes
+Promote environmental sustainability or conservation initiatives
+Collaborate with technical specialists to resolve design or development problems
+Review environmental permits, plans or reports
+Design layout of art or product exhibits, displays or promotional materials
+Design layouts for print publications
+Create computer-generated graphics or animation
+Draw detailed or technical illustrations
+Review art or design materials
+Determine how best to represent a concept visually
+Collaborate with others to develop or refine designs
+Maintain records, documents or other files
+Confer with clients to determine needs
+Research new technologies
+Operate still or video cameras or related equipment
+Develop artistic or design concepts for decoration, exhibition, performance or commercial purposes
+Build models, patterns or templates
+Coordinate design activities
+Monitor current trends
+Promote products, activities, or organisations
+Conduct market research
+Select materials or props
+Write informational material
+Study scripts to determine project requirements
+Maintain inventories of materials, equipment or products
+Conduct research to inform art, designs or other work
+Verify mathematical calculations
+Create graphical representations of structures, landscapes or aquatic systems
+Advise others on health and safety issues
+Measure environmental characteristics
+Locate natural resources using geospatial or other environmental data
+Maintain professional knowledge or certifications
+Determine appropriate locations for operations or installations
+Create maps
+Analyse physical, survey, or geographic data
+Direct surveying activities
+Calculate geographic positions from survey data
+Gather physical survey data
+Advise others on technical requirements for surveying, mapping and spatial information systems
+Document technical design details
+Develop surveying and land information systems
+Supervise employees
+Coordinate activities with suppliers, contractors, clients, or other departments
+Apply mathematical principles or statistical approaches to solve problems in scientific or applied fields
+Inspect finished products to locate flaws
+Review documents or materials for compliance with policies or regulations
+Apply knowledge, understanding and respect of culturally significant sites or objects
+Determine operational criteria or specifications
+Prepare technical or operational reports
+Confer with peers to accomplish work
+Evaluate data quality
+Represent the organisation in external relations
+Prepare graphics or other visual representations of information
+Coordinate construction or installation activities
+Analyse project data to determine specifications or requirements
+Analyse business or financial data
+Estimate costs for projects or productions
+Present work to clients for approval
+Develop promotional strategies or plans
+Investigate the environmental impact of projects
+Calculate the volume or depth of liquids or gases
+Plan facility layouts or designs
+Incorporate green features into the design of structures or facilities
+Inspect facilities or sites to determine if they meet specifications or standards
+Review details of technical drawings or specifications
+Manage content of broadcasts or presentations
+Coordinate logistics for productions or events
+Prepare production storyboards
+Convert data among multiple digital or analogue formats
+Construct distinctive physical objects for artistic, functional or commercial purposes
+Survey land or bodies of water
+Inform others about laws or regulations
+Confer with technical staff to prepare designs or operational plans
+Discuss designs or plans with clients
+Update technical knowledge
+Calibrate scientific or technical equipment
+Collaborate with others to determine technical details of productions
+Apply finishes to artwork, crafts, or displays
+Perform marketing activities
+Teach classes in area of specialisation
+Collaborate with others to prepare or perform artistic productions
+Determine technical requirements of productions or projects
+Prepare materials for preservation, storage or display
+Arrange artwork, products or props
+Send information, materials or documentation
+Entertain public with performances
+Communicate with other construction or mining staff to discuss project details
+Create construction or installation diagrams
+Create graphical representations of civil structures
+Prepare proposal documents
+Recommend technical design or process changes to improve efficiency, quality or performance
+Review technical documents to plan work
+Train staff on proper operational procedures
+Testify at legal or legislative proceedings
+Supervise engineering or other technical staff
+Design water conservation systems
+Select project materials
+Explain project details to the general public
+Advise customers on the use of goods or services
+Design websites or applications
+Update website content
+Test software performance
+Create electronic data backup to prevent loss of information
+Provide customer service to clients or users
+Write computer programming code
+Collaborate with others to resolve information technology issues
+Design computer modelling or simulation programs
+Develop specifications or procedures for website development or maintenance
+Document design or development procedures
+Develop models of information or communications systems
+Document network-related activities or tasks
+Create databases to store electronic data
+Configure computer networks
+Update knowledge about emerging industry or technology trends
+Recommend changes to improve computer or information systems
+Resolve computer software problems
+Troubleshoot issues with computer applications or systems
+Develop diagrams or flow charts of system operation
+Collaborate with others to develop or implement marketing strategies
+Monitor the security of digital information
+Develop testing routines or procedures
+Develop computer or information security policies or procedures
+Implement security measures for computer or information systems
+Provide technical support for computer network issues
+Evaluate utility of software or hardware technologies
+Provide recommendations to others about computer hardware or software
+Conduct research to gain information about products or processes
+Install computer hardware
+Prepare contracts, disclosures or applications
+Direct design or development activities
+Design structures or facilities
+Prepare procedural documents
+Plan and manage, and analyse costs and benefits of, proposed designs or projects

@@ -1,136 +1,77 @@
 """
 Roger Lera
-17/04/2023
+19/10/2023
 """
 import os
 import numpy as np
 import time
 import csv
-from definitions import * # classes Skill, Activity, TimePeriod, TimePeriodSequence, Job, User Preference
-from read_file import *
-from questionnaire import *
+from read_files import *
 import streamlit as st
 
-
-st.set_page_config(
-    page_title="Yoma LP",
-    page_icon="👋",
-)
-
-def switch_page(page_name: str):
-
-    from streamlit.runtime.scriptrunner import RerunData,RerunException
-    #from streamlit import _RerunData, _RerunException
-    #from streamlit.source_util import get_pages
-
-    def standardize_name(name: str) -> str:
-        return name.lower().replace("_", " ")
-    
-    page_name = standardize_name(page_name)
-
-    pages = st.source_util.get_pages("Home.py")  # OR whatever your main page is called
-
-    for page_hash, config in pages.items():
-        if standardize_name(config["page_name"]) == page_name:
-            raise RerunException(
-                RerunData(
-                    page_script_hash=page_hash,
-                    page_name=page_name,
-                )
-            )
-
-    page_names = [standardize_name(config["page_name"]) for config in pages.values()]
-
-    raise ValueError(f"Could not find page {page_name}. Must be one of {page_names}")
-
-    return None
-
-wd_ = 'data'
 path_ = os.getcwd()
-
-job_file_path = os.path.join(path_,wd_,"anzsco.xlsx")
-q_file_path = os.path.join(path_,wd_,"questions.json")
-
+wd_ = 'results'
+fields_path = os.path.join(path_,'field_dict.csv')
+results_path = os.path.join(path_,'results')
 
 try:
-    J = st.session_state['J']
-    Q = st.session_state['Q']
-    q_id = st.session_state['q_id']
-    q_response = st.session_state['q_response']
-    j_tree = st.session_state['job_tree']
-    q_list = st.session_state['q_list']
-    j_list = st.session_state['j_list']
-    
-    
+    field_dict = st.session_state['fields']
 except:
-    J = read_jobs_a(job_file_path)
-    Q = read_questions(q_file_path)
-    q_id = 1
-    q_response = 0
-    j_tree = job_tree(J)
-    q_list = Q[0].predecesor.copy()
-    j_list = []
-    init_tree(j_tree)
-    st.session_state['J'] = J
-    st.session_state['Q'] = Q
-    st.session_state['q_id'] = 1
-    st.session_state['q_response'] = q_response
-    st.session_state['q_list'] = q_list
-    st.session_state['j_list'] = j_list
-    st.session_state['job_tree'] = j_tree
+    field_dict = read_fields(fields_path)
+    st.session_state['fields'] = field_dict    
 
-    
 
-st.session_state['survey'] = False #survey not answered
 
-#st.write("# Welcome to the Yoma Learning Pathway Recommender! 👋 :trumpet: :doughnut:")
-st.write("# Welcome to the Yoma Career Path Questionnaire! 👋 ")
-
-#st.sidebar.success("Select a demo above.")
-
-st.markdown(
-    """
-    This app aims to suggest possible career paths 
-    according to your preferences and answers. 
-
-    To use the app, follow the next sequence of steps.
-
-        1. Introduce the user name.
-        2. Answer the questionnaire.
-        3. Submit the answers of the questionnaire. 
-    
-"""
+st.write("# Learning Path :trumpet: :doughnut:")
+st.sidebar.selectbox(
+    "Select a field.",
+    field_dict.keys(),
+    #index=None,
+    #placeholder = "Unknown Field",
+    key = "field"
 )
 
-if 'username' not in st.session_state.keys():
-    #user_name = st.text_input("Introduce Goodwall user name.",
-    #value="",key='username',placeholder='john_smith')
-    user_name = st.text_input("Introduce Goodwall user name.",
-    value="",placeholder='john_smith')
-else:
-    #user_name = st.text_input("Introduce Goodwall user name.",
-    #value=st.session_state['username'],key='username')
-    user_name = st.text_input("Introduce Goodwall user name.",
-    value=st.session_state['username'],placeholder='john_smith')
+ded_dict = {"Medium (5 h/week)":5,
+            "High (10 h/week)":10,
+            "Super (20 h/week)":20}
+
+ded_dict = {"Medium (5 h/week)":5,
+            "High (10 h/week)":10,
+            "Trumpet master (20 h/week)":20}
+
+ded_emoji = {5:':smiley:',
+             10:':nerd:',
+             20:':sunglasses:'}
+
+ded_emoji = {5:':snail:',
+             10:':doughnut:',
+             20:':trumpet:'}
+
+st.sidebar.selectbox(
+    "Select a field.",
+    ded_dict.keys(),
+    #index=None,
+    #placeholder = "Unknown Dedication",
+    key = 'dedication',
+)
 
 
+if 'dedication' in st.session_state.keys() and 'field' in st.session_state.keys():
+    
+    ded = st.session_state['dedication']
+    fie = st.session_state['field']
 
-#st.markdown(f"Do you know your desired career role?")
-# Display buttons in the same row using columns
-#col1, col2 = st.columns(2)
-if 'username' not in st.session_state.keys():
-    link_1 = st.button("Go to questionnaire.", disabled=True)
-elif len(st.session_state['username']) == 0:
-    link_1 = st.button("Go to questionnaire.", disabled=True)
-else:
-    link_1 = st.button("Go to questionnaire.",disabled=False)
+    file_path = os.path.join(results_path,f"{field_dict[fie]}-{ded_dict[ded]}.stdout")
 
-with st.expander("Why do we need your username?"):
-    st.write("""
-    We collect your username to validate that there are no duplicated answers. 
-    You will not receive any messages from this platform. 
-    We will delete all private information after we gather and analyse your answers. 
-    """)
+    df,fa = read_path(file_path)
+
+    st.write(f"## Field: {fie}")
+    st.write(f"### Dedication: {ded} {ded_emoji[ded_dict[ded]]}")
+
+    st.write(f"Field affinity: {fa:.2f} %")
+
+    st.write(df)
+
 
 st.markdown(
     """
@@ -140,17 +81,6 @@ st.markdown(
     - Jump into our [opportunities](https://app.yoma.africa/opportunities) offer. 
 """
 )
-if 'username' not in st.session_state.keys():
-    st.session_state['username'] = user_name
-elif st.session_state['username'] != user_name:
-    st.session_state['username'] = user_name
-    st.experimental_rerun()
-
-
-if link_1:
-    switch_page("Questionnaire")
-#elif link_2:
-    #switch_page("Jobs")
 
     
 

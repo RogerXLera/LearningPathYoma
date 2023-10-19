@@ -1,0 +1,202 @@
+Read instances: 0.18 s
+Generate matrices: 6.82 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 18 08:23:11 PM: Your problem has 4039 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 18 08:23:11 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 18 08:23:11 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 18 08:23:11 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:23:11 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 18 08:23:11 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 18 08:23:11 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 18 08:23:11 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 18 08:23:11 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 18 08:23:11 PM: Applying reduction CPLEX
+(CVXPY) Oct 18 08:23:11 PM: Finished problem compilation (took 7.049e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:23:11 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 5627 rows and 2992 columns.
+MIP Presolve modified 11686 coefficients.
+Aggregator did 41 substitutions.
+Reduced MIP has 2230 rows, 1632 columns, and 30334 nonzeros.
+Reduced MIP has 1631 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.09 sec. (112.26 ticks)
+Found incumbent of value 0.990000 after 0.09 sec. (116.42 ticks)
+Probing fixed 135 vars, tightened 0 bounds.
+Probing changed sense of 144 constraints.
+Probing time = 0.07 sec. (104.32 ticks)
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 285 rows and 139 columns.
+MIP Presolve modified 1478 coefficients.
+Aggregator did 12 substitutions.
+Reduced MIP has 1933 rows, 1475 columns, and 27018 nonzeros.
+Reduced MIP has 1474 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (47.20 ticks)
+Probing time = 0.01 sec. (10.72 ticks)
+Clique table members: 763.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.04 sec. (33.51 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.4415            55.41%
+      0     0        0.6463    84        0.9900        0.6463      329   34.72%
+*     0+    0                            0.6605        0.6463             2.16%
+      0     0        cutoff              0.6605        0.6605      473    0.00%
+Elapsed time = 0.36 sec. (432.61 ticks, tree = 0.01 MB, solutions = 2)
+
+GUB cover cuts applied:  57
+Clique cuts applied:  1
+Cover cuts applied:  2
+Mixed integer rounding cuts applied:  25
+Zero-half cuts applied:  13
+Lift and project cuts applied:  1
+Gomory fractional cuts applied:  6
+
+Root node processing (before b&c):
+  Real time             =    0.36 sec. (432.88 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.36 sec. (432.88 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:23:11 PM: Problem status: optimal
+(CVXPY) Oct 18 08:23:11 PM: Optimal value: 6.605e-01
+(CVXPY) Oct 18 08:23:11 PM: Compilation took 7.049e-02 seconds
+(CVXPY) Oct 18 08:23:11 PM: Solver (including time spent in interface) took 4.418e-01 seconds
+The optimal value is 0.6605405405405406
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Outlining the Finance Overview in SAP S/4HANA (7.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover SAP Sales Cloud (6.0) 	 Start Period: 1 	 End Period: 2
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.36
+Job affinity: 33.784
+Skills per Unit
+	 Initial Activity:
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
+		 Monitor organisational procedures to ensure proper functioning
+		 Implement organisational process or policy changes
+		 Direct organisational operations, projects or services
+		 Monitor external affairs or events affecting business operations
+		 Develop organisational policies or programs
+		 Assess risks to business operations
+		 Maintain data in information systems or databases
+		 Analyse data to inform operational decisions or activities
+		 Communicate organisational information to customers or other stakeholders
+	 Outlining the Finance Overview in SAP S/4HANA:
+		 Reconcile records of sales or other financial transactions
+		 Maintain records of sales or other business transactions
+		 Prepare financial documents, reports or budgets
+		 Examine financial records
+		 Direct financial operations
+		 Gather financial records
+		 Analyse business or financial data
+		 Present business-related information
+		 Execute sales or other financial transactions
+	 Discover SAP Sales Cloud:
+		 Prepare sales or other contracts
+		 Direct sales, marketing or customer service activities
+		 Analyse data to inform operational decisions or activities
+		 Monitor sales activities
+		 Execute sales or other financial transactions
+		 Negotiate prices or other sales terms
+		 Share sales-related or market information with colleagues
+		 Develop promotional materials
+		 Supervise sales or support staff
+Skills for Job 222
+Supervise employees
+Gather financial records
+Compute debt repayment schedules
+Interpret financial information for others
+Assess financial status of clients
+Interview clients to gather financial information
+Market goods, services or events
+Verify accuracy of financial information
+Authorise financial actions
+Negotiate agreements to resolve disputes
+Submit financial applications
+Develop financial plans for clients
+Update professional knowledge
+Maintain data in information systems or databases
+Examine financial records
+Correspond with customers to answer questions or resolve complaints
+Analyse market conditions or trends
+Confer with staff to coordinate business operations
+Establish organisational guidelines or policies
+Prepare financial documents, reports or budgets
+Recommend investments to clients
+Train staff to improve their skills
+Conduct eligibility or selection interviews
+Communicate with government agencies
+Execute sales or other financial transactions
+Supervise sales or support staff
+Monitor sales activities
+Prepare sales or other contracts
+Review accuracy of sales or other transactions
+Sell goods or services
+Negotiate prices or other sales terms
+Maintain records of sales or other business transactions
+Reconcile records of sales or other financial transactions
+Share sales-related or market information with colleagues
+Develop professional relationships or networks
+Monitor market conditions or trends
+Identify investment opportunities or strategies
+Direct financial operations
+Analyse data to inform operational decisions or activities
+Maintain knowledge of current developments in area of expertise
+Approve expenditures
+Advise others on business or operational matters
+Determine operational compliance with regulations or standards
+Communicate organisational information to customers or other stakeholders
+Examine financial records to ensure compliance with policies or regulations
+Monitor external affairs or events affecting business operations
+Direct sales, marketing or customer service activities
+Coordinate with external parties to exchange information
+Identify strategic business investment opportunities
+Monitor organisational procedures to ensure proper functioning
+Examine marketing materials to ensure compliance with policies or regulations
+Direct organisational operations, projects or services
+Evaluate employee performance
+Develop promotional materials
+Apply and maintain information security controls as required by policies or risk assessments
+Implement organisational process or policy changes
+Develop organisational policies or programs
+Hire staff
+Apply mathematical models of financial or business conditions
+Apply mathematical principles or statistical approaches to solve problems in scientific or applied fields
+Apply machine learning techniques to data
+Develop software applications
+Analyse business or financial data
+Determine the value of goods or services
+Analyse industry trends
+Advise others on financial matters
+Analyse risks related to investments in green technology
+Assess risks to business operations
+Confer with others about financial matters
+Present business-related information
+Develop business relationships
+Educate clients on financial planning topics
+Implement financial decisions
+Disburse funds from clients' accounts to creditors

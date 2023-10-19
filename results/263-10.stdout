@@ -1,0 +1,211 @@
+Read instances: 0.19 s
+Generate matrices: 7.25 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 18 08:26:52 PM: Your problem has 4043 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 18 08:26:52 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 18 08:26:52 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 18 08:26:52 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:26:52 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 18 08:26:52 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 18 08:26:52 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 18 08:26:52 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 18 08:26:52 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 18 08:26:52 PM: Applying reduction CPLEX
+(CVXPY) Oct 18 08:26:52 PM: Finished problem compilation (took 8.416e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:26:52 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 5641 rows and 3001 columns.
+MIP Presolve modified 11687 coefficients.
+Aggregator did 38 substitutions.
+Reduced MIP has 2231 rows, 1634 columns, and 30339 nonzeros.
+Reduced MIP has 1633 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.09 sec. (112.07 ticks)
+Found incumbent of value 0.990000 after 0.10 sec. (116.23 ticks)
+Probing fixed 135 vars, tightened 0 bounds.
+Probing changed sense of 145 constraints.
+Probing time = 0.11 sec. (106.38 ticks)
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 286 rows and 139 columns.
+MIP Presolve modified 1478 coefficients.
+Aggregator did 12 substitutions.
+Reduced MIP has 1933 rows, 1475 columns, and 27018 nonzeros.
+Reduced MIP has 1474 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (45.72 ticks)
+Probing time = 0.01 sec. (10.72 ticks)
+Clique table members: 763.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.04 sec. (20.44 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.5014            49.35%
+      0     0        0.7178    47        0.9900        0.7178      168   27.50%
+*     0+    0                            0.7250        0.7178             1.00%
+      0     0        0.7196    30        0.7250      Cuts: 49      208    0.75%
+      0     0        0.7199    59        0.7250      Cuts: 30      239    0.70%
+      0     0        cutoff              0.7250        0.7250      239    0.00%
+Elapsed time = 0.42 sec. (377.34 ticks, tree = 0.01 MB, solutions = 2)
+
+GUB cover cuts applied:  10
+Cover cuts applied:  1
+Flow cuts applied:  1
+Mixed integer rounding cuts applied:  12
+Zero-half cuts applied:  2
+Gomory fractional cuts applied:  5
+
+Root node processing (before b&c):
+  Real time             =    0.42 sec. (377.60 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.42 sec. (377.60 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:26:53 PM: Problem status: optimal
+(CVXPY) Oct 18 08:26:53 PM: Optimal value: 7.250e-01
+(CVXPY) Oct 18 08:26:53 PM: Compilation took 8.416e-02 seconds
+(CVXPY) Oct 18 08:26:53 PM: Solver (including time spent in interface) took 5.116e-01 seconds
+The optimal value is 0.725
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 1
+Activity: Explore Product Engineering in SAP S/4HANA (4.0) 	 Start Period: 1 	 End Period: 2
+Activity: Implement SAP Service Cloud (5.0) 	 Start Period: 2 	 End Period: 2
+Activity: Databases Course (3.0) 	 Start Period: 2 	 End Period: 2
+Activity: Introducing SAP S/4HANA Cloud for Group Reporting (1.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.42
+Job affinity: 27.273
+Skills per Unit
+	 Initial Activity:
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
+		 Develop procedures for data management
+		 Manage information technology projects or system activities
+		 Document operational activities
+		 Analyse data to identify or resolve operational problems
+		 Provide technical support for software maintenance or use
+		 Develop computer or information security policies or procedures
+		 Develop performance metrics or standards related to information technology
+		 Develop guidelines for system implementation
+		 Supervise information technology staff
+		 Implement security measures for computer or information systems
+	 Explore Product Engineering in SAP S/4HANA:
+		 Analyse project data to determine specifications or requirements
+		 Evaluate project designs to determine adequacy or feasibility
+		 Document design or development procedures
+		 Identify information technology project resource requirements
+		 Develop guidelines for system implementation
+	 Implement SAP Service Cloud:
+		 Maintain the inventory of equipment
+		 Provide technical support for software maintenance or use
+		 Prepare instruction manuals
+		 Collect data about customer needs
+		 Develop guidelines for system implementation
+		 Develop procedures for data management
+		 Maintain computer hardware
+		 Develop computer or information security policies or procedures
+		 Identify information technology project resource requirements
+		 Provide customer service to clients or users
+	 Introducing SAP S/4HANA Cloud for Group Reporting:
+		 Manage financial activities of the organisations
+	 Databases Course:
+		 Create databases to store electronic data
+		 Develop procedures for data management
+Skills for Job 263
+Write reports or evaluations
+Compile data or documentation
+Analyse data to assess operational or project effectiveness
+Analyse security of systems, network or data
+Present research results
+Provide technical support for software maintenance or use
+Review computer information systems, procedures and networks
+Provide technical assistance to clients or users
+Troubleshoot issues with computer applications or systems
+Ensure business strategies comply with information security standards
+Modify software programs to improve performance
+Test computer system operations to ensure proper functioning
+Resolve computer software problems
+Test software performance
+Resolve computer network problems
+Analyse data to identify or resolve operational problems
+Monitor computer system performance to ensure proper operation
+Document operational activities
+Install computer software
+Develop testing routines or procedures
+Anticipate the organisational implications of machine learning models
+Recommend changes to improve computer or information systems
+Assess network-related risks and specify recovery routines and contingency procedures
+Evaluate utility of software or hardware technologies
+Write computer programming code
+Test computer hardware performance
+Document design or development procedures
+Monitor the performance of computer networks
+Maintain computer hardware
+Create electronic data backup to prevent loss of information
+Document network-related activities or tasks
+Install computer hardware
+Coordinate project activities with other staff or departments
+Conduct research to gain information about products or processes
+Train others in computer interface or software use
+Develop specifications for computer network operation
+Update knowledge about emerging industry or technology trends
+Prepare instruction manuals
+Implement security measures for computer or information systems
+Provide technical support for computer network issues
+Configure computer networks
+Manage information technology projects or system activities
+Manage documentation to ensure organisation or accuracy
+Supervise information technology staff
+Analyse data to identify trends or relationships among variables
+Develop detailed project plans
+Collaborate with others to resolve information technology issues
+Read documents to gather technical information
+Collaborate with others to determine design specifications or details
+Develop guidelines for system implementation
+Develop performance metrics or standards related to information technology
+Create databases to store electronic data
+Provide customer service to clients or users
+Inform individuals or organisations of status or findings
+Design integrated computer systems
+Manage financial activities of the organisations
+Maintain computer networks to enhance performance and user access
+Develop information communication procedures
+Estimate time or monetary resources needed to complete projects
+Teach others to use computer equipment or hardware
+Develop computer or information security policies or procedures
+Coordinate software or hardware installation
+Communicate project information to others
+Develop models of information or communications systems
+Evaluate project designs to determine adequacy or feasibility
+Maintain contingency plans for disaster recovery
+Manage budgets for appropriate resource allocation
+Maintain the inventory of equipment
+Analyse project data to determine specifications or requirements
+Document operational procedures
+Identify information technology project resource requirements
+Document technical specifications or requirements
+Collate and analyse information for threat intelligence requirements from a variety of sources
+Develop procedures for data management
+Coordinate resource procurement activities
+Collect data about customer needs
+Develop software applications

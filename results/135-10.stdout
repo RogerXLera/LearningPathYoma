@@ -1,0 +1,192 @@
+Read instances: 0.20 s
+Generate matrices: 7.12 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 18 08:21:21 PM: Your problem has 4009 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 18 08:21:21 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 18 08:21:21 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 18 08:21:21 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:21:21 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 18 08:21:21 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 18 08:21:21 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 18 08:21:21 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 18 08:21:21 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 18 08:21:21 PM: Applying reduction CPLEX
+(CVXPY) Oct 18 08:21:21 PM: Finished problem compilation (took 7.120e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:21:21 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 5536 rows and 2948 columns.
+MIP Presolve modified 11686 coefficients.
+Aggregator did 40 substitutions.
+Reduced MIP has 2232 rows, 1634 columns, and 30339 nonzeros.
+Reduced MIP has 1633 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.09 sec. (112.43 ticks)
+Found incumbent of value 0.990000 after 0.09 sec. (116.59 ticks)
+Probing fixed 135 vars, tightened 0 bounds.
+Probing changed sense of 144 constraints.
+Probing time = 0.07 sec. (107.08 ticks)
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 287 rows and 139 columns.
+MIP Presolve modified 1478 coefficients.
+Aggregator did 12 substitutions.
+Reduced MIP has 1933 rows, 1475 columns, and 27018 nonzeros.
+Reduced MIP has 1474 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (47.25 ticks)
+Probing time = 0.01 sec. (10.72 ticks)
+Clique table members: 763.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.04 sec. (23.76 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.2829            71.43%
+      0     0        0.5674    90        0.9900        0.5674      211   42.69%
+*     0+    0                            0.5707        0.5674             0.58%
+      0     0        0.5682    20        0.5707      Cuts: 32      251    0.44%
+      0     0        cutoff              0.5707                    273    0.00%
+Elapsed time = 0.35 sec. (377.54 ticks, tree = 0.01 MB, solutions = 2)
+
+GUB cover cuts applied:  18
+Zero-half cuts applied:  2
+Gomory fractional cuts applied:  2
+
+Root node processing (before b&c):
+  Real time             =    0.35 sec. (377.79 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.35 sec. (377.79 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:21:21 PM: Problem status: optimal
+(CVXPY) Oct 18 08:21:21 PM: Optimal value: 5.707e-01
+(CVXPY) Oct 18 08:21:21 PM: Compilation took 7.120e-02 seconds
+(CVXPY) Oct 18 08:21:21 PM: Solver (including time spent in interface) took 4.333e-01 seconds
+The optimal value is 0.5707142857142857
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 2
+Activity: Explore Product Engineering in SAP S/4HANA (4.0) 	 Start Period: 2 	 End Period: 2
+Activity: Introducing SAP S/4HANA Cloud for Group Reporting (1.0) 	 Start Period: 2 	 End Period: 2
+Activity: Intrapreneurship – Employee-driven Innovation (4.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.35
+Job affinity: 42.857
+Skills per Unit
+	 Initial Activity:
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
+		 Develop data analysis or data management procedures
+		 Manage information technology projects or system activities
+		 Prepare operational progress or status reports
+		 Develop operating strategies, plans or procedures
+		 Direct organisational operations, projects or services
+		 Recommend organisational process or policy changes
+		 Develop computer or information security policies or procedures
+		 Develop organisational policies or programs
+		 Develop guidelines for system implementation
+		 Supervise information technology staff
+		 Manage operations, research or logistics projects
+		 Implement security measures for computer or information systems
+		 Maintain data in information systems or databases
+		 Advise customers on technical or procedural issues
+		 Analyse data to inform operational decisions or activities
+	 Explore Product Engineering in SAP S/4HANA:
+		 Analyse project data to determine specifications or requirements
+		 Analyse data to determine project feasibility
+		 Develop data analysis or data management procedures
+		 Identify information technology project resource requirements
+		 Develop guidelines for system implementation
+		 Develop operating strategies, plans or procedures
+	 Discover SAP S/4HANA Asset Management and SAP S/4HANA Service:
+		 Direct organisational operations, projects or services
+		 Manage operations, research or logistics projects
+		 Advise customers on technical or procedural issues
+		 Manage information technology projects or system activities
+		 Develop operating strategies, plans or procedures
+		 Determine resource needs
+		 Prepare operational progress or status reports
+		 Collect data about customer needs
+		 Hire staff
+	 Introducing SAP S/4HANA Cloud for Group Reporting:
+		 Prepare analytical reports
+	 Intrapreneurship – Employee-driven Innovation:
+		 Conduct employee training programs
+		 Train others in cyber security issues
+		 Develop operating strategies, plans or procedures
+Skills for Job 135
+Manage information technology projects or system activities
+Develop detailed project plans
+Provide leadership to align operational activities with the organisation’s vision and goals
+Collaborate with others to resolve information technology issues
+Communicate organisational policies and procedures
+Supervise information technology staff
+Assign duties or work schedules to employees
+Coordinate project activities with other staff or departments
+Develop operating strategies, plans or procedures
+Implement security measures for computer or information systems
+Develop information communication procedures
+Train others on work processes
+Analyse project data to determine specifications or requirements
+Coordinate resource procurement activities
+Analyse data to determine project feasibility
+Analyse data to inform operational decisions or activities
+Identify information technology project resource requirements
+Participate in staffing decisions
+Analyse security of systems, network or data
+Maintain data in information systems or databases
+Analyse data to identify trends or relationships among variables
+Prepare analytical reports
+Analyse business or financial data
+Collect data about customer needs
+Develop data analysis or data management procedures
+Manage budgets for appropriate resource allocation
+Develop guidelines for system implementation
+Advise customers on technical or procedural issues
+Evaluate employee performance
+Prepare operational progress or status reports
+Coordinate operational activities with external stakeholders
+Maintain knowledge of current developments in area of expertise
+Manage operations, research or logistics projects
+Develop organisational goals or objectives
+Direct organisational operations, projects or services
+Manage organisational or project budgets
+Determine resource needs
+Recommend organisational process or policy changes
+Confer with peers to accomplish work
+Resolve employee or contractor problems
+Procure materials, equipment or other resources
+Recruit staff
+Develop organisational policies or programs
+Develop computer or information security policies or procedures
+Resolve operational performance problems
+Train others in cyber security issues
+Troubleshoot equipment or systems operation problems
+Troubleshoot issues with computer applications or systems
+Develop models of information or communications systems
+Develop software applications
+Conduct employee training programs
+Hire staff
+Monitor the performance of computer networks
+Apply and maintain information security controls as required by policies or risk assessments
+Collate and analyse information for threat intelligence requirements from a variety of sources
+Review computer information systems, procedures and networks

@@ -1,0 +1,215 @@
+Read instances: 0.19 s
+Generate matrices: 7.22 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 18 08:20:15 PM: Your problem has 4039 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 18 08:20:15 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 18 08:20:15 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 18 08:20:15 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:20:15 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 18 08:20:15 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 18 08:20:15 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 18 08:20:15 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 18 08:20:15 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 18 08:20:15 PM: Applying reduction CPLEX
+(CVXPY) Oct 18 08:20:15 PM: Finished problem compilation (took 7.733e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:20:15 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 6655 rows and 3826 columns.
+MIP Presolve modified 8300 coefficients.
+Aggregator did 51 substitutions.
+Reduced MIP has 1192 rows, 952 columns, and 12206 nonzeros.
+Reduced MIP has 951 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.08 sec. (99.95 ticks)
+Found incumbent of value 0.990000 after 0.08 sec. (102.73 ticks)
+Probing fixed 63 vars, tightened 0 bounds.
+Probing changed sense of 63 constraints.
+Probing time = 0.02 sec. (27.34 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 367 rows and 67 columns.
+MIP Presolve modified 805 coefficients.
+Aggregator did 12 substitutions.
+Reduced MIP has 813 rows, 656 columns, and 9615 nonzeros.
+Reduced MIP has 655 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (24.74 ticks)
+Probing time = 0.00 sec. (6.93 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 813 rows, 656 columns, and 9615 nonzeros.
+Reduced MIP has 655 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (7.02 ticks)
+Probing time = 0.00 sec. (6.93 ticks)
+Clique table members: 408.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.00 sec. (5.84 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.4634            53.19%
+      0     0        0.7396     9        0.9900        0.7396      117   25.29%
+*     0+    0                            0.7422        0.7396             0.35%
+      0     0        cutoff              0.7422                    132    0.00%
+Elapsed time = 0.17 sec. (194.23 ticks, tree = 0.01 MB, solutions = 2)
+
+Root node processing (before b&c):
+  Real time             =    0.17 sec. (194.43 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.17 sec. (194.43 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:20:16 PM: Problem status: optimal
+(CVXPY) Oct 18 08:20:16 PM: Optimal value: 7.422e-01
+(CVXPY) Oct 18 08:20:16 PM: Compilation took 7.733e-02 seconds
+(CVXPY) Oct 18 08:20:16 PM: Solver (including time spent in interface) took 2.570e-01 seconds
+The optimal value is 0.7422340425531915
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Intrapreneurship – Employee-driven Innovation (4.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 2
+Solve time: 0.18
+Job affinity: 25.532
+Skills per Unit
+	 Initial Activity:
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
+		 Develop organisational methods or procedures
+		 Manage control system activities in organisations
+		 Inspect work environments to ensure safety
+		 Investigate safety of work environment
+		 Consult with others regarding health and safety associated with equipment or facilities
+		 Develop procedures to evaluate organisational activities
+		 Implement organisational process or policy changes
+		 Establish business management methods
+		 Prepare operational progress or status reports
+		 Develop operating strategies, plans or procedures
+		 Direct organisational operations, projects or services
+		 Prepare reports related to compliance matters
+		 Train employees on environmental awareness, conservation or safety topics
+		 Recommend organisational process or policy changes
+		 Develop organisational policies or programs
+		 Manage operations, research or logistics projects
+		 Assess risks to business operations
+		 Manage environmental sustainability projects
+		 Evaluate staff practices to ensure adherence to regulations
+		 Analyse data to inform operational decisions or activities
+		 Communicate organisational information to customers or other stakeholders
+	 Intrapreneurship – Employee-driven Innovation:
+		 Establish interpersonal business relationships to facilitate work activities
+		 Conduct employee training programs
+		 Develop operating strategies, plans or procedures
+		 Advise others on business or operational matters
+Skills for Job 132
+Develop organisational policies or programs
+Communicate organisational policies and procedures
+Direct financial operations
+Direct organisational operations, projects or services
+Implement organisational process or policy changes
+Direct sales, marketing or customer service activities
+Confer with peers to accomplish work
+Analyse data to assess operational or project effectiveness
+Manage human resources activities
+Analyse data to inform operational decisions or activities
+Manage construction activities
+Prepare staff schedules or work assignments
+Resolve employee or contractor problems
+Negotiate contracts for transportation, distribution or logistics services
+Direct administrative or support services
+Draft legislation or regulations
+Present information to the public
+Prepare operational budgets
+Advise others on legal or regulatory compliance matters
+Represent the organisation in external relations
+Liaise between departments or other groups to improve function or communication
+Coordinate special events or programs
+Prepare financial documents, reports or budgets
+Prepare operational progress or status reports
+Coordinate with external parties to exchange information
+Promote goods, services, or programs
+Advise communities or institutions regarding health or safety issues
+Analyse data to identify trends or relationships among variables
+Analyse operational data to evaluate operations, processes or products
+Consult with others regarding health and safety associated with equipment or facilities
+Design public or employee health programs
+Develop emergency procedures
+Inspect work environments to ensure safety
+Investigate safety of work environment
+Investigate system, equipment or product failures
+Train employees on environmental awareness, conservation or safety topics
+Provide basic information to guests, visitors, or clients
+Monitor performance of organisational members or partners
+Analyse financial records to improve efficiency
+Determine pricing or monetary policies
+Develop marketing plans or strategies
+Plan facility layouts or designs
+Develop organisational goals or objectives
+Manage environmental sustainability projects
+Conduct employee training programs
+Hire staff
+Recommend organisational process or policy changes
+Determine resource needs
+Coordinate operational activities with external stakeholders
+Develop operating strategies, plans or procedures
+Establish interpersonal business relationships to facilitate work activities
+Communicate organisational information to customers or other stakeholders
+Manage operations, research or logistics projects
+Develop organisational methods or procedures
+Recruit staff
+Evaluate employee performance
+Supervise employees
+Approve expenditures
+Prepare proposals or grant applications to obtain project funding
+Administer compensation or benefits programs
+Negotiate labour disputes
+Compile operational data
+Maintain staff records
+Interview employees, customers or others to collect information
+Maintain knowledge of current developments in area of expertise
+Analyse data to inform staffing decisions
+Estimate labour requirements
+Investigate industrial or transportation accidents
+Prepare reports related to compliance matters
+Advise others on career or personal development
+Negotiate sales or lease agreements for goods or services
+Advise others on business or operational matters
+Collect payments for goods or services
+Analyse business or financial data
+Monitor flow of cash or other resources
+Monitor organisational compliance with regulations
+Analyse financial records to improve budgeting or planning
+Manage control system activities in organisations
+Conduct financial or regulatory audits
+Advise others on human resources topics
+Arrange collective bargaining agreements
+Assess risks to business operations
+Establish business management methods
+Establish organisational guidelines or policies
+Evaluate staff practices to ensure adherence to regulations
+Measure effectiveness of business strategies or practices
+Negotiate agreements to resolve disputes
+Train managerial staff
+Update knowledge of legal or regulatory environments
+Conduct opinion surveys or needs assessments
+Determine operational compliance with regulations or standards
+Develop procedures to evaluate organisational activities
+Evaluate program effectiveness
+Evaluate training programs, instructors or materials

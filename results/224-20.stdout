@@ -1,0 +1,522 @@
+Read instances: 0.18 s
+Generate matrices: 7.01 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 18 08:24:14 PM: Your problem has 4209 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 18 08:24:14 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 18 08:24:14 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 18 08:24:14 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:24:14 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 18 08:24:14 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 18 08:24:14 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 18 08:24:14 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 18 08:24:14 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 18 08:24:15 PM: Applying reduction CPLEX
+(CVXPY) Oct 18 08:24:15 PM: Finished problem compilation (took 7.260e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:24:15 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 5176 rows and 2621 columns.
+MIP Presolve modified 15082 coefficients.
+Aggregator did 118 substitutions.
+Reduced MIP has 3114 rows, 2210 columns, and 44890 nonzeros.
+Reduced MIP has 2209 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.12 sec. (160.55 ticks)
+Found incumbent of value 0.990000 after 0.13 sec. (166.04 ticks)
+Probing fixed 52 vars, tightened 0 bounds.
+Probing changed sense of 61 constraints.
+Probing time = 0.07 sec. (97.25 ticks)
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 129 rows and 56 columns.
+MIP Presolve modified 315 coefficients.
+Aggregator did 12 substitutions.
+Reduced MIP has 2973 rows, 2128 columns, and 43695 nonzeros.
+Reduced MIP has 2127 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.07 sec. (77.75 ticks)
+Probing time = 0.02 sec. (13.17 ticks)
+Clique table members: 2255.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.11 sec. (90.86 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.5032            49.17%
+      0     0        0.7211    54        0.9900        0.7211      829   27.16%
+*     0+    0                            0.7269        0.7211             0.80%
+      0     0        0.7222    88        0.7269      Cuts: 66     1065    0.65%
+      0     0        0.7227    78        0.7269      Cuts: 87     1122    0.58%
+
+Repeating presolve.
+Tried aggregator 2 times.
+MIP Presolve eliminated 2718 rows and 1855 columns.
+MIP Presolve modified 2671 coefficients.
+Aggregator did 13 substitutions.
+Reduced MIP has 241 rows, 165 columns, and 2237 nonzeros.
+Reduced MIP has 164 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (23.45 ticks)
+Probing fixed 18 vars, tightened 0 bounds.
+Probing changed sense of 2 constraints.
+Probing time = 0.00 sec. (0.94 ticks)
+Cover probing fixed 0 vars, tightened 7 bounds.
+Tried aggregator 2 times.
+MIP Presolve eliminated 76 rows and 34 columns.
+MIP Presolve modified 301 coefficients.
+Aggregator did 2 substitutions.
+Reduced MIP has 163 rows, 129 columns, and 1569 nonzeros.
+Reduced MIP has 128 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (3.28 ticks)
+Probing time = 0.00 sec. (0.42 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 4 rows and 0 columns.
+Reduced MIP has 159 rows, 129 columns, and 1537 nonzeros.
+Reduced MIP has 128 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.20 ticks)
+Represolve time = 0.03 sec. (34.23 ticks)
+Probing time = 0.00 sec. (0.41 ticks)
+Clique table members: 292.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.00 sec. (1.20 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.7269        0.7238             0.42%
+      0     0        0.7228    42        0.7269        0.7238     1180    0.42%
+      0     0        0.7244    13        0.7269   LiftProj: 1     1203    0.34%
+      0     0        0.7244    16        0.7269      Cuts: 24     1210    0.34%
+      0     0        0.7248     7        0.7269       Cuts: 2     1216    0.28%
+
+Repeating presolve.
+Tried aggregator 2 times.
+MIP Presolve eliminated 67 rows and 38 columns.
+MIP Presolve modified 209 coefficients.
+Aggregator did 2 substitutions.
+Reduced MIP has 91 rows, 86 columns, and 888 nonzeros.
+Reduced MIP has 86 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.31 ticks)
+Probing time = 0.00 sec. (0.19 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2 rows and 2 columns.
+MIP Presolve modified 2 coefficients.
+Reduced MIP has 89 rows, 84 columns, and 877 nonzeros.
+Reduced MIP has 84 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.88 ticks)
+Probing time = 0.00 sec. (0.19 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 89 rows, 84 columns, and 877 nonzeros.
+Reduced MIP has 84 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.60 ticks)
+Represolve time = 0.01 sec. (6.33 ticks)
+Probing time = 0.00 sec. (0.19 ticks)
+Clique table members: 160.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.00 sec. (0.47 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.7269        0.7252             0.23%
+      0     0        0.7248    10        0.7269        0.7252     1247    0.23%
+      0     0        cutoff              0.7269        0.7252     1247    0.23%
+Elapsed time = 0.70 sec. (677.06 ticks, tree = 0.01 MB, solutions = 2)
+
+GUB cover cuts applied:  4
+Cover cuts applied:  2
+Zero-half cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    0.70 sec. (677.23 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.70 sec. (677.23 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:24:15 PM: Problem status: optimal
+(CVXPY) Oct 18 08:24:15 PM: Optimal value: 7.269e-01
+(CVXPY) Oct 18 08:24:15 PM: Compilation took 7.260e-02 seconds
+(CVXPY) Oct 18 08:24:15 PM: Solver (including time spent in interface) took 7.964e-01 seconds
+The optimal value is 0.726875
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Outlining the Finance Overview in SAP S/4HANA (7.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 1 	 End Period: 1
+Activity: Be Visual! Sketching Basics for IT Business (Editi (1.0) 	 Start Period: 1 	 End Period: 1
+Activity: Basics of Design Testing (Edition Q2/2019) (5.0) 	 Start Period: 1 	 End Period: 1
+Activity: Databases Course (3.0) 	 Start Period: 1 	 End Period: 2
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 2 	 End Period: 2
+Activity: Get Started with SAP Emarsys Customer Engagement (1.0) 	 Start Period: 2 	 End Period: 2
+Activity: Discover SAP Sales Cloud (6.0) 	 Start Period: 2 	 End Period: 2
+Activity: Implement SAP Service Cloud (5.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.70
+Job affinity: 27.083
+Skills per Unit
+	 Initial Activity:
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
+		 Develop procedures for data management
+		 Monitor operational activities to ensure compliance with regulations or standard operating procedures
+		 Develop procedures to evaluate organisational activities
+		 Implement organisational process or policy changes
+		 Prepare operational progress or status reports
+		 Develop operating strategies, plans or procedures
+		 Train staff in organisational or compliance procedures
+		 Apply information technology to solve business or other applied problems
+		 Recommend organisational process or policy changes
+		 Document operational activities
+		 Analyse data to identify or resolve operational problems
+		 Provide technical support for software maintenance or use
+		 Develop computer or information security policies or procedures
+		 Develop organisational policies or programs
+		 Develop performance metrics or standards related to information technology
+		 Supervise information technology staff
+		 Manage operations, research or logistics projects
+		 Gather organisational performance information
+		 Implement security measures for computer or information systems
+		 Develop environmental sustainability plans or projects
+		 Maintain operational records
+		 Maintain data in information systems or databases
+		 Analyse data to inform operational decisions or activities
+		 Communicate organisational information to customers or other stakeholders
+		 Develop procedures for data entry or processing
+		 Monitor facilities or operational systems
+	 Outlining the Finance Overview in SAP S/4HANA:
+		 Prepare financial documents, reports or budgets
+		 Manage financial activities of the organisations
+		 Examine financial records
+		 Direct financial operations
+		 Gather financial records
+		 Prepare analytical reports
+		 Analyse financial information
+		 Analyse business or financial data
+		 Develop business or financial information systems
+		 Prepare operational budgets
+	 Get Started with SAP Emarsys Customer Engagement:
+		 Develop promotional strategies or plans
+		 Develop marketing plans or strategies
+		 Collect data about customer needs
+	 Discover SAP Sales Cloud:
+		 Analyse data to inform operational decisions or activities
+		 Negotiate sales or lease agreements for goods or services
+		 Prepare analytical reports
+		 Collect data about customer needs
+		 Negotiate purchases or contracts
+		 Develop operating strategies, plans or procedures
+		 Develop promotional strategies or plans
+		 Develop pricing forecasts and models
+		 Analyse data to assess operational or project effectiveness
+		 Conduct market research
+		 Procure goods or services
+	 Implement SAP Service Cloud:
+		 Develop operating strategies, plans or procedures
+		 Provide technical support for software maintenance or use
+		 Prepare instruction manuals
+		 Collect data about customer needs
+		 Develop procedures for data entry or processing
+		 Maintain inventories of materials, equipment or products
+		 Inspect materials or equipment to determine need for repair or replacement
+		 Inspect condition, or functioning, of facilities or equipment
+		 Develop procedures for data management
+		 Monitor operational activities to ensure compliance with regulations or standard operating procedures
+		 Develop computer or information security policies or procedures
+		 Establish standards for products, processes or procedures
+		 Determine operational procedures
+		 Provide customer service to clients or users
+	 Discover SAP S/4HANA Asset Management and SAP S/4HANA Service:
+		 Inspect materials or equipment to determine need for repair or replacement
+		 Provide technical support for software maintenance or use
+		 Provide customer service to clients or users
+		 Inspect condition, or functioning, of facilities or equipment
+		 Manage operations, research or logistics projects
+		 Monitor facilities or operational systems
+		 Confer with staff to coordinate business operations
+		 Develop operating strategies, plans or procedures
+		 Monitor operational activities to ensure compliance with regulations or standard operating procedures
+		 Advise others on business or operational matters
+		 Analyse data to identify or resolve operational problems
+		 Prepare operational budgets
+		 Prepare operational progress or status reports
+		 Collect data about customer needs
+		 Direct activities of staff
+		 Hire staff
+		 Maintain inventories of materials, equipment or products
+	 Databases Course:
+		 Maintain data in information systems or databases
+		 Create databases to store electronic data
+		 Develop database parameters or specifications
+		 Develop procedures for data management
+		 Develop procedures for data entry or processing
+		 Develop library or archival databases
+	 Be Visual! Sketching Basics for IT Business (Edition Q4/2022):
+		 Prepare graphics or other visual representations of information
+	 Basics of Design Testing (Edition Q2/2019):
+		 Develop training materials
+		 Develop instructional materials
+		 Develop testing routines or procedures
+		 Test products for functionality or quality
+		 Evaluate project designs to determine adequacy or feasibility
+Skills for Job 224
+Review professional literature to maintain professional knowledge
+Instruct tertiary students in social sciences or humanities disciplines
+Prepare scientific or technical reports or presentations
+Forecast economic, political, social or financial trends
+Supervise trainees
+Analyse data to identify trends or relationships among variables
+Conduct research on social issues
+Apply mathematical principles or statistical approaches to solve problems in scientific or applied fields
+Advise others on matters of public policy
+Record research or operational data
+Present information to the public
+Establish standards for products, processes or procedures
+Advise others on business or operational matters
+Testify at legal or legislative proceedings
+Analyse project data to determine specifications or requirements
+Analyse data to identify or resolve operational problems
+Conduct research to gain information about products or processes
+Document operational activities
+Develop detailed project plans
+Apply information technology to solve business or other applied problems
+Advise others on legal or regulatory compliance matters
+Liaise between departments or other groups to improve function or communication
+Analyse data to assess operational or project effectiveness
+Communicate organisational information to customers or other stakeholders
+Advise others about environmental management or conservation
+Analyse market conditions or trends
+Appraise environmental impact of regulations or policies
+Collect environmental data or samples
+Communicate results of environmental research
+Develop environmental research methods
+Develop environmental sustainability plans or projects
+Develop mathematical models of environmental conditions
+Interpret research or operational data
+Monitor market conditions or trends
+Plan environmental research
+Prepare information or documentation related to legal or regulatory matters
+Prepare proposal documents or grant applications
+Promote environmental sustainability or conservation initiatives
+Research environmental impact of industrial or development activities
+Research impacts of environmental conservation initiatives
+Research issues related to the environment or sustainable business practices
+Teach classes in area of specialisation
+Prepare forms or applications
+Maintain operational records
+Direct financial operations
+Prepare financial documents, reports or budgets
+Examine financial records to ensure compliance with policies or regulations
+Prepare operational budgets
+Resolve employee or contractor problems
+Analyse data to inform operational decisions or activities
+Procure materials, equipment or other resources
+Procure stocks of merchandise or supplies
+Procure goods or services
+Coordinate resource procurement activities
+Monitor inventories
+Negotiate sales or lease agreements for goods or services
+Search information sources to find data
+Direct department activities
+Classify materials according to standard systems
+Maintain inventories of materials, equipment or products
+Plan community programs or activities for the general public
+Confer with others to conduct or arrange operational activities
+Develop library or archival databases
+Compile specialised bibliographies or lists of materials
+Construct exhibits or parts of exhibits
+Inspect materials or equipment to determine need for repair or replacement
+Develop policies or procedures for archives, museums or libraries
+Attend training sessions or events to develop or maintain professional knowledge
+Inventory materials or equipment
+Maintain inventory records
+Serve on institutional or departmental committees
+Help patrons use library or archival resources
+Process library materials
+Teach others to use technology or equipment
+Select educational materials or equipment
+Organise informational materials
+Order instructional or library materials or equipment
+Direct activities of staff
+Train staff members
+Negotiate purchases or contracts
+Promote educational institutions or programs
+Develop instructional materials
+Write articles, books or other materials
+Advise educators on curricula, instructional methods or policies
+Write grant proposals
+Retrieve information from electronic sources
+Develop procedures for data entry or processing
+Prepare data for analysis
+Provide technical support for software maintenance or use
+Implement security measures for computer or information systems
+Monitor the security of digital information
+Manage documentation to ensure organisation or accuracy
+Develop procedures for data management
+Ensure business strategies comply with information security standards
+Monitor operational activities to ensure compliance with regulations or standard operating procedures
+Document technical specifications or requirements
+Collect data about customer needs
+Update knowledge about emerging industry or technology trends
+Develop testing routines or procedures
+Prepare instruction manuals
+Recommend changes to improve computer or information systems
+Develop performance metrics or standards related to information technology
+Document operational procedures
+Develop plans to manage natural or renewable resources
+Develop scientific or mathematical models
+Examine records or other types of data to investigate criminal activities
+Use databases to locate investigation details or other information
+Investigate illegal or suspicious activities
+Collaborate with other law enforcement or security agencies to share information
+Prepare investigation or incident reports
+Verify accuracy of data
+Collate and analyse information for threat intelligence requirements from a variety of sources
+Record information about suspects or criminals
+Apply and maintain information security controls as required by policies or risk assessments
+Analyse security of systems, network or data
+Observe individuals' activities to gather information or compile evidence
+Create databases to store electronic data
+Operate surveillance equipment to detect suspicious or illegal activities
+Maintain professional knowledge or certifications
+Convert data among multiple digital or analogue formats
+Determine operational procedures
+Interview people to gather information about criminal activities
+Develop promotional strategies or plans
+Represent the organisation in external relations
+Coordinate operational activities with external stakeholders
+Write advertising or promotional material
+Collaborate with others in marketing activities
+Provide educational information to the public
+Write informational material
+Coach others
+Edit written materials
+Coordinate logistics for productions or events
+Promote products, activities, or organisations
+Inform viewers, listeners or audiences
+Conduct market research
+Analyse jobs using observation, survey or interview techniques
+Develop methods of social or economic research
+Estimate labour requirements
+Research social issues
+Provide information to the general public
+Research topics in area of expertise
+Evaluate characteristics of archival or historical objects
+Evaluate scholarly materials
+Apply mathematical models of financial or business conditions
+Analyse consumer trends
+Prepare research reports
+Gather organisational performance information
+Measure effectiveness of business strategies or practices
+Analyse industry trends
+Monitor business indicators
+Discuss business strategies, practices or policies with managers
+Appraise property values
+Create images of data, locations or products
+Gather financial records
+Evaluate condition of properties
+Verify accuracy of records
+Estimate costs of goods or services
+Examine financial records
+Maintain knowledge of current developments in area of expertise
+Analyse impact of legal or regulatory changes
+Develop marketing plans or strategies
+Establish interpersonal business relationships to facilitate work activities
+Prepare proposals or grant applications to obtain project funding
+Promote goods, services, or programs
+Recommend organisational process or policy changes
+Analyse and understand the local and national implications of proposed legislation
+Confer with colleagues to formulate positions and strategies pertaining to pending issues
+Maintain knowledge of relevant national and international current events
+Attend receptions, dinners, and conferences to meet people, exchange views and information, and develop working relationships
+Supervise scientific or technical staff
+Review plans or proposals for environmental conservation
+Examine condition of property or products
+Communicate with the public on environmental issues
+Communicate with government agencies
+Mediate disputes
+Collaborate with technical specialists to resolve design or development problems
+Review environmental permits, plans or reports
+Analyse business or financial data
+Confer with staff to coordinate business operations
+Develop business or financial information systems
+Develop training materials
+Train staff in organisational or compliance procedures
+Analyse financial information
+Calculate tax information
+Manage financial activities of the organisations
+Develop organisational goals or objectives
+Analyse health-related data
+Collaborate with others to develop or implement marketing strategies
+Apply machine learning techniques to data
+Provide customer service to clients or users
+Negotiate contracts with clients or service providers
+Design computer modelling or simulation programs
+Train others in computer interface or software use
+Determine appropriate methods for data analysis
+Develop computer or information security policies or procedures
+Present research results
+Prepare analytical reports
+Estimate labour or resource requirements for forestry, fishing or agricultural operations
+Research sustainable agricultural processes or practices
+Prepare materials for preservation, storage or display
+Edit documents
+Prepare staff schedules or work assignments
+Evaluate employee performance
+Supervise employees
+Collect medical information from patients, family members or other medical professionals
+Maintain data in information systems or databases
+Implement organisational process or policy changes
+Monitor resources
+Monitor performance of organisational members or partners
+Manage operations, research or logistics projects
+Conduct employee training programs
+Manage human resources activities
+Prepare operational progress or status reports
+Develop procedures to evaluate organisational activities
+Inspect condition, or functioning, of facilities or equipment
+Monitor facilities or operational systems
+Analyse risks to minimise losses or damages
+Develop operating strategies, plans or procedures
+Develop organisational policies or programs
+Hire staff
+Recruit staff
+Evaluate civic projects or public policies
+Develop software applications
+Evaluate data quality
+Modify software programs to improve performance
+Develop database parameters or specifications
+Develop models of information or communications systems
+Supervise information technology staff
+Design research studies to obtain scientific information
+Prepare graphics or other visual representations of information
+Compile data or documentation
+Evaluate project designs to determine adequacy or feasibility
+Test products for functionality or quality
+Develop pricing forecasts and models
+Collaborate with others to resolve information technology issues
+Train others on work processes
+Manage budgets for appropriate resource allocation
+Advise others on health care matters
+Collect information about community health needs
+Communicate health and wellness information to the public

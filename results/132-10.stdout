@@ -1,0 +1,290 @@
+Read instances: 0.21 s
+Generate matrices: 7.21 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 18 08:20:25 PM: Your problem has 4039 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 18 08:20:25 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 18 08:20:25 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 18 08:20:25 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:20:25 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 18 08:20:25 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 18 08:20:25 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 18 08:20:25 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 18 08:20:25 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 18 08:20:25 PM: Applying reduction CPLEX
+(CVXPY) Oct 18 08:20:25 PM: Finished problem compilation (took 7.717e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:20:25 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 5604 rows and 2974 columns.
+MIP Presolve modified 11685 coefficients.
+Aggregator did 59 substitutions.
+Reduced MIP has 2235 rows, 1637 columns, and 30350 nonzeros.
+Reduced MIP has 1636 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.09 sec. (110.86 ticks)
+Found incumbent of value 0.990000 after 0.10 sec. (115.02 ticks)
+Probing fixed 135 vars, tightened 0 bounds.
+Probing changed sense of 144 constraints.
+Probing time = 0.08 sec. (107.03 ticks)
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 290 rows and 139 columns.
+MIP Presolve modified 1479 coefficients.
+Aggregator did 12 substitutions.
+Reduced MIP has 1933 rows, 1475 columns, and 27018 nonzeros.
+Reduced MIP has 1474 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (47.17 ticks)
+Probing time = 0.01 sec. (10.72 ticks)
+Clique table members: 763.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.04 sec. (27.68 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.3686            62.77%
+      0     0        0.6460   102        0.9900        0.6460      313   34.74%
+*     0+    0                            0.6580        0.6460             1.82%
+      0     0        0.6489   115        0.6580     Cuts: 119      480    1.39%
+      0     0        0.6510    78        0.6580     Cuts: 147      554    1.07%
+
+Repeating presolve.
+Tried aggregator 1 time.
+MIP Presolve eliminated 1750 rows and 1281 columns.
+MIP Presolve modified 1631 coefficients.
+Reduced MIP has 182 rows, 110 columns, and 1439 nonzeros.
+Reduced MIP has 109 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (10.03 ticks)
+Probing fixed 7 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (1.13 ticks)
+Cover probing fixed 0 vars, tightened 7 bounds.
+Tried aggregator 2 times.
+MIP Presolve eliminated 27 rows and 12 columns.
+MIP Presolve modified 133 coefficients.
+Aggregator did 1 substitutions.
+Reduced MIP has 154 rows, 97 columns, and 1190 nonzeros.
+Reduced MIP has 96 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.83 ticks)
+Probing time = 0.00 sec. (0.85 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 34 rows and 24 columns.
+Reduced MIP has 120 rows, 73 columns, and 961 nonzeros.
+Reduced MIP has 72 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.12 ticks)
+Probing time = 0.00 sec. (0.49 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 5 rows and 5 columns.
+Reduced MIP has 115 rows, 68 columns, and 926 nonzeros.
+Reduced MIP has 67 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.05 ticks)
+Probing time = 0.00 sec. (0.44 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 115 rows, 68 columns, and 926 nonzeros.
+Reduced MIP has 67 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.69 ticks)
+Represolve time = 0.03 sec. (25.93 ticks)
+Probing time = 0.00 sec. (0.44 ticks)
+Clique table members: 447.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.00 sec. (0.73 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.6580        0.6510             1.07%
+      0     0        0.6510    13        0.6580        0.6510      594    1.07%
+      0     0        0.6561    35        0.6580       Cuts: 8      620    0.28%
+      0     0        cutoff              0.6580                    626    0.00%
+Elapsed time = 0.51 sec. (486.91 ticks, tree = 0.01 MB, solutions = 2)
+
+GUB cover cuts applied:  10
+Cover cuts applied:  1
+Flow cuts applied:  2
+Mixed integer rounding cuts applied:  2
+Zero-half cuts applied:  5
+Gomory fractional cuts applied:  4
+
+Root node processing (before b&c):
+  Real time             =    0.51 sec. (487.07 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.51 sec. (487.07 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:20:25 PM: Problem status: optimal
+(CVXPY) Oct 18 08:20:25 PM: Optimal value: 6.580e-01
+(CVXPY) Oct 18 08:20:25 PM: Compilation took 7.717e-02 seconds
+(CVXPY) Oct 18 08:20:25 PM: Solver (including time spent in interface) took 5.927e-01 seconds
+The optimal value is 0.6579787234042553
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Outlining the Finance Overview in SAP S/4HANA (7.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 2
+Activity: Get Started with SAP Emarsys Customer Engagement (1.0) 	 Start Period: 2 	 End Period: 2
+Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.51
+Job affinity: 34.043
+Skills per Unit
+	 Initial Activity:
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
+		 Develop organisational methods or procedures
+		 Manage control system activities in organisations
+		 Inspect work environments to ensure safety
+		 Investigate safety of work environment
+		 Consult with others regarding health and safety associated with equipment or facilities
+		 Develop procedures to evaluate organisational activities
+		 Implement organisational process or policy changes
+		 Establish business management methods
+		 Prepare operational progress or status reports
+		 Develop operating strategies, plans or procedures
+		 Direct organisational operations, projects or services
+		 Prepare reports related to compliance matters
+		 Train employees on environmental awareness, conservation or safety topics
+		 Recommend organisational process or policy changes
+		 Develop organisational policies or programs
+		 Manage operations, research or logistics projects
+		 Assess risks to business operations
+		 Manage environmental sustainability projects
+		 Evaluate staff practices to ensure adherence to regulations
+		 Analyse data to inform operational decisions or activities
+		 Communicate organisational information to customers or other stakeholders
+	 Outlining the Finance Overview in SAP S/4HANA:
+		 Prepare financial documents, reports or budgets
+		 Direct financial operations
+		 Analyse financial records to improve budgeting or planning
+		 Prepare reports related to compliance matters
+		 Analyse financial records to improve efficiency
+		 Analyse business or financial data
+		 Prepare operational budgets
+	 Get Started with SAP Emarsys Customer Engagement:
+		 Develop marketing plans or strategies
+	 Discover SAP S/4HANA Asset Management and SAP S/4HANA Service:
+		 Direct administrative or support services
+		 Direct organisational operations, projects or services
+		 Manage control system activities in organisations
+		 Establish business management methods
+		 Manage operations, research or logistics projects
+		 Develop operating strategies, plans or procedures
+		 Assess risks to business operations
+		 Advise others on business or operational matters
+		 Prepare operational budgets
+		 Determine resource needs
+		 Prepare operational progress or status reports
+		 Consult with others regarding health and safety associated with equipment or facilities
+		 Hire staff
+Skills for Job 132
+Develop organisational policies or programs
+Communicate organisational policies and procedures
+Direct financial operations
+Direct organisational operations, projects or services
+Implement organisational process or policy changes
+Direct sales, marketing or customer service activities
+Confer with peers to accomplish work
+Analyse data to assess operational or project effectiveness
+Manage human resources activities
+Analyse data to inform operational decisions or activities
+Manage construction activities
+Prepare staff schedules or work assignments
+Resolve employee or contractor problems
+Negotiate contracts for transportation, distribution or logistics services
+Direct administrative or support services
+Draft legislation or regulations
+Present information to the public
+Prepare operational budgets
+Advise others on legal or regulatory compliance matters
+Represent the organisation in external relations
+Liaise between departments or other groups to improve function or communication
+Coordinate special events or programs
+Prepare financial documents, reports or budgets
+Prepare operational progress or status reports
+Coordinate with external parties to exchange information
+Promote goods, services, or programs
+Advise communities or institutions regarding health or safety issues
+Analyse data to identify trends or relationships among variables
+Analyse operational data to evaluate operations, processes or products
+Consult with others regarding health and safety associated with equipment or facilities
+Design public or employee health programs
+Develop emergency procedures
+Inspect work environments to ensure safety
+Investigate safety of work environment
+Investigate system, equipment or product failures
+Train employees on environmental awareness, conservation or safety topics
+Provide basic information to guests, visitors, or clients
+Monitor performance of organisational members or partners
+Analyse financial records to improve efficiency
+Determine pricing or monetary policies
+Develop marketing plans or strategies
+Plan facility layouts or designs
+Develop organisational goals or objectives
+Manage environmental sustainability projects
+Conduct employee training programs
+Hire staff
+Recommend organisational process or policy changes
+Determine resource needs
+Coordinate operational activities with external stakeholders
+Develop operating strategies, plans or procedures
+Establish interpersonal business relationships to facilitate work activities
+Communicate organisational information to customers or other stakeholders
+Manage operations, research or logistics projects
+Develop organisational methods or procedures
+Recruit staff
+Evaluate employee performance
+Supervise employees
+Approve expenditures
+Prepare proposals or grant applications to obtain project funding
+Administer compensation or benefits programs
+Negotiate labour disputes
+Compile operational data
+Maintain staff records
+Interview employees, customers or others to collect information
+Maintain knowledge of current developments in area of expertise
+Analyse data to inform staffing decisions
+Estimate labour requirements
+Investigate industrial or transportation accidents
+Prepare reports related to compliance matters
+Advise others on career or personal development
+Negotiate sales or lease agreements for goods or services
+Advise others on business or operational matters
+Collect payments for goods or services
+Analyse business or financial data
+Monitor flow of cash or other resources
+Monitor organisational compliance with regulations
+Analyse financial records to improve budgeting or planning
+Manage control system activities in organisations
+Conduct financial or regulatory audits
+Advise others on human resources topics
+Arrange collective bargaining agreements
+Assess risks to business operations
+Establish business management methods
+Establish organisational guidelines or policies
+Evaluate staff practices to ensure adherence to regulations
+Measure effectiveness of business strategies or practices
+Negotiate agreements to resolve disputes
+Train managerial staff
+Update knowledge of legal or regulatory environments
+Conduct opinion surveys or needs assessments
+Determine operational compliance with regulations or standards
+Develop procedures to evaluate organisational activities
+Evaluate program effectiveness
+Evaluate training programs, instructors or materials

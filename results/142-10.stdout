@@ -1,0 +1,169 @@
+Read instances: 0.18 s
+Generate matrices: 6.82 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 18 08:22:16 PM: Your problem has 4003 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 18 08:22:16 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 18 08:22:16 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 18 08:22:16 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:22:16 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 18 08:22:16 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 18 08:22:16 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 18 08:22:16 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 18 08:22:16 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 18 08:22:16 PM: Applying reduction CPLEX
+(CVXPY) Oct 18 08:22:16 PM: Finished problem compilation (took 7.157e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:22:16 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 5531 rows and 2950 columns.
+MIP Presolve modified 11687 coefficients.
+Aggregator did 29 substitutions.
+Reduced MIP has 2230 rows, 1633 columns, and 30335 nonzeros.
+Reduced MIP has 1632 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.09 sec. (111.89 ticks)
+Found incumbent of value 0.990000 after 0.09 sec. (116.04 ticks)
+Probing fixed 135 vars, tightened 0 bounds.
+Probing changed sense of 145 constraints.
+Probing time = 0.07 sec. (105.29 ticks)
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 285 rows and 139 columns.
+MIP Presolve modified 1478 coefficients.
+Aggregator did 12 substitutions.
+Reduced MIP has 1933 rows, 1475 columns, and 27018 nonzeros.
+Reduced MIP has 1474 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (45.75 ticks)
+Probing time = 0.01 sec. (10.72 ticks)
+Clique table members: 763.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.03 sec. (22.24 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.3375            65.91%
+      0     0        0.5574    40        0.9900        0.5574      211   43.70%
+*     0+    0                            0.7700        0.5574            27.61%
+*     0+    0                            0.5675        0.5574             1.78%
+      0     0        cutoff              0.5675        0.5675      236    0.00%
+Elapsed time = 0.32 sec. (401.43 ticks, tree = 0.01 MB, solutions = 3)
+
+GUB cover cuts applied:  2
+Clique cuts applied:  1
+Mixed integer rounding cuts applied:  11
+Zero-half cuts applied:  10
+Lift and project cuts applied:  7
+Gomory fractional cuts applied:  12
+
+Root node processing (before b&c):
+  Real time             =    0.32 sec. (401.72 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.32 sec. (401.72 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:22:17 PM: Problem status: optimal
+(CVXPY) Oct 18 08:22:17 PM: Optimal value: 5.675e-01
+(CVXPY) Oct 18 08:22:17 PM: Compilation took 7.157e-02 seconds
+(CVXPY) Oct 18 08:22:17 PM: Solver (including time spent in interface) took 3.990e-01 seconds
+The optimal value is 0.5675
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Outlining the Finance Overview in SAP S/4HANA (7.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover SAP Sales Cloud (6.0) 	 Start Period: 1 	 End Period: 2
+Activity: Get Started with SAP Emarsys Customer Engagement (1.0) 	 Start Period: 2 	 End Period: 2
+Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.32
+Job affinity: 43.182
+Skills per Unit
+	 Initial Activity:
+	 Outlining the Finance Overview in SAP S/4HANA:
+		 Maintain records of sales or other business transactions
+		 Prepare operational reports or records
+		 Prepare financial documents, reports or budgets
+	 Get Started with SAP Emarsys Customer Engagement:
+		 Develop marketing plans or strategies
+		 Coordinate sales campaigns
+	 Discover SAP Sales Cloud:
+		 Monitor sales activities
+		 Answer customer questions about goods or services
+		 Coordinate sales campaigns
+		 Train sales staff
+		 Maintain knowledge of business operations
+		 Supervise sales or support staff
+	 Discover SAP S/4HANA Asset Management and SAP S/4HANA Service:
+		 Direct administrative or support services
+		 Supervise service workers
+		 Direct organisational operations, projects or services
+		 Train service staff
+		 Resolve customer complaints or problems
+		 Establish operational policies
+		 Maintain knowledge of business operations
+		 Develop plans for programs or services
+		 Answer customer questions about goods or services
+		 Prepare operational progress or status reports
+		 Hire staff
+Skills for Job 142
+Establish operational policies
+Examine condition of property or products
+Supervise sales or support staff
+Assign duties or work schedules to employees
+Monitor sales activities
+Train sales staff
+Answer customer questions about goods or services
+Greet customers, patrons or visitors
+Monitor work areas to provide security
+Maintain records of sales or other business transactions
+Monitor inventories
+Set up merchandise displays
+Develop marketing plans or strategies
+Monitor market conditions or trends
+Clean work areas
+Sell goods or services
+Procure stocks of merchandise or supplies
+Prepare financial documents, reports or budgets
+Coordinate sales campaigns
+Direct organisational operations, projects or services
+Prepare staff schedules or work assignments
+Resolve customer complaints or problems
+Prepare operational progress or status reports
+Collect payments for goods or services
+Direct administrative or support services
+Provide basic information to guests, visitors, or clients
+Negotiate labour disputes
+Conduct employee training programs
+Hire staff
+Coordinate with external parties to exchange information
+Evaluate employee performance
+Supervise service workers
+Explain regulations, policies or procedures
+Provide attraction or event information to patrons
+Promote goods, services, or programs
+Maintain knowledge of business operations
+Develop plans for programs or services
+Order materials, supplies, or equipment
+Inspect equipment to ensure proper functioning
+Inspect facilities
+Prepare operational reports or records
+Perform human resources activities
+Train service staff
+Maintain professional knowledge or certifications

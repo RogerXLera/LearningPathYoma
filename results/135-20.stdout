@@ -1,0 +1,282 @@
+Read instances: 0.19 s
+Generate matrices: 6.89 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 18 08:21:30 PM: Your problem has 4009 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 18 08:21:30 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 18 08:21:30 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 18 08:21:30 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:21:30 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 18 08:21:30 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 18 08:21:30 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 18 08:21:30 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 18 08:21:30 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 18 08:21:30 PM: Applying reduction CPLEX
+(CVXPY) Oct 18 08:21:30 PM: Finished problem compilation (took 8.649e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:21:30 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 4660 rows and 2398 columns.
+MIP Presolve modified 15080 coefficients.
+Aggregator did 41 substitutions.
+Reduced MIP has 3107 rows, 2203 columns, and 44863 nonzeros.
+Reduced MIP has 2202 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.13 sec. (158.35 ticks)
+Found incumbent of value 0.990000 after 0.14 sec. (163.80 ticks)
+Probing fixed 52 vars, tightened 0 bounds.
+Probing changed sense of 61 constraints.
+Probing time = 0.07 sec. (98.07 ticks)
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 122 rows and 56 columns.
+MIP Presolve modified 315 coefficients.
+Aggregator did 12 substitutions.
+Reduced MIP has 2973 rows, 2128 columns, and 43695 nonzeros.
+Reduced MIP has 2127 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.07 sec. (77.89 ticks)
+Probing time = 0.02 sec. (13.17 ticks)
+Clique table members: 2255.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.06 sec. (42.78 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.2652            73.21%
+      0     0        0.4672    64        0.9900        0.4672      293   52.81%
+*     0+    0                            0.5530        0.4672            15.52%
+*     0+    0                            0.4823        0.4672             3.13%
+      0     0        0.4707    91        0.4823      Cuts: 47      378    2.40%
+      0     0        0.4728    65        0.4823     Cuts: 115      448    1.98%
+
+Repeating presolve.
+Tried aggregator 1 time.
+MIP Presolve eliminated 2730 rows and 1894 columns.
+MIP Presolve modified 2652 coefficients.
+Reduced MIP has 240 rows, 170 columns, and 2437 nonzeros.
+Reduced MIP has 169 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (17.34 ticks)
+Probing fixed 16 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (1.20 ticks)
+Cover probing fixed 0 vars, tightened 6 bounds.
+Tried aggregator 2 times.
+MIP Presolve eliminated 64 rows and 25 columns.
+MIP Presolve modified 310 coefficients.
+Aggregator did 3 substitutions.
+Reduced MIP has 173 rows, 142 columns, and 1830 nonzeros.
+Reduced MIP has 141 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (3.43 ticks)
+Probing time = 0.00 sec. (0.73 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 173 rows, 142 columns, and 1830 nonzeros.
+Reduced MIP has 141 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.11 ticks)
+Represolve time = 0.03 sec. (29.97 ticks)
+Probing time = 0.00 sec. (0.72 ticks)
+Clique table members: 572.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.00 sec. (1.48 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.4823        0.4728             1.98%
+      0     0        0.4735    45        0.4823        0.4735      532    1.83%
+      0     0        0.4758    13        0.4823      Cuts: 57      564    1.36%
+      0     0        0.4802    51        0.4823      Cuts: 17      610    0.44%
+
+Repeating presolve.
+Tried aggregator 2 times.
+MIP Presolve eliminated 48 rows and 42 columns.
+MIP Presolve modified 87 coefficients.
+Aggregator did 1 substitutions.
+Reduced MIP has 124 rows, 94 columns, and 1156 nonzeros.
+Reduced MIP has 93 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.19 ticks)
+Probing time = 0.00 sec. (0.43 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 1 rows and 1 columns.
+Reduced MIP has 123 rows, 93 columns, and 1149 nonzeros.
+Reduced MIP has 92 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.14 ticks)
+Probing time = 0.00 sec. (0.42 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 123 rows, 93 columns, and 1149 nonzeros.
+Reduced MIP has 92 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.77 ticks)
+Represolve time = 0.01 sec. (7.72 ticks)
+Probing time = 0.00 sec. (0.42 ticks)
+Clique table members: 333.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.00 sec. (1.14 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.4823        0.4802             0.44%
+      0     0        0.4802    50        0.4823        0.4802      677    0.44%
+      0     0        cutoff              0.4823                    677    0.00%
+Elapsed time = 0.68 sec. (602.05 ticks, tree = 0.01 MB, solutions = 3)
+
+GUB cover cuts applied:  5
+Clique cuts applied:  2
+Flow cuts applied:  1
+Mixed integer rounding cuts applied:  1
+Zero-half cuts applied:  2
+Gomory fractional cuts applied:  3
+
+Root node processing (before b&c):
+  Real time             =    0.68 sec. (602.24 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.68 sec. (602.24 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:21:31 PM: Problem status: optimal
+(CVXPY) Oct 18 08:21:31 PM: Optimal value: 4.823e-01
+(CVXPY) Oct 18 08:21:31 PM: Compilation took 8.649e-02 seconds
+(CVXPY) Oct 18 08:21:31 PM: Solver (including time spent in interface) took 7.768e-01 seconds
+The optimal value is 0.48232142857142857
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Intrapreneurship – Employee-driven Innovation (4.0) 	 Start Period: 1 	 End Period: 1
+Activity: Confidential Communication in the Internet (10.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 2
+Activity: Explore Product Engineering in SAP S/4HANA (4.0) 	 Start Period: 2 	 End Period: 2
+Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 2 	 End Period: 2
+Activity: Introducing SAP S/4HANA Cloud for Group Reporting (1.0) 	 Start Period: 2 	 End Period: 2
+Activity: Intelligent Spend Management Using SAP Concur (Rep (8.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.68
+Job affinity: 51.786
+Skills per Unit
+	 Initial Activity:
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
+		 Develop data analysis or data management procedures
+		 Manage information technology projects or system activities
+		 Prepare operational progress or status reports
+		 Develop operating strategies, plans or procedures
+		 Direct organisational operations, projects or services
+		 Recommend organisational process or policy changes
+		 Develop computer or information security policies or procedures
+		 Develop organisational policies or programs
+		 Develop guidelines for system implementation
+		 Supervise information technology staff
+		 Manage operations, research or logistics projects
+		 Implement security measures for computer or information systems
+		 Maintain data in information systems or databases
+		 Advise customers on technical or procedural issues
+		 Analyse data to inform operational decisions or activities
+	 Explore Product Engineering in SAP S/4HANA:
+		 Analyse project data to determine specifications or requirements
+		 Analyse data to determine project feasibility
+		 Develop data analysis or data management procedures
+		 Identify information technology project resource requirements
+		 Develop guidelines for system implementation
+		 Develop operating strategies, plans or procedures
+	 Discover SAP S/4HANA Asset Management and SAP S/4HANA Service:
+		 Direct organisational operations, projects or services
+		 Manage operations, research or logistics projects
+		 Advise customers on technical or procedural issues
+		 Manage information technology projects or system activities
+		 Develop operating strategies, plans or procedures
+		 Determine resource needs
+		 Prepare operational progress or status reports
+		 Collect data about customer needs
+		 Hire staff
+	 Introducing SAP S/4HANA Cloud for Group Reporting:
+		 Prepare analytical reports
+	 Intelligent Spend Management Using SAP Concur (Repeat):
+		 Manage organisational or project budgets
+		 Manage budgets for appropriate resource allocation
+		 Coordinate resource procurement activities
+		 Direct organisational operations, projects or services
+	 Confidential Communication in the Internet:
+		 Train others in cyber security issues
+		 Analyse security of systems, network or data
+		 Develop models of information or communications systems
+		 Implement security measures for computer or information systems
+	 Intrapreneurship – Employee-driven Innovation:
+		 Conduct employee training programs
+		 Train others in cyber security issues
+		 Develop operating strategies, plans or procedures
+Skills for Job 135
+Manage information technology projects or system activities
+Develop detailed project plans
+Provide leadership to align operational activities with the organisation’s vision and goals
+Collaborate with others to resolve information technology issues
+Communicate organisational policies and procedures
+Supervise information technology staff
+Assign duties or work schedules to employees
+Coordinate project activities with other staff or departments
+Develop operating strategies, plans or procedures
+Implement security measures for computer or information systems
+Develop information communication procedures
+Train others on work processes
+Analyse project data to determine specifications or requirements
+Coordinate resource procurement activities
+Analyse data to determine project feasibility
+Analyse data to inform operational decisions or activities
+Identify information technology project resource requirements
+Participate in staffing decisions
+Analyse security of systems, network or data
+Maintain data in information systems or databases
+Analyse data to identify trends or relationships among variables
+Prepare analytical reports
+Analyse business or financial data
+Collect data about customer needs
+Develop data analysis or data management procedures
+Manage budgets for appropriate resource allocation
+Develop guidelines for system implementation
+Advise customers on technical or procedural issues
+Evaluate employee performance
+Prepare operational progress or status reports
+Coordinate operational activities with external stakeholders
+Maintain knowledge of current developments in area of expertise
+Manage operations, research or logistics projects
+Develop organisational goals or objectives
+Direct organisational operations, projects or services
+Manage organisational or project budgets
+Determine resource needs
+Recommend organisational process or policy changes
+Confer with peers to accomplish work
+Resolve employee or contractor problems
+Procure materials, equipment or other resources
+Recruit staff
+Develop organisational policies or programs
+Develop computer or information security policies or procedures
+Resolve operational performance problems
+Train others in cyber security issues
+Troubleshoot equipment or systems operation problems
+Troubleshoot issues with computer applications or systems
+Develop models of information or communications systems
+Develop software applications
+Conduct employee training programs
+Hire staff
+Monitor the performance of computer networks
+Apply and maintain information security controls as required by policies or risk assessments
+Collate and analyse information for threat intelligence requirements from a variety of sources
+Review computer information systems, procedures and networks

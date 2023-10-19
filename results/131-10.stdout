@@ -1,0 +1,184 @@
+Read instances: 0.18 s
+Generate matrices: 7.29 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 18 08:19:56 PM: Your problem has 4003 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 18 08:19:56 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 18 08:19:56 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 18 08:19:56 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:19:56 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 18 08:19:56 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 18 08:19:56 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 18 08:19:56 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 18 08:19:56 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 18 08:19:56 PM: Applying reduction CPLEX
+(CVXPY) Oct 18 08:19:56 PM: Finished problem compilation (took 8.712e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:19:56 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 5522 rows and 2942 columns.
+MIP Presolve modified 11688 coefficients.
+Aggregator did 37 substitutions.
+Reduced MIP has 2231 rows, 1633 columns, and 30335 nonzeros.
+Reduced MIP has 1632 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.10 sec. (112.97 ticks)
+Found incumbent of value 0.990000 after 0.10 sec. (117.13 ticks)
+Probing fixed 135 vars, tightened 0 bounds.
+Probing changed sense of 144 constraints.
+Probing time = 0.07 sec. (105.00 ticks)
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 286 rows and 139 columns.
+MIP Presolve modified 1479 coefficients.
+Aggregator did 12 substitutions.
+Reduced MIP has 1933 rows, 1475 columns, and 27018 nonzeros.
+Reduced MIP has 1474 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (47.22 ticks)
+Probing time = 0.01 sec. (10.72 ticks)
+Clique table members: 763.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.03 sec. (23.98 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.2574            74.00%
+      0     0        0.5283    53        0.9900        0.5283      237   46.63%
+*     0+    0                            0.5396        0.5283             2.09%
+      0     0        0.5313    38        0.5396      Cuts: 73      337    1.53%
+      0     0        cutoff              0.5396                    374    0.00%
+Elapsed time = 0.35 sec. (376.43 ticks, tree = 0.01 MB, solutions = 2)
+
+GUB cover cuts applied:  12
+Cover cuts applied:  2
+Flow cuts applied:  9
+Mixed integer rounding cuts applied:  5
+Zero-half cuts applied:  10
+Gomory fractional cuts applied:  6
+
+Root node processing (before b&c):
+  Real time             =    0.35 sec. (376.69 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.35 sec. (376.69 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 18 08:19:57 PM: Problem status: optimal
+(CVXPY) Oct 18 08:19:57 PM: Optimal value: 5.396e-01
+(CVXPY) Oct 18 08:19:57 PM: Compilation took 8.712e-02 seconds
+(CVXPY) Oct 18 08:19:57 PM: Solver (including time spent in interface) took 4.526e-01 seconds
+The optimal value is 0.5396
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 1
+Activity: Outlining Cost Management and Profitability Analys (2.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover SAP Sales Cloud (6.0) 	 Start Period: 1 	 End Period: 2
+Activity: Get Started with SAP Emarsys Customer Engagement (1.0) 	 Start Period: 2 	 End Period: 2
+Activity: Intrapreneurship – Employee-driven Innovation (4.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.36
+Job affinity: 46.000
+Skills per Unit
+	 Initial Activity:
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
+		 Implement organisational process or policy changes
+		 Develop operating strategies, plans or procedures
+		 Direct organisational operations, projects or services
+		 Recommend organisational process or policy changes
+		 Develop sustainable organisational policies or practices
+		 Monitor external affairs or events affecting business operations
+		 Develop organisational policies or programs
+		 Manage operations, research or logistics projects
+		 Maintain operational records
+		 Advise customers on technical or procedural issues
+		 Analyse data to inform operational decisions or activities
+	 Get Started with SAP Emarsys Customer Engagement:
+		 Create marketing materials
+		 Develop promotional materials
+		 Develop marketing plans or strategies
+	 Discover SAP Sales Cloud:
+		 Direct sales, marketing or customer service activities
+		 Analyse data to inform operational decisions or activities
+		 Negotiate sales or lease agreements for goods or services
+		 Create marketing materials
+		 Develop operating strategies, plans or procedures
+		 Analyse market research data
+		 Negotiate contracts for transportation, distribution or logistics services
+		 Develop promotional materials
+		 Analyse data to assess operational or project effectiveness
+	 Outlining Cost Management and Profitability Analysis in SAP S/4HANA:
+		 Prepare operational budgets
+		 Develop operating strategies, plans or procedures
+	 Intrapreneurship – Employee-driven Innovation:
+		 Establish interpersonal business relationships to facilitate work activities
+		 Conduct employee training programs
+		 Develop operating strategies, plans or procedures
+		 Advise others on business or operational matters
+Skills for Job 131
+Develop marketing plans or strategies
+Confer with peers to accomplish work
+Direct sales, marketing or customer service activities
+Supervise employees
+Evaluate program effectiveness
+Compile operational data
+Determine pricing or monetary policies
+Analyse market research data
+Analyse data to inform operational decisions or activities
+Estimate cost or material requirements
+Advise others on business or operational matters
+Monitor external affairs or events affecting business operations
+Develop marketing plans or strategies for environmental initiatives
+Conduct opinion surveys or needs assessments
+Coordinate special events or programs
+Negotiate contracts for transportation, distribution or logistics services
+Develop sustainable organisational policies or practices
+Recommend organisational process or policy changes
+Develop promotional materials
+Establish interpersonal business relationships to facilitate work activities
+Present information to the public
+Evaluate employee performance
+Coordinate with external parties to exchange information
+Manage organisational or project budgets
+Analyse data to identify trends or relationships among variables
+Develop organisational policies or programs
+Liaise between departments or other groups to improve function or communication
+Develop organisational goals or objectives
+Direct financial operations
+Edit documents
+Maintain operational records
+Develop operating strategies, plans or procedures
+Develop contingency plans to deal with organisational emergencies
+Develop social media materials
+Examine marketing materials to ensure compliance with policies or regulations
+Conduct employee training programs
+Promote goods, services, or programs
+Advise customers on technical or procedural issues
+Direct organisational operations, projects or services
+Maintain knowledge of current developments in area of expertise
+Implement organisational process or policy changes
+Monitor performance of organisational members or partners
+Analyse data to assess operational or project effectiveness
+Coordinate operational activities with external stakeholders
+Prepare operational budgets
+Prepare financial documents, reports or budgets
+Negotiate sales or lease agreements for goods or services
+Create marketing materials
+Manage operations, research or logistics projects
+Represent the organisation in external relations
