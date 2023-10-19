@@ -49,15 +49,12 @@ def read_path(file_path):
         fi = []
         h = []
         fa = 0
-        init_act = "Initial Activity "
         detect_act = "Activity:"
         detect_fa = "Job affinity:"
         for row in f_lines:
             if row[:len(detect_act)] == detect_act:
                 print(row)
                 nam,s,fi_,h_ = process_line(row)
-                if nam == init_act:
-                    continue
                 name += [nam]
                 st += [s]
                 fi += [fi_]
@@ -66,4 +63,4 @@ def read_path(file_path):
                 fa = float(row.split(detect_fa)[1].split(' ')[1])
                 
     
-    return pd.DataFrame({'Course':name,'Start Week':st,"End Week":fi,"Dedication (h)":h}),fa
+    return pd.DataFrame({'Course':name[0:],'Start Week':st[0:],"End Week":fi[0:],"Dedication (h)":h[0:]}),fa
