@@ -48,7 +48,7 @@ ded_emoji = {5:':snail:',
              20:':trumpet:'}
 
 st.sidebar.selectbox(
-    "Select a field.",
+    "Select a dedication.",
     ded_dict.keys(),
     #index=None,
     #placeholder = "Unknown Dedication",
