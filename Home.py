@@ -8,6 +8,7 @@ import time
 import csv
 from read_files import *
 import streamlit as st
+import plotly.express as px
 
 path_ = os.getcwd()
 wd_ = 'results'
@@ -31,21 +32,25 @@ st.sidebar.selectbox(
     key = "field"
 )
 
-ded_dict = {"Medium (5 h/week)":5,
-            "High (10 h/week)":10,
-            "Super (20 h/week)":20}
+ded_dict = {"Low (10 h)":5,
+            "Medium (20 h)":10,
+            "High (40 h)":20,
+            "Super (80 h)":40}
 
-ded_dict = {"Medium (5 h/week)":5,
-            "High (10 h/week)":10,
-            "Trumpet master (20 h/week)":20}
+ded_dict = {"Low (10 h)":5,
+            "Medium (20 h)":10,
+            "Trumpet master (40 h)":20,
+            "Aristotelian expert (80 h)":40}
 
 ded_emoji = {5:':smiley:',
              10:':nerd:',
-             20:':sunglasses:'}
+             20:':sunglasses:',
+             40:':brain:'}
 
 ded_emoji = {5:':snail:',
              10:':doughnut:',
-             20:':trumpet:'}
+             20:':trumpet:',
+             40:':books:'}
 
 st.sidebar.selectbox(
     "Select a dedication.",
@@ -64,13 +69,26 @@ if 'dedication' in st.session_state.keys() and 'field' in st.session_state.keys(
     file_path = os.path.join(results_path,f"{field_dict[fie]}-{ded_dict[ded]}.stdout")
 
     df,fa = read_path(file_path)
+    J = read_field(f'{field_dict[fie]}')
+    skills = read_skills(file_path)
 
     st.write(f"## Field: {fie}")
     st.write(f"### Dedication: {ded} {ded_emoji[ded_dict[ded]]}")
 
-    st.write(f"Field affinity: {fa:.2f} %")
-
     st.write(df)
+
+    st.write(f"#### Skill Learning: {fa:.0f} %")
+
+    df_fa = pd.DataFrame({'name':['Yes','No'],'percentage':[fa,100-fa]})
+    pie = px.pie(df_fa, values='percentage', names='name', title='Skill Learning')
+    st.plotly_chart(pie)
+
+    st.write(f"#### Field Jobs")
+    ja_df = job_field_affinity(J,skills,5)
+    bar = px.bar(ja_df, x='Skill Learning (%)', y='Jobs', title='Learning Jobs',orientation='h')
+    st.plotly_chart(bar)
+
+
 
 
 st.markdown(

@@ -1,0 +1,380 @@
+Read instances: 0.19 s
+Generate matrices: 7.08 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 19 04:45:47 PM: Your problem has 4055 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 19 04:45:47 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 19 04:45:47 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 19 04:45:47 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:45:47 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 19 04:45:47 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 19 04:45:47 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 19 04:45:47 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 19 04:45:47 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 19 04:45:47 PM: Applying reduction CPLEX
+(CVXPY) Oct 19 04:45:47 PM: Finished problem compilation (took 7.324e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:45:47 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 4501 rows and 2250 columns.
+MIP Presolve modified 16022 coefficients.
+Aggregator did 66 substitutions.
+Reduced MIP has 3379 rows, 2385 columns, and 50148 nonzeros.
+Reduced MIP has 2384 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.11 sec. (142.73 ticks)
+Found incumbent of value 0.990000 after 0.12 sec. (150.98 ticks)
+Probing fixed 8 vars, tightened 0 bounds.
+Probing time = 0.04 sec. (29.02 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 24 rows and 8 columns.
+MIP Presolve modified 44 coefficients.
+Reduced MIP has 3355 rows, 2367 columns, and 49974 nonzeros.
+Reduced MIP has 2366 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (48.78 ticks)
+Probing time = 0.01 sec. (8.09 ticks)
+Clique table members: 22504.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.10 sec. (77.76 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.3617            63.46%
+      0     0        0.4885    69        0.9900        0.4885      427   50.66%
+*     0+    0                            0.5000        0.4885             2.31%
+      0     0        0.4903    92        0.5000      Cuts: 79      606    1.93%
+      0     0        0.4906    88        0.5000     Cuts: 126      645    1.88%
+
+Repeating presolve.
+Tried aggregator 2 times.
+MIP Presolve eliminated 2434 rows and 1647 columns.
+MIP Presolve modified 2806 coefficients.
+Aggregator did 1 substitutions.
+Reduced MIP has 918 rows, 646 columns, and 10738 nonzeros.
+Reduced MIP has 645 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (50.59 ticks)
+Probing fixed 14 vars, tightened 0 bounds.
+Probing changed sense of 12 constraints.
+Probing time = 0.01 sec. (2.37 ticks)
+Cover probing fixed 0 vars, tightened 2 bounds.
+Tried aggregator 2 times.
+MIP Presolve eliminated 171 rows and 70 columns.
+MIP Presolve modified 418 coefficients.
+Aggregator did 10 substitutions.
+Reduced MIP has 737 rows, 566 columns, and 9439 nonzeros.
+Reduced MIP has 565 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (18.34 ticks)
+Probing time = 0.00 sec. (2.58 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1 rows and 0 columns.
+Reduced MIP has 736 rows, 566 columns, and 9435 nonzeros.
+Reduced MIP has 565 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (5.36 ticks)
+Represolve time = 0.09 sec. (89.93 ticks)
+Probing time = 0.00 sec. (2.56 ticks)
+Clique table members: 2834.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.01 sec. (12.66 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.5000        0.4906             1.88%
+      0     0        0.4910    78        0.5000        0.4910      923    1.81%
+      0     0        0.4912    73        0.5000      Cuts: 46      980    1.76%
+      0     0        0.4921    95        0.5000      Cuts: 87     1029    1.58%
+      0     0        0.4921    96        0.5000      Cuts: 75     1049    1.58%
+      0     0        0.4923    79        0.5000       Cuts: 6     1074    1.53%
+      0     0        0.4924    82        0.5000      Cuts: 48     1091    1.52%
+      0     2        0.4924    80        0.5000        0.4932     1091    1.37%
+Elapsed time = 1.00 sec. (782.76 ticks, tree = 0.02 MB, solutions = 2)
+   2339  1031        0.4972    16        0.5000        0.4956    18878    0.88%
+   4348  1405        0.4971    57        0.5000        0.4965    35792    0.71%
+   5856  1264        cutoff              0.5000        0.4973    45363    0.55%
+
+Performing restart 1
+
+Repeating presolve.
+Tried aggregator 2 times.
+MIP Presolve eliminated 133 rows and 107 columns.
+MIP Presolve modified 5133 coefficients.
+Aggregator did 7 substitutions.
+Reduced MIP has 596 rows, 452 columns, and 4819 nonzeros.
+Reduced MIP has 451 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (14.23 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 55 rows and 36 columns.
+MIP Presolve modified 23 coefficients.
+Reduced MIP has 541 rows, 416 columns, and 4530 nonzeros.
+Reduced MIP has 415 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (9.46 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 541 rows, 416 columns, and 4530 nonzeros.
+Reduced MIP has 415 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (5.54 ticks)
+Represolve time = 0.06 sec. (49.75 ticks)
+   6498     0        0.4941    65        0.5000      Cuts: 24    52341    0.45%
+   6498     0        0.4943    45        0.5000      Cuts: 20    52392    0.45%
+   6498     0        0.4943    56        0.5000      Cuts: 27    52418    0.45%
+   6498     0        0.4943    74        0.5000       Cuts: 4    52436    0.45%
+   6498     0        0.4944    71        0.5000      Cuts: 23    52442    0.45%
+   6498     0        0.4944    76        0.5000       Cuts: 7    52449    0.45%
+   6498     2        0.4944    76        0.5000        0.4978    52449    0.45%
+   9238   935        cutoff              0.5000        0.4978    71830    0.45%
+
+GUB cover cuts applied:  9
+Clique cuts applied:  7
+Cover cuts applied:  27
+Implied bound cuts applied:  3
+Flow cuts applied:  1
+Mixed integer rounding cuts applied:  4
+Zero-half cuts applied:  9
+Lift and project cuts applied:  1
+Gomory fractional cuts applied:  6
+
+Root node processing (before b&c):
+  Real time             =    1.00 sec. (782.36 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    3.20 sec. (1611.57 ticks)
+  Sync time (average)   =    0.47 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    4.19 sec. (2393.92 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:45:52 PM: Problem status: optimal
+(CVXPY) Oct 19 04:45:52 PM: Optimal value: 5.000e-01
+(CVXPY) Oct 19 04:45:52 PM: Compilation took 7.324e-02 seconds
+(CVXPY) Oct 19 04:45:52 PM: Solver (including time spent in interface) took 4.281e+00 seconds
+The optimal value is 0.5
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Discover SAP Sales Cloud (6.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 1 	 End Period: 1
+Activity: Manage Your External Workforce Program with SAP Fi (12.0) 	 Start Period: 1 	 End Period: 1
+Activity: Facilitate Remote Collaboration Like a Pro (Repeat (16.0) 	 Start Period: 1 	 End Period: 1
+Activity: Intrapreneurship – Employee-driven Innovation (4.0) 	 Start Period: 1 	 End Period: 2
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 2 	 End Period: 2
+Activity: Explore Product Engineering in SAP S/4HANA (4.0) 	 Start Period: 2 	 End Period: 2
+Activity: Get Started with SAP Emarsys Customer Engagement (1.0) 	 Start Period: 2 	 End Period: 2
+Activity: Databases Course (3.0) 	 Start Period: 2 	 End Period: 2
+Activity: Uncover Key Features and Benefits of SAP Marketing (6.0) 	 Start Period: 2 	 End Period: 2
+Activity: Outlining the Finance Overview in SAP S/4HANA (7.0) 	 Start Period: 2 	 End Period: 2
+Activity: Outlining Cost Management and Profitability Analys (2.0) 	 Start Period: 2 	 End Period: 2
+Activity: Be Visual! Sketching Basics for IT Business (Editi (1.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 4.19
+Job affinity: 50.000
+Skills per Unit
+	 Initial Activity:
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
+		 Recommend organisational process or policy changes
+		 Develop sustainable organisational policies or practices
+		 Monitor external affairs or events affecting business operations
+		 Develop performance metrics or standards related to information technology
+		 Maintain operational records
+		 Maintain data in information systems or databases
+		 Analyse data to inform operational decisions or activities
+	 Outlining the Finance Overview in SAP S/4HANA:
+		 Reconcile records of sales or other financial transactions
+		 Maintain records of sales or other business transactions
+		 Prepare financial documents, reports or budgets
+	 Explore Product Engineering in SAP S/4HANA:
+		 Estimate cost or material requirements
+		 Study product information to acquire professional knowledge
+		 Discuss design or technical features of goods or services with technical staff
+		 Explain technical product or service information to customers
+		 Evaluate potential of products, technologies or resources
+	 Get Started with SAP Emarsys Customer Engagement:
+		 Contact current or potential customers to promote goods or services
+		 Develop promotional materials
+		 Develop promotional strategies or plans
+		 Develop marketing plans or strategies
+		 Implement advertising or marketing initiatives
+		 Identify potential customers
+		 Deliver promotional presentations to current or prospective customers
+		 Coordinate sales campaigns
+	 Discover SAP Sales Cloud:
+		 Recommend goods or services to customers
+		 Prepare sales or other contracts
+		 Direct sales, marketing or customer service activities
+		 Analyse data to inform operational decisions or activities
+		 Gather customer or product information to determine customer needs
+		 Process sales or other transactions
+		 Advise customers on the use of goods or services
+		 Monitor sales activities
+		 Answer customer questions about goods or services
+		 Identify potential customers
+		 Coordinate sales campaigns
+		 Provide customers with general information or assistance
+		 Develop content for sales presentations or other materials
+		 Negotiate prices or other sales terms
+		 Study product information to acquire professional knowledge
+		 Develop proposals for current or prospective customers
+		 Analyse market research data
+		 Share sales-related or market information with colleagues
+		 Negotiate contracts for transportation, distribution or logistics services
+		 Develop promotional strategies or plans
+		 Develop promotional materials
+		 Develop pricing forecasts and models
+		 Explain technical product or service information to customers
+		 Evaluate potential of products, technologies or resources
+		 Conduct market research
+	 Uncover Key Features and Benefits of SAP Marketing Cloud:
+		 Identify potential customers
+		 Analyse market research data
+		 Gather customer or product information to determine customer needs
+		 Develop marketing plans or strategies
+		 Develop business or market strategies
+		 Conduct market research
+		 Develop promotional strategies or plans
+	 Discover SAP S/4HANA Asset Management and SAP S/4HANA Service:
+		 Arrange delivery of goods or services
+		 Provide customers with general information or assistance
+		 Communicate with customers to resolve complaints or ensure satisfaction
+		 Advise customers on the use of goods or services
+		 Answer customer questions about goods or services
+		 Advise others on business or operational matters
+	 Outlining Cost Management and Profitability Analysis in SAP S/4HANA:
+		 Estimate costs or terms of sales
+	 Databases Course:
+		 Maintain data in information systems or databases
+		 Maintain records of customer accounts
+	 Be Visual! Sketching Basics for IT Business (Edition Q4/2022):
+		 Prepare graphics or other visual representations of information
+	 Facilitate Remote Collaboration Like a Pro (Repeat):
+		 Confer with peers to accomplish work
+		 Confer with clients to determine needs
+		 Discuss design or technical features of goods or services with technical staff
+		 Develop content for sales presentations or other materials
+	 Manage Your External Workforce Program with SAP Fieldglass:
+		 Represent the organisation in external relations
+		 Coordinate operational activities with external stakeholders
+	 Intrapreneurship – Employee-driven Innovation:
+		 Establish interpersonal business relationships to facilitate work activities
+		 Develop proposals for current or prospective customers
+		 Advise others on business or operational matters
+		 Evaluate potential of products, technologies or resources
+Skills for Job 225
+Develop marketing plans or strategies
+Confer with peers to accomplish work
+Direct sales, marketing or customer service activities
+Supervise employees
+Evaluate program effectiveness
+Compile operational data
+Determine pricing or monetary policies
+Analyse market research data
+Deliver, publish, broadcast or distribute final audio or visual media product
+Analyse data to inform operational decisions or activities
+Estimate cost or material requirements
+Advise others on business or operational matters
+Develop social media materials
+Monitor external affairs or events affecting business operations
+Develop marketing plans or strategies for environmental initiatives
+Conduct opinion surveys or needs assessments
+Coordinate special events or programs
+Design websites or applications
+Negotiate contracts for transportation, distribution or logistics services
+Develop sustainable organisational policies or practices
+Recommend organisational process or policy changes
+Prepare research reports
+Measure effectiveness of business strategies or practices
+Analyse consumer trends
+Analyse industry trends
+Monitor business indicators
+Analyse market conditions or trends
+Conduct surveys in organisations
+Establish interpersonal business relationships to facilitate work activities
+Discuss business strategies, practices or policies with managers
+Represent the organisation in external relations
+Develop business or market strategies
+Evaluate potential of products, technologies or resources
+Estimate costs or terms of sales
+Explain technical product or service information to customers
+Maintain records of customer accounts
+Advise customers on the use of goods or services
+Contact current or potential customers to promote goods or services
+Answer customer questions about goods or services
+Negotiate prices or other sales terms
+Arrange delivery of goods or services
+Sell goods or services
+Discuss design or technical features of goods or services with technical staff
+Identify potential customers
+Recommend goods or services to customers
+Demonstrate products to consumers
+Gather customer or product information to determine customer needs
+Develop content for sales presentations or other materials
+Prepare sales or other contracts
+Process sales or other transactions
+Monitor sales activities
+Study product information to acquire professional knowledge
+Maintain records of sales or other business transactions
+Coordinate sales campaigns
+Distribute promotional literature or samples to customers
+Stock products or parts
+Deliver promotional presentations to current or prospective customers
+Develop proposals for current or prospective customers
+Attend events to develop professional knowledge
+Prepare financial documents, reports or budgets
+Write advertising or promotional material
+Develop promotional strategies or plans
+Provide educational information to the public
+Manage content of broadcasts or presentations
+Collaborate with others in marketing activities
+Write informational material
+Coach others
+Edit written materials
+Coordinate logistics for productions or events
+Operate still or video cameras or related equipment
+Promote products, activities, or organisations
+Inform viewers, listeners or audiences
+Conduct market research
+Monitor market conditions or trends
+Share sales-related or market information with colleagues
+Verify customer credit information
+Explain financial information to customers
+Confer with clients to determine needs
+Reconcile records of sales or other financial transactions
+Issue money, credit or vouchers
+Visit establishments to evaluate needs or to promote products or service sales
+Report information to managers or other staff
+Provide customers with general information or assistance
+Communicate with customers to resolve complaints or ensure satisfaction
+Review laws or regulations to maintain professional knowledge
+Coordinate project activities with other staff or departments
+Maintain data in information systems or databases
+Apply and maintain information security controls as required by policies or risk assessments
+Analyse website or related online data to track trends or usage
+Implement advertising or marketing initiatives
+Collaborate with others to develop or implement marketing strategies
+Develop performance metrics or standards related to information technology
+Prepare graphics or other visual representations of information
+Develop pricing forecasts and models
+Maintain knowledge of current developments in area of expertise
+Maintain operational records
+Coordinate operational activities with external stakeholders
+Develop promotional materials
+Publish content on digital platforms or social media sites
+Monitor current trends
+Schedule release of marketing content
+Present information to the public
+Determine how best to represent a concept visually
+Present work to clients for approval

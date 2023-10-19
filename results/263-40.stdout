@@ -1,0 +1,298 @@
+Read instances: 0.18 s
+Generate matrices: 7.81 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 19 04:46:46 PM: Your problem has 4043 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 19 04:46:46 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 19 04:46:46 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 19 04:46:46 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:46:46 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 19 04:46:46 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 19 04:46:46 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 19 04:46:46 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 19 04:46:46 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 19 04:46:46 PM: Applying reduction CPLEX
+(CVXPY) Oct 19 04:46:46 PM: Finished problem compilation (took 9.725e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:46:46 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 4489 rows and 2253 columns.
+MIP Presolve modified 16022 coefficients.
+Aggregator did 45 substitutions.
+Reduced MIP has 3376 rows, 2382 columns, and 50136 nonzeros.
+Reduced MIP has 2381 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.13 sec. (142.40 ticks)
+Found incumbent of value 0.990000 after 0.15 sec. (150.64 ticks)
+Probing fixed 8 vars, tightened 0 bounds.
+Probing time = 0.07 sec. (29.11 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 21 rows and 8 columns.
+MIP Presolve modified 44 coefficients.
+Reduced MIP has 3355 rows, 2367 columns, and 49974 nonzeros.
+Reduced MIP has 2366 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.06 sec. (48.78 ticks)
+Probing time = 0.03 sec. (8.06 ticks)
+Clique table members: 22506.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.18 sec. (121.54 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.4114            58.44%
+      0     0        0.5784   145        0.9900        0.5784      725   41.58%
+*     0+    0                            0.5964        0.5784             3.03%
+      0     0        0.5844    54        0.5964     Cuts: 269     1055    2.02%
+      0     0        0.5849    53        0.5964      Cuts: 51     1101    1.94%
+
+Repeating presolve.
+Tried aggregator 2 times.
+MIP Presolve eliminated 2368 rows and 1618 columns.
+MIP Presolve modified 1752 coefficients.
+Aggregator did 2 substitutions.
+Reduced MIP has 985 rows, 643 columns, and 11561 nonzeros.
+Reduced MIP has 642 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (37.99 ticks)
+Probing fixed 28 vars, tightened 0 bounds.
+Probing changed sense of 12 constraints.
+Probing time = 0.01 sec. (2.74 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 101 rows and 70 columns.
+MIP Presolve modified 89 coefficients.
+Aggregator did 7 substitutions.
+Reduced MIP has 877 rows, 566 columns, and 10456 nonzeros.
+Reduced MIP has 565 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (16.36 ticks)
+Probing fixed 30 vars, tightened 0 bounds.
+Probing time = 0.01 sec. (2.30 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 115 rows and 52 columns.
+MIP Presolve modified 581 coefficients.
+Reduced MIP has 762 rows, 514 columns, and 8893 nonzeros.
+Reduced MIP has 513 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (9.95 ticks)
+Probing time = 0.00 sec. (2.72 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 762 rows, 514 columns, and 8893 nonzeros.
+Reduced MIP has 513 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (4.84 ticks)
+Represolve time = 0.11 sec. (95.35 ticks)
+Probing time = 0.00 sec. (2.73 ticks)
+Clique table members: 4159.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.01 sec. (14.99 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.5964        0.5849             1.94%
+      0     0        0.5849    55        0.5964        0.5849     1422    1.94%
+      0     0        0.5935    98        0.5964      Cuts: 61     1505    0.49%
+      0     0        0.5943    71        0.5964       Cuts: 6     1629    0.35%
+      0     0        0.5947    74        0.5964      Cuts: 78     1665    0.30%
+      0     0        0.5949    82        0.5964      Cuts: 49     1697    0.26%
+      0     0        0.5949   100        0.5964      Cuts: 10     1727    0.25%
+      0     0        0.5950    85        0.5964       Cuts: 5     1756    0.25%
+      0     0        0.5950    85        0.5964       Cuts: 9     1772    0.24%
+      0     0        0.5950    77        0.5964  ZeroHalf: 30     1791    0.23%
+      0     0        cutoff              0.5964                   1793    0.00%
+Elapsed time = 1.36 sec. (876.51 ticks, tree = 0.01 MB, solutions = 2)
+
+GUB cover cuts applied:  16
+Clique cuts applied:  29
+Implied bound cuts applied:  4
+Mixed integer rounding cuts applied:  9
+Zero-half cuts applied:  42
+Lift and project cuts applied:  3
+Gomory fractional cuts applied:  4
+
+Root node processing (before b&c):
+  Real time             =    1.36 sec. (876.71 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.36 sec. (876.71 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:46:47 PM: Problem status: optimal
+(CVXPY) Oct 19 04:46:47 PM: Optimal value: 5.964e-01
+(CVXPY) Oct 19 04:46:47 PM: Compilation took 9.725e-02 seconds
+(CVXPY) Oct 19 04:46:47 PM: Solver (including time spent in interface) took 1.520e+00 seconds
+The optimal value is 0.5964285714285714
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Information Security Management in a Nutshell (16.0) 	 Start Period: 1 	 End Period: 1
+Activity: Implement SAP Service Cloud (5.0) 	 Start Period: 1 	 End Period: 1
+Activity: Intelligent Spend Management Using SAP Concur (Rep (8.0) 	 Start Period: 1 	 End Period: 1
+Activity: Copywriting: Improve User Experience One Word at a (6.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 2
+Activity: Outlining the Record to Report Process in SAP S/4H (11.0) 	 Start Period: 2 	 End Period: 2
+Activity: Explore Product Engineering in SAP S/4HANA (4.0) 	 Start Period: 2 	 End Period: 2
+Activity: Discover SAP Sales Cloud (6.0) 	 Start Period: 2 	 End Period: 2
+Activity: Databases Course (3.0) 	 Start Period: 2 	 End Period: 2
+Activity: Confidential Communication in the Internet (10.0) 	 Start Period: 2 	 End Period: 2
+Activity: Basics of Design Testing (Edition Q2/2019) (5.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 1.36
+Job affinity: 40.260
+Skills per Unit
+	 Initial Activity:
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
+		 Develop procedures for data management
+		 Manage information technology projects or system activities
+		 Document operational activities
+		 Analyse data to identify or resolve operational problems
+		 Provide technical support for software maintenance or use
+		 Develop computer or information security policies or procedures
+		 Develop performance metrics or standards related to information technology
+		 Develop guidelines for system implementation
+		 Supervise information technology staff
+		 Implement security measures for computer or information systems
+	 Outlining the Record to Report Process in SAP S/4HANA:
+		 Document operational procedures
+		 Develop procedures for data management
+		 Manage financial activities of the organisations
+		 Document operational activities
+	 Explore Product Engineering in SAP S/4HANA:
+		 Analyse project data to determine specifications or requirements
+		 Evaluate project designs to determine adequacy or feasibility
+		 Document design or development procedures
+		 Identify information technology project resource requirements
+		 Develop guidelines for system implementation
+	 Discover SAP Sales Cloud:
+		 Collect data about customer needs
+		 Analyse data to assess operational or project effectiveness
+	 Implement SAP Service Cloud:
+		 Maintain the inventory of equipment
+		 Provide technical support for software maintenance or use
+		 Prepare instruction manuals
+		 Collect data about customer needs
+		 Develop guidelines for system implementation
+		 Develop procedures for data management
+		 Maintain computer hardware
+		 Develop computer or information security policies or procedures
+		 Identify information technology project resource requirements
+		 Provide customer service to clients or users
+	 Databases Course:
+		 Create databases to store electronic data
+		 Develop procedures for data management
+	 Intelligent Spend Management Using SAP Concur (Repeat):
+		 Manage budgets for appropriate resource allocation
+		 Coordinate resource procurement activities
+		 Manage financial activities of the organisations
+	 Confidential Communication in the Internet:
+		 Analyse security of systems, network or data
+		 Develop models of information or communications systems
+		 Implement security measures for computer or information systems
+	 Basics of Design Testing (Edition Q2/2019):
+		 Develop testing routines or procedures
+		 Evaluate project designs to determine adequacy or feasibility
+	 Copywriting: Improve User Experience One Word at a Time (Repeat):
+		 Write reports or evaluations
+		 Document design or development procedures
+	 Information Security Management in a Nutshell:
+		 Implement security measures for computer or information systems
+		 Develop computer or information security policies or procedures
+		 Analyse security of systems, network or data
+		 Develop procedures for data management
+		 Develop information communication procedures
+		 Supervise information technology staff
+		 Collaborate with others to resolve information technology issues
+Skills for Job 263
+Write reports or evaluations
+Compile data or documentation
+Analyse data to assess operational or project effectiveness
+Analyse security of systems, network or data
+Present research results
+Provide technical support for software maintenance or use
+Review computer information systems, procedures and networks
+Provide technical assistance to clients or users
+Troubleshoot issues with computer applications or systems
+Ensure business strategies comply with information security standards
+Modify software programs to improve performance
+Test computer system operations to ensure proper functioning
+Resolve computer software problems
+Test software performance
+Resolve computer network problems
+Analyse data to identify or resolve operational problems
+Monitor computer system performance to ensure proper operation
+Document operational activities
+Install computer software
+Develop testing routines or procedures
+Anticipate the organisational implications of machine learning models
+Recommend changes to improve computer or information systems
+Assess network-related risks and specify recovery routines and contingency procedures
+Evaluate utility of software or hardware technologies
+Write computer programming code
+Test computer hardware performance
+Document design or development procedures
+Monitor the performance of computer networks
+Maintain computer hardware
+Create electronic data backup to prevent loss of information
+Document network-related activities or tasks
+Install computer hardware
+Coordinate project activities with other staff or departments
+Conduct research to gain information about products or processes
+Train others in computer interface or software use
+Develop specifications for computer network operation
+Update knowledge about emerging industry or technology trends
+Prepare instruction manuals
+Implement security measures for computer or information systems
+Provide technical support for computer network issues
+Configure computer networks
+Manage information technology projects or system activities
+Manage documentation to ensure organisation or accuracy
+Supervise information technology staff
+Analyse data to identify trends or relationships among variables
+Develop detailed project plans
+Collaborate with others to resolve information technology issues
+Read documents to gather technical information
+Collaborate with others to determine design specifications or details
+Develop guidelines for system implementation
+Develop performance metrics or standards related to information technology
+Create databases to store electronic data
+Provide customer service to clients or users
+Inform individuals or organisations of status or findings
+Design integrated computer systems
+Manage financial activities of the organisations
+Maintain computer networks to enhance performance and user access
+Develop information communication procedures
+Estimate time or monetary resources needed to complete projects
+Teach others to use computer equipment or hardware
+Develop computer or information security policies or procedures
+Coordinate software or hardware installation
+Communicate project information to others
+Develop models of information or communications systems
+Evaluate project designs to determine adequacy or feasibility
+Maintain contingency plans for disaster recovery
+Manage budgets for appropriate resource allocation
+Maintain the inventory of equipment
+Analyse project data to determine specifications or requirements
+Document operational procedures
+Identify information technology project resource requirements
+Document technical specifications or requirements
+Collate and analyse information for threat intelligence requirements from a variety of sources
+Develop procedures for data management
+Coordinate resource procurement activities
+Collect data about customer needs
+Develop software applications

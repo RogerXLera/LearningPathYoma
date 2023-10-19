@@ -1,0 +1,489 @@
+Read instances: 0.19 s
+Generate matrices: 7.21 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 19 04:46:11 PM: Your problem has 4101 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 19 04:46:11 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 19 04:46:11 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 19 04:46:11 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:46:11 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 19 04:46:11 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 19 04:46:11 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 19 04:46:11 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 19 04:46:11 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 19 04:46:11 PM: Applying reduction CPLEX
+(CVXPY) Oct 19 04:46:11 PM: Finished problem compilation (took 7.543e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:46:11 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 4568 rows and 2258 columns.
+MIP Presolve modified 16022 coefficients.
+Aggregator did 127 substitutions.
+Reduced MIP has 3389 rows, 2395 columns, and 50187 nonzeros.
+Reduced MIP has 2394 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.11 sec. (144.00 ticks)
+Found incumbent of value 0.990000 after 0.12 sec. (152.27 ticks)
+Probing fixed 8 vars, tightened 0 bounds.
+Probing time = 0.04 sec. (29.15 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 34 rows and 8 columns.
+MIP Presolve modified 44 coefficients.
+Reduced MIP has 3355 rows, 2367 columns, and 49974 nonzeros.
+Reduced MIP has 2366 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.05 sec. (48.72 ticks)
+Probing time = 0.02 sec. (8.08 ticks)
+Clique table members: 22490.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.10 sec. (63.66 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.3212            67.55%
+*     0+    0                            0.9872        0.3212            67.46%
+      0     0        0.5006    86        0.9872        0.5006      467   49.29%
+*     0+    0                            0.5053        0.5006             0.92%
+      0     0        0.5022    88        0.5053     Cuts: 133      625    0.60%
+      0     0        0.5039    31        0.5053      Cuts: 18      674    0.26%
+
+Repeating presolve.
+Tried aggregator 3 times.
+MIP Presolve eliminated 3180 rows and 2178 columns.
+MIP Presolve modified 3418 coefficients.
+Aggregator did 7 substitutions.
+Reduced MIP has 160 rows, 122 columns, and 1601 nonzeros.
+Reduced MIP has 121 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (21.36 ticks)
+Probing fixed 9 vars, tightened 0 bounds.
+Probing changed sense of 2 constraints.
+Probing time = 0.00 sec. (0.42 ticks)
+Cover probing fixed 0 vars, tightened 1 bounds.
+Tried aggregator 2 times.
+MIP Presolve eliminated 32 rows and 15 columns.
+MIP Presolve modified 232 coefficients.
+Aggregator did 4 substitutions.
+Reduced MIP has 124 rows, 103 columns, and 1236 nonzeros.
+Reduced MIP has 102 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.65 ticks)
+Probing time = 0.00 sec. (0.29 ticks)
+Cover probing fixed 0 vars, tightened 2 bounds.
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 21 rows and 0 columns.
+MIP Presolve modified 4 coefficients.
+Reduced MIP has 103 rows, 103 columns, and 1182 nonzeros.
+Reduced MIP has 102 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.04 ticks)
+Represolve time = 0.03 sec. (31.55 ticks)
+Probing time = 0.00 sec. (0.26 ticks)
+Clique table members: 183.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.00 sec. (0.60 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.5053        0.5039             0.26%
+      0     0        cutoff              0.5053                    706    0.00%
+
+GUB cover cuts applied:  5
+Implied bound cuts applied:  5
+Zero-half cuts applied:  2
+Lift and project cuts applied:  2
+Gomory fractional cuts applied:  2
+
+Root node processing (before b&c):
+  Real time             =    0.62 sec. (527.25 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.62 sec. (527.25 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:46:12 PM: Problem status: optimal
+(CVXPY) Oct 19 04:46:12 PM: Optimal value: 5.053e-01
+(CVXPY) Oct 19 04:46:12 PM: Compilation took 7.543e-02 seconds
+(CVXPY) Oct 19 04:46:12 PM: Solver (including time spent in interface) took 7.023e-01 seconds
+The optimal value is 0.5052659574468085
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: SAP Environment, Health, and Safety for Operationa (12.0) 	 Start Period: 1 	 End Period: 1
+Activity: Research and Development in Discrete Industries (15.0) 	 Start Period: 1 	 End Period: 1
+Activity: Manage Production Orders in SAP S/4HANA Manufactur (12.0) 	 Start Period: 1 	 End Period: 2
+Activity: Explore Product Engineering in SAP S/4HANA (4.0) 	 Start Period: 2 	 End Period: 2
+Activity: Get Started with SAP Emarsys Customer Engagement (1.0) 	 Start Period: 2 	 End Period: 2
+Activity: Implement SAP Service Cloud (5.0) 	 Start Period: 2 	 End Period: 2
+Activity: Databases Course (3.0) 	 Start Period: 2 	 End Period: 2
+Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 2 	 End Period: 2
+Activity: Outlining the Finance Overview in SAP S/4HANA (7.0) 	 Start Period: 2 	 End Period: 2
+Activity: Be Visual! Sketching Basics for IT Business (Editi (1.0) 	 Start Period: 2 	 End Period: 2
+Activity: Design for a Circular Economy (9.0) 	 Start Period: 2 	 End Period: 2
+Activity: Basics of Design Testing (Edition Q2/2019) (5.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.62
+Job affinity: 49.468
+Skills per Unit
+	 Initial Activity:
+	 Outlining the Finance Overview in SAP S/4HANA:
+		 Prepare technical or operational reports
+		 Prepare operational reports
+		 Prepare technical reports for internal use
+		 Analyse business or financial data
+		 Conduct financial audits
+		 Prepare financial documents
+	 Explore Product Engineering in SAP S/4HANA:
+		 Analyse design or requirements information for mechanical equipment or systems
+		 Plan and manage, and analyse costs and benefits of, proposed designs or projects
+		 Review blueprints or specifications to determine work requirements
+		 Evaluate technical data to determine effect on designs or plans
+		 Research industrial processes or operations
+		 Develop technical specifications for systems or equipment
+		 Estimate technical or resource requirements for development or production projects
+		 Analyse project data to determine specifications or requirements
+		 Evaluate plans or specifications to determine technological or environmental implications
+		 Determine design criteria or specifications
+		 Create models of engineering designs or methods
+		 Document technical design details
+		 Evaluate project designs to determine adequacy or feasibility
+		 Assess the cost effectiveness of products, projects or services
+		 Analyse design requirements for computer or electronics systems
+		 Confer with technical staff to prepare designs or operational plans
+		 Design industrial equipment
+		 Explain engineering drawings, specifications or other technical information
+		 Estimate operational costs
+		 Design industrial processing systems
+		 Evaluate designs or specifications to ensure quality
+		 Research advanced engineering designs or applications
+		 Implement design or process improvements
+		 Evaluate characteristics of equipment or systems
+		 Select tools, equipment, or technologies for use in operations or projects
+		 Recommend technical design or process changes to improve efficiency, quality or performance
+		 Develop technical methods or processes
+		 Direct quality control activities
+		 Estimate costs of goods or services
+		 Direct design or development activities
+		 Prepare technical or operational reports
+		 Design electronic or computer equipment or instrumentation
+		 Fabricate products or components using machine tools
+		 Determine operational criteria or specifications
+		 Prepare operational reports
+		 Investigate system, equipment or product failures
+	 Get Started with SAP Emarsys Customer Engagement:
+		 Perform marketing activities
+	 Manage Production Orders in SAP S/4HANA Manufacturing:
+		 Research industrial processes or operations
+		 Install production equipment or systems
+		 Maintain inventories of materials, equipment or products
+		 Schedule operational activities
+		 Design industrial processing systems
+		 Prepare operational reports
+		 Maintain the inventory of equipment
+		 Create graphical representations of industrial production systems
+		 Prepare technical or operational reports
+		 Confer with technical staff to prepare designs or operational plans
+		 Monitor availability of equipment or supplies
+		 Document operational activities
+	 Implement SAP Service Cloud:
+		 Develop safety standards, policies or procedures
+		 Maintain mechanical equipment
+		 Direct equipment maintenance or repair activities
+		 Maintain the inventory of equipment
+		 Record information about parts, materials or repair procedures
+		 Maintain inventories of materials, equipment or products
+		 Maintain electronic equipment
+		 Inspect condition, or functioning, of facilities or equipment
+		 Train staff on proper operational procedures
+		 Advise customers on the use of goods or services
+		 Investigate system, equipment or product failures
+		 Maintain test equipment
+		 Notify others of equipment problems
+		 Schedule operational activities
+		 Confer with technical staff to prepare designs or operational plans
+		 Update technical knowledge
+	 Discover SAP S/4HANA Asset Management and SAP S/4HANA Service:
+		 Direct equipment maintenance or repair activities
+		 Maintain mechanical equipment
+		 Inspect condition, or functioning, of facilities or equipment
+		 Advise customers on the use of goods or services
+		 Confer with technical staff to prepare designs or operational plans
+		 Prepare technical or operational reports
+		 Monitor operational quality or safety
+		 Recommend technical design or process changes to improve efficiency, quality or performance
+		 Supervise production or support staff
+		 Confer with other staff to resolve design or operational problems
+		 Maintain the inventory of equipment
+		 Prepare operational progress or status reports
+		 Prepare operational reports
+		 Maintain inventories of materials, equipment or products
+		 Maintain electronic equipment
+	 Databases Course:
+		 Maintain data in information systems or databases
+		 Maintain operational records or records systems
+	 Design for a Circular Economy:
+		 Design energy efficient equipment or systems
+		 Research design or application of green technologies
+		 Incorporate green features into the design of structures or facilities
+		 Recommend technical design or process changes to improve efficiency, quality or performance
+		 Implement design or process improvements
+		 Design structures or facilities
+		 Evaluate plans or specifications to determine technological or environmental implications
+		 Plan and manage, and analyse costs and benefits of, proposed designs or projects
+		 Direct environmental development activities
+	 Be Visual! Sketching Basics for IT Business (Edition Q4/2022):
+		 Create schematic drawings for electronics
+		 Plan and manage, and analyse costs and benefits of, proposed designs or projects
+		 Draw detailed or technical illustrations
+	 SAP Environment, Health, and Safety for Operational Sustainability:
+		 Investigate safety of work environment
+		 Teach safety standards or environmental compliance methods
+		 Advise others on health and safety issues
+		 Develop safety standards, policies or procedures
+		 Train staff on proper operational procedures
+		 Test facilities for environmental hazards
+		 Coordinate safety or regulatory compliance activities
+		 Research human performance or health factors related to engineering or design activities
+		 Monitor operational quality or safety
+		 Design environmental control systems
+		 Direct quality control activities
+		 Inspect facilities to ensure compliance with fire regulations
+		 Direct environmental development activities
+		 Research product safety
+		 Evaluate plans or specifications to determine technological or environmental implications
+	 Research and Development in Discrete Industries:
+		 Research industrial processes or operations
+		 Conduct research to gain information about products or processes
+		 Direct design or development activities
+		 Research engineering applications of emerging technologies
+		 Research advanced engineering designs or applications
+		 Research product safety
+		 Design electronic or computer equipment or instrumentation
+		 Develop technical methods or processes
+		 Identify new applications for existing technologies
+		 Update knowledge about emerging industry or technology trends
+		 Develop technical specifications for systems or equipment
+		 Analyse design or requirements information for mechanical equipment or systems
+		 Make devices or components
+		 Create physical models or prototypes
+		 Design industrial processing systems
+		 Plan and manage, and analyse costs and benefits of, proposed designs or projects
+		 Evaluate plans or specifications to determine technological or environmental implications
+		 Communicate technical information to suppliers, contractors or regulatory agencies
+		 Evaluate new technologies or methods
+		 Analyse design requirements for computer or electronics systems
+		 Confer with technical staff to prepare designs or operational plans
+	 Basics of Design Testing (Edition Q2/2019):
+		 Document design or operational test results
+		 Evaluate designs or specifications to ensure quality
+		 Interpret design or operational test results
+		 Devise research or testing protocols
+		 Test products for functionality or quality
+		 Create models of engineering designs or methods
+		 Evaluate project designs to determine adequacy or feasibility
+Skills for Job 233
+Review technical documents to plan work
+Recommend technical design or process changes to improve efficiency, quality or performance
+Design industrial processing systems
+Supervise production or support staff
+Test performance of electrical, electronic, mechanical, or integrated systems or equipment
+Direct industrial production activities
+Implement design or process improvements
+Design industrial equipment
+Evaluate characteristics of equipment or systems
+Advise customers on the use of goods or services
+Confer with technical staff to prepare designs or operational plans
+Confer with other staff to resolve design or operational problems
+Direct installation activities
+Analyse design or requirements information for mechanical equipment or systems
+Research industrial processes or operations
+Identify new applications for existing technologies
+Estimate operational costs
+Evaluate plans or specifications to determine technological or environmental implications
+Direct equipment maintenance or repair activities
+Advise others regarding green practices or environmental concerns
+Document technical design details
+Investigate system, equipment or product failures
+Design electronic or computer equipment or instrumentation
+Create models of engineering designs or methods
+Develop software applications
+Prepare proposal documents
+Perform marketing activities
+Determine operational methods
+Coordinate safety or regulatory compliance activities
+Select tools, equipment, or technologies for use in operations or projects
+Install production equipment or systems
+Maintain operational records or records systems
+Supervise engineering or other technical staff
+Plan and manage, and analyse costs and benefits of, proposed designs or projects
+Direct energy production or management activities
+Analyse physical, survey, or geographic data
+Resolve operational performance problems
+Explain engineering drawings, specifications or other technical information
+Monitor the productivity or efficiency of industrial operations
+Develop technical methods or processes
+Prepare detailed work plans
+Direct quality control activities
+Design environmental control systems
+Direct design or development activities
+Manage project risk
+Prepare technical reports for internal use
+Interpret design or operational test results
+Inspect equipment or systems
+Research advanced engineering designs or applications
+Collect samples of raw materials or finished products
+Operate computer systems
+Create electrical schematics
+Estimate technical or resource requirements for development or production projects
+Design energy efficient equipment or systems
+Discuss designs or plans with clients
+Prepare operational reports
+Design electrical equipment or systems
+Survey land or bodies of water
+Devise research or testing protocols
+Maintain electronic equipment
+Design structures or facilities
+Develop technical specifications for systems or equipment
+Design energy production or management equipment or systems
+Direct construction activities
+Design alternative energy systems
+Inspect operational processes
+Train staff on proper operational procedures
+Prepare project budgets
+Test products for functionality or quality
+Create graphical representations of structures, landscapes or aquatic systems
+Monitor processes for compliance with standards
+Schedule operational activities
+Communicate with others to coordinate vehicle movement
+Procure materials, equipment or other resources
+Maintain mechanical equipment
+Prepare contracts, disclosures or applications
+Communicate technical information to suppliers, contractors or regulatory agencies
+Conduct validation tests of equipment or processes
+Analyse test or validation data
+Maintain test equipment
+Update technical knowledge
+Inspect finished products to locate flaws
+Create graphical representations of civil structures
+Inspect facilities or sites to determine if they meet specifications or standards
+Test characteristics of materials or structures
+Evaluate technical data to determine effect on designs or plans
+Analyse operational data
+Investigate the environmental impact of projects
+Incorporate green features into the design of structures or facilities
+Explain project details to the general public
+Research design or application of green technologies
+Create schematic drawings for electronics
+Analyse design requirements for computer or electronics systems
+Determine operational criteria or specifications
+Write computer programming code
+Provide technical guidance to other staff
+Advise others on health and safety issues
+Investigate safety of work environment
+Analyse data to identify trends or relationships among variables
+Analyse project data to determine specifications or requirements
+Calibrate scientific or technical equipment
+Disassemble equipment to inspect for deficiencies
+Draw detailed or technical illustrations
+Evaluate characteristics of products
+Fabricate products or components using machine tools
+Inspect condition, or functioning, of facilities or equipment
+Order materials, supplies, or equipment
+Reassemble equipment after repair
+Repair precision devices or work pieces
+Review blueprints or specifications to determine work requirements
+Write reports or evaluations
+Record information about parts, materials or repair procedures
+Research engineering aspects of biological or chemical processes
+Determine causes of operational problems or failures
+Design control systems for mechanical or other equipment
+Inspect locomotives or other railway equipment
+Monitor availability of equipment or supplies
+Monitor equipment gauges or displays
+Monitor operational quality or safety
+Monitor surroundings to detect potential hazards
+Receive information or instructions for performing work assignments
+Signal others to coordinate vehicle movement
+Create graphical representations of industrial production systems
+Evaluate designs or specifications to ensure quality
+Prepare procedural documents
+Conduct quantitative failure analyses of operational data
+Prepare materials for processing
+Collect data about project sites
+Collaborate with others to determine design specifications or details
+Conduct research to gain information about products or processes
+Coordinate project activities with other staff or departments
+Coordinate software or hardware installation
+Document network-related activities or tasks
+Document operational activities
+Document operational procedures
+Document technical specifications or requirements
+Estimate time or monetary resources needed to complete projects
+Evaluate new technologies or methods
+Evaluate project designs to determine adequacy or feasibility
+Maintain contingency plans for disaster recovery
+Maintain the inventory of equipment
+Update knowledge about emerging industry or technology trends
+Direct environmental development activities
+Monitor activities affecting environmental quality
+Prepare technical or operational reports
+Package materials for transport
+Teach safety standards or environmental compliance methods
+Design civil structures or systems
+Direct surveying activities
+Install instrumentation or electronic equipment or systems
+Research human performance or health factors related to engineering or design activities
+Maintain inventories of materials, equipment or products
+Design electromechanical equipment or systems
+Determine design criteria or specifications
+Research engineering applications of emerging technologies
+Research product safety
+Test facilities for environmental hazards
+Document design or operational test results
+Develop safety standards, policies or procedures
+Make devices or components
+Testify at legal or legislative proceedings
+Create graphical representations of mechanical equipment
+Select project materials
+Create physical models or prototypes
+Mix sound inputs
+Operate control consoles for sound, lighting or video
+Operate audio recording equipment
+Collaborate with others to determine technical details of productions
+Maintain logs of production activities
+Notify others of equipment problems
+Convert data among multiple digital or analogue formats
+Select materials or props
+Inspect facilities to ensure compliance with fire regulations
+Estimate costs of goods or services
+Prepare operational progress or status reports
+Prepare financial documents
+Negotiate contracts with clients or service providers
+Develop financial plans for clients
+Analyse business or financial data
+Confer with others about financial matters
+Assess the cost effectiveness of products, projects or services
+Monitor financial indicators
+Maintain data in information systems or databases
+Estimate demand for goods or services
+Estimate green project costs
+Conduct financial audits
+Negotiate agreements to resolve disputes
+Evaluate applicable laws and regulations to determine impact on organisational activities

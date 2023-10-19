@@ -1,0 +1,292 @@
+Read instances: 0.19 s
+Generate matrices: 6.63 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 19 04:44:08 PM: Your problem has 4003 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 19 04:44:08 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 19 04:44:08 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 19 04:44:08 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:44:08 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 19 04:44:08 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 19 04:44:08 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 19 04:44:08 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 19 04:44:08 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 19 04:44:08 PM: Applying reduction CPLEX
+(CVXPY) Oct 19 04:44:08 PM: Finished problem compilation (took 7.766e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:44:08 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 4378 rows and 2200 columns.
+MIP Presolve modified 16022 coefficients.
+Aggregator did 38 substitutions.
+Reduced MIP has 3374 rows, 2380 columns, and 50128 nonzeros.
+Reduced MIP has 2379 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.11 sec. (142.17 ticks)
+Found incumbent of value 0.990000 after 0.11 sec. (150.40 ticks)
+Probing fixed 8 vars, tightened 0 bounds.
+Probing time = 0.03 sec. (29.26 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 19 rows and 8 columns.
+MIP Presolve modified 44 coefficients.
+Reduced MIP has 3355 rows, 2367 columns, and 49974 nonzeros.
+Reduced MIP has 2366 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (48.74 ticks)
+Probing time = 0.01 sec. (8.09 ticks)
+Clique table members: 22498.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.07 sec. (56.12 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.2376            76.00%
+      0     0        0.3422    91        0.9900        0.3422      410   65.43%
+*     0+    0                            0.3614        0.3422             5.31%
+      0     0        0.3490    53        0.3614     Cuts: 133      468    3.43%
+      0     0        0.3494   103        0.3614      Cuts: 48      922    3.32%
+
+Repeating presolve.
+Tried aggregator 2 times.
+MIP Presolve eliminated 2531 rows and 1654 columns.
+MIP Presolve modified 3019 coefficients.
+Aggregator did 1 substitutions.
+Reduced MIP has 822 rows, 632 columns, and 10161 nonzeros.
+Reduced MIP has 631 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.03 sec. (48.13 ticks)
+Probing fixed 7 vars, tightened 0 bounds.
+Probing changed sense of 12 constraints.
+Probing time = 0.00 sec. (1.92 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 94 rows and 64 columns.
+MIP Presolve modified 147 coefficients.
+Aggregator did 9 substitutions.
+Reduced MIP has 719 rows, 559 columns, and 9250 nonzeros.
+Reduced MIP has 558 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (14.77 ticks)
+Probing time = 0.00 sec. (2.58 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 719 rows, 559 columns, and 9250 nonzeros.
+Reduced MIP has 558 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (5.08 ticks)
+Represolve time = 0.07 sec. (81.22 ticks)
+Probing time = 0.00 sec. (2.59 ticks)
+Clique table members: 2826.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.01 sec. (10.46 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.3614        0.3494             3.32%
+      0     0        0.3497    82        0.3614        0.3497     1164    3.25%
+      0     0        0.3573    53        0.3614      Cuts: 90     1234    1.13%
+      0     0        0.3573    53        0.3614       Cuts: 3     1248    1.13%
+      0     2        0.3573    41        0.3614        0.3573     1248    1.13%
+Elapsed time = 0.85 sec. (664.24 ticks, tree = 0.02 MB, solutions = 2)
+   2060   601        0.3612    57        0.3614        0.3595    25218    0.52%
+   4299   955        0.3598    74        0.3614        0.3597    57127    0.46%
+   6582  1084        0.3606    34        0.3614        0.3600    85729    0.40%
+
+Performing restart 1
+
+Repeating presolve.
+Tried aggregator 2 times.
+MIP Presolve eliminated 40 rows and 28 columns.
+MIP Presolve modified 5668 coefficients.
+Aggregator did 3 substitutions.
+Reduced MIP has 676 rows, 528 columns, and 5568 nonzeros.
+Reduced MIP has 527 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (18.91 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 72 rows and 46 columns.
+MIP Presolve modified 39 coefficients.
+Reduced MIP has 604 rows, 482 columns, and 5187 nonzeros.
+Reduced MIP has 481 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (3.78 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 604 rows, 482 columns, and 5187 nonzeros.
+Reduced MIP has 481 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (3.41 ticks)
+Represolve time = 0.05 sec. (39.61 ticks)
+   6636     0        0.3574     5        0.3614       Cuts: 6    91409    0.38%
+   6636     0        0.3575    32        0.3614      Cuts: 17    91419    0.38%
+   6636     0        0.3578    36        0.3614      Fract: 3    91504    0.38%
+   6636     0        0.3578    54        0.3614      Cuts: 18    91515    0.38%
+   6636     0        0.3578    37        0.3614   ZeroHalf: 1    91518    0.38%
+   6636     0        0.3578    39        0.3614      Cuts: 30    91543    0.38%
+   6636     0        0.3581    37        0.3614      Cuts: 11    91583    0.38%
+   6636     0        0.3581    39        0.3614      Cuts: 27    91591    0.38%
+   6636     2        0.3581    33        0.3614        0.3600    91591    0.38%
+
+GUB cover cuts applied:  1
+Clique cuts applied:  5
+Cover cuts applied:  4
+Implied bound cuts applied:  2
+Flow cuts applied:  1
+Mixed integer rounding cuts applied:  1
+Zero-half cuts applied:  3
+Gomory fractional cuts applied:  5
+
+Root node processing (before b&c):
+  Real time             =    0.82 sec. (663.93 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    1.95 sec. (1161.88 ticks)
+  Sync time (average)   =    0.33 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    2.77 sec. (1825.81 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:44:11 PM: Problem status: optimal
+(CVXPY) Oct 19 04:44:11 PM: Optimal value: 3.614e-01
+(CVXPY) Oct 19 04:44:11 PM: Compilation took 7.766e-02 seconds
+(CVXPY) Oct 19 04:44:11 PM: Solver (including time spent in interface) took 2.852e+00 seconds
+The optimal value is 0.3614
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Discover SAP Sales Cloud (6.0) 	 Start Period: 1 	 End Period: 1
+Activity: Get Started with SAP Emarsys Customer Engagement (1.0) 	 Start Period: 1 	 End Period: 1
+Activity: Explore Supply Chain Business Scenarios in SAP S/4 (10.0) 	 Start Period: 1 	 End Period: 1
+Activity: Manage Your External Workforce Program with SAP Fi (12.0) 	 Start Period: 1 	 End Period: 1
+Activity: Confidential Communication in the Internet (10.0) 	 Start Period: 1 	 End Period: 2
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 2 	 End Period: 2
+Activity: Implement SAP Service Cloud (5.0) 	 Start Period: 2 	 End Period: 2
+Activity: Outlining the Finance Overview in SAP S/4HANA (7.0) 	 Start Period: 2 	 End Period: 2
+Activity: Intrapreneurship – Employee-driven Innovation (4.0) 	 Start Period: 2 	 End Period: 2
+Activity: Design for a Circular Economy (9.0) 	 Start Period: 2 	 End Period: 2
+Activity: Intelligent Spend Management Using SAP Concur (Rep (8.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 2.77
+Job affinity: 64.000
+Skills per Unit
+	 Initial Activity:
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
+		 Implement organisational process or policy changes
+		 Develop operating strategies, plans or procedures
+		 Direct organisational operations, projects or services
+		 Recommend organisational process or policy changes
+		 Develop sustainable organisational policies or practices
+		 Monitor external affairs or events affecting business operations
+		 Develop organisational policies or programs
+		 Manage operations, research or logistics projects
+		 Maintain operational records
+		 Advise customers on technical or procedural issues
+		 Analyse data to inform operational decisions or activities
+	 Outlining the Finance Overview in SAP S/4HANA:
+		 Prepare financial documents, reports or budgets
+		 Direct financial operations
+		 Prepare operational budgets
+	 Get Started with SAP Emarsys Customer Engagement:
+		 Create marketing materials
+		 Develop promotional materials
+		 Develop marketing plans or strategies
+	 Discover SAP Sales Cloud:
+		 Direct sales, marketing or customer service activities
+		 Analyse data to inform operational decisions or activities
+		 Negotiate sales or lease agreements for goods or services
+		 Create marketing materials
+		 Develop operating strategies, plans or procedures
+		 Analyse market research data
+		 Negotiate contracts for transportation, distribution or logistics services
+		 Develop promotional materials
+		 Analyse data to assess operational or project effectiveness
+	 Implement SAP Service Cloud:
+		 Develop operating strategies, plans or procedures
+		 Direct organisational operations, projects or services
+		 Advise customers on technical or procedural issues
+		 Develop contingency plans to deal with organisational emergencies
+	 Explore Supply Chain Business Scenarios in SAP S/4HANA Cloud, public edition:
+		 Manage operations, research or logistics projects
+		 Develop operating strategies, plans or procedures
+		 Evaluate employee performance
+		 Direct organisational operations, projects or services
+	 Design for a Circular Economy:
+		 Develop sustainable organisational policies or practices
+		 Develop marketing plans or strategies for environmental initiatives
+	 Intelligent Spend Management Using SAP Concur (Repeat):
+		 Manage organisational or project budgets
+		 Prepare operational budgets
+		 Prepare financial documents, reports or budgets
+		 Direct organisational operations, projects or services
+	 Manage Your External Workforce Program with SAP Fieldglass:
+		 Conduct employee training programs
+		 Represent the organisation in external relations
+		 Coordinate operational activities with external stakeholders
+		 Direct organisational operations, projects or services
+		 Develop organisational policies or programs
+	 Confidential Communication in the Internet:
+		 Coordinate with external parties to exchange information
+	 Intrapreneurship – Employee-driven Innovation:
+		 Establish interpersonal business relationships to facilitate work activities
+		 Conduct employee training programs
+		 Develop operating strategies, plans or procedures
+		 Advise others on business or operational matters
+Skills for Job 131
+Develop marketing plans or strategies
+Confer with peers to accomplish work
+Direct sales, marketing or customer service activities
+Supervise employees
+Evaluate program effectiveness
+Compile operational data
+Determine pricing or monetary policies
+Analyse market research data
+Analyse data to inform operational decisions or activities
+Estimate cost or material requirements
+Advise others on business or operational matters
+Monitor external affairs or events affecting business operations
+Develop marketing plans or strategies for environmental initiatives
+Conduct opinion surveys or needs assessments
+Coordinate special events or programs
+Negotiate contracts for transportation, distribution or logistics services
+Develop sustainable organisational policies or practices
+Recommend organisational process or policy changes
+Develop promotional materials
+Establish interpersonal business relationships to facilitate work activities
+Present information to the public
+Evaluate employee performance
+Coordinate with external parties to exchange information
+Manage organisational or project budgets
+Analyse data to identify trends or relationships among variables
+Develop organisational policies or programs
+Liaise between departments or other groups to improve function or communication
+Develop organisational goals or objectives
+Direct financial operations
+Edit documents
+Maintain operational records
+Develop operating strategies, plans or procedures
+Develop contingency plans to deal with organisational emergencies
+Develop social media materials
+Examine marketing materials to ensure compliance with policies or regulations
+Conduct employee training programs
+Promote goods, services, or programs
+Advise customers on technical or procedural issues
+Direct organisational operations, projects or services
+Maintain knowledge of current developments in area of expertise
+Implement organisational process or policy changes
+Monitor performance of organisational members or partners
+Analyse data to assess operational or project effectiveness
+Coordinate operational activities with external stakeholders
+Prepare operational budgets
+Prepare financial documents, reports or budgets
+Negotiate sales or lease agreements for goods or services
+Create marketing materials
+Manage operations, research or logistics projects
+Represent the organisation in external relations

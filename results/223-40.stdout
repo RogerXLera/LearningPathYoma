@@ -1,0 +1,244 @@
+Read instances: 0.19 s
+Generate matrices: 7.05 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 19 04:45:27 PM: Your problem has 4011 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 19 04:45:27 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 19 04:45:27 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 19 04:45:27 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:45:27 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 19 04:45:27 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 19 04:45:27 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 19 04:45:27 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 19 04:45:27 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 19 04:45:28 PM: Applying reduction CPLEX
+(CVXPY) Oct 19 04:45:28 PM: Finished problem compilation (took 7.527e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:45:28 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 4405 rows and 2216 columns.
+MIP Presolve modified 16022 coefficients.
+Aggregator did 34 substitutions.
+Reduced MIP has 3375 rows, 2381 columns, and 50132 nonzeros.
+Reduced MIP has 2380 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.11 sec. (142.25 ticks)
+Found incumbent of value 0.990000 after 0.11 sec. (150.48 ticks)
+Probing fixed 8 vars, tightened 0 bounds.
+Probing time = 0.03 sec. (29.08 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 20 rows and 8 columns.
+MIP Presolve modified 44 coefficients.
+Reduced MIP has 3355 rows, 2367 columns, and 49974 nonzeros.
+Reduced MIP has 2366 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (48.74 ticks)
+Probing time = 0.01 sec. (8.05 ticks)
+Clique table members: 22498.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.05 sec. (41.86 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.3168            68.00%
+      0     0        0.4464    66        0.9900        0.4464      281   54.91%
+*     0+    0                            0.4604        0.4464             3.04%
+      0     0        0.4500    75        0.4604      Cuts: 95      522    2.25%
+      0     0        0.4503    73        0.4604      Cuts: 27      591    2.19%
+
+Repeating presolve.
+Tried aggregator 2 times.
+MIP Presolve eliminated 2498 rows and 1680 columns.
+MIP Presolve modified 2037 coefficients.
+Aggregator did 3 substitutions.
+Reduced MIP has 854 rows, 586 columns, and 9970 nonzeros.
+Reduced MIP has 585 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (42.06 ticks)
+Probing fixed 44 vars, tightened 0 bounds.
+Probing changed sense of 12 constraints.
+Probing time = 0.01 sec. (7.35 ticks)
+Cover probing fixed 0 vars, tightened 3 bounds.
+Tried aggregator 2 times.
+MIP Presolve eliminated 220 rows and 101 columns.
+MIP Presolve modified 964 coefficients.
+Aggregator did 6 substitutions.
+Reduced MIP has 628 rows, 479 columns, and 7834 nonzeros.
+Reduced MIP has 478 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (14.19 ticks)
+Probing fixed 1 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (4.77 ticks)
+Cover probing fixed 0 vars, tightened 1 bounds.
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1 rows and 1 columns.
+MIP Presolve modified 3 coefficients.
+Reduced MIP has 627 rows, 478 columns, and 7822 nonzeros.
+Reduced MIP has 477 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (5.98 ticks)
+Represolve time = 0.09 sec. (83.38 ticks)
+Probing time = 0.00 sec. (2.54 ticks)
+Clique table members: 3502.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.01 sec. (7.18 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.4604        0.4503             2.19%
+      0     0        0.4508    51        0.4604        0.4508      771    2.09%
+      0     0        0.4584   123        0.4604     Cuts: 106      901    0.44%
+      0     0        cutoff              0.4604                    901    0.00%
+Elapsed time = 0.71 sec. (603.12 ticks, tree = 0.01 MB, solutions = 2)
+
+GUB cover cuts applied:  5
+Clique cuts applied:  6
+Implied bound cuts applied:  21
+Mixed integer rounding cuts applied:  4
+Zero-half cuts applied:  8
+Lift and project cuts applied:  1
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    0.71 sec. (603.31 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.71 sec. (603.31 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:45:28 PM: Problem status: optimal
+(CVXPY) Oct 19 04:45:28 PM: Optimal value: 4.604e-01
+(CVXPY) Oct 19 04:45:28 PM: Compilation took 7.527e-02 seconds
+(CVXPY) Oct 19 04:45:28 PM: Solver (including time spent in interface) took 8.042e-01 seconds
+The optimal value is 0.4604
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Product Compliance in a Nutshell (12.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 1
+Activity: Outlining the Finance Overview in SAP S/4HANA (7.0) 	 Start Period: 1 	 End Period: 1
+Activity: Intrapreneurship – Employee-driven Innovation (4.0) 	 Start Period: 1 	 End Period: 1
+Activity: Bereit für die Digitalisierung? Digitales Talent M (10.0) 	 Start Period: 1 	 End Period: 1
+Activity: Hire to Retire – Strategy, Implementation, and Ope (9.0) 	 Start Period: 1 	 End Period: 2
+Activity: Getting Hired Course (13.0) 	 Start Period: 2 	 End Period: 2
+Activity: Explore Supply Chain Business Scenarios in SAP S/4 (10.0) 	 Start Period: 2 	 End Period: 2
+Activity: Basics of Design Testing (Edition Q2/2019) (5.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.71
+Job affinity: 54.000
+Skills per Unit
+	 Initial Activity:
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
+		 Prepare operational reports
+		 Develop procedures to evaluate organisational activities
+		 Establish business management methods
+		 Analyse data to identify or resolve operational problems
+		 Assess risks to business operations
+		 Evaluate staff practices to ensure adherence to regulations
+		 Maintain data in information systems or databases
+	 Outlining the Finance Overview in SAP S/4HANA:
+		 Prepare operational reports
+		 Present business-related information
+		 Prepare operational budgets
+	 Explore Supply Chain Business Scenarios in SAP S/4HANA Cloud, public edition:
+		 Establish business management methods
+		 Evaluate employee performance
+	 Getting Hired Course:
+		 Develop training materials
+		 Conduct eligibility or selection interviews
+		 Develop instructional materials
+		 Evaluate training programs, instructors or materials
+	 Product Compliance in a Nutshell:
+		 Determine operational compliance with regulations or standards
+		 Prepare regulatory or compliance documentation
+		 Explain regulations, policies or procedures
+		 Establish organisational guidelines or policies
+		 Evaluate staff practices to ensure adherence to regulations
+	 Hire to Retire – Strategy, Implementation, and Operations:
+		 Manage human resources activities
+		 Advise others on human resources topics
+		 Coordinate recruitment activities
+		 Conduct employee training programs
+	 Intrapreneurship – Employee-driven Innovation:
+		 Conduct employee training programs
+		 Advise others on business or operational matters
+	 Basics of Design Testing (Edition Q2/2019):
+		 Evaluate training programs, instructors or materials
+		 Develop training materials
+		 Develop instructional materials
+		 Create technology-based learning materials
+	 Bereit für die Digitalisierung? Digitales Talent Management:
+		 Advise others on human resources topics
+		 Manage human resources activities
+		 Conduct employee training programs
+		 Train managerial staff
+		 Train staff to improve their skills
+		 Administer staff recruitment or hiring activities
+Skills for Job 223
+Advise educators on curricula, instructional methods or policies
+Assess educational needs of students
+Create technology-based learning materials
+Develop instructional materials
+Develop instructional objectives
+Edit documents
+Modify teaching methods or materials to accommodate student needs
+Research topics in area of expertise
+Teach others to use technology or equipment
+Conduct opinion surveys or needs assessments
+Conduct employee training programs
+Evaluate training programs, instructors or materials
+Evaluate program effectiveness
+Evaluate employee performance
+Coordinate special events or programs
+Manage human resources activities
+Determine operational compliance with regulations or standards
+Confer with peers to accomplish work
+Develop procedures to evaluate organisational activities
+Prepare operational budgets
+Administer staff recruitment or hiring activities
+Coordinate recruitment activities
+Maintain data in information systems or databases
+Update knowledge of legal or regulatory environments
+Verify application data to determine program eligibility
+Inform individuals or organisations of status or findings
+Review license or permit applications
+Evaluate staff practices to ensure adherence to regulations
+Explain regulations, policies or procedures
+Train managerial staff
+Conduct eligibility or selection interviews
+Advise others on human resources topics
+Discuss business strategies, practices or policies with managers
+Evaluate effectiveness of staff policies or practices
+Prepare operational reports
+Develop training materials
+Train staff to improve their skills
+Advise others on business or operational matters
+Establish business management methods
+Measure effectiveness of business strategies or practices
+Assess risks to business operations
+Organise special events
+Arrange collective bargaining agreements
+Prepare regulatory or compliance documentation
+Present business-related information
+Analyse data to identify or resolve operational problems
+Collect evidence for legal proceedings
+Negotiate agreements to resolve disputes
+Establish organisational guidelines or policies
+Testify at legal or legislative proceedings

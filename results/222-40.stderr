@@ -1,0 +1,8 @@
+2023-10-19 16:45:10.768 WARNING streamlit.runtime.caching.cache_data_api: No runtime found, using MemoryCacheStorageManager
+2023-10-19 16:45:10.869 
+  [33m[1mWarning:[0m to view this Streamlit app on a browser, run it with the following
+  command:
+
+    streamlit run /home/roger/Desktop/doctorat/github/YomaCR/solve.py [ARGUMENTS]
+2023-10-19 16:45:10.869 No runtime found, using MemoryCacheStorageManager
+Warning:  Non-integral bounds for integer variables rounded.

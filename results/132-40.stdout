@@ -1,0 +1,293 @@
+Read instances: 0.20 s
+Generate matrices: 6.89 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 19 04:44:20 PM: Your problem has 4039 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 19 04:44:20 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 19 04:44:20 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 19 04:44:20 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:44:20 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 19 04:44:20 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 19 04:44:20 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 19 04:44:20 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 19 04:44:20 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 19 04:44:20 PM: Applying reduction CPLEX
+(CVXPY) Oct 19 04:44:20 PM: Finished problem compilation (took 7.604e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:44:20 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 4452 rows and 2228 columns.
+MIP Presolve modified 16022 coefficients.
+Aggregator did 64 substitutions.
+Reduced MIP has 3382 rows, 2388 columns, and 50160 nonzeros.
+Reduced MIP has 2387 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.10 sec. (142.96 ticks)
+Found incumbent of value 0.990000 after 0.11 sec. (151.21 ticks)
+Probing fixed 8 vars, tightened 0 bounds.
+Probing time = 0.04 sec. (28.81 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 27 rows and 8 columns.
+MIP Presolve modified 44 coefficients.
+Reduced MIP has 3355 rows, 2367 columns, and 49974 nonzeros.
+Reduced MIP has 2366 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (48.69 ticks)
+Probing time = 0.01 sec. (8.02 ticks)
+Clique table members: 22502.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.15 sec. (94.74 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.3160            68.09%
+      0     0        0.4441    52        0.9900        0.4441      584   55.14%
+*     0+    0                            0.4473        0.4441             0.72%
+      0     0        0.4454    55        0.4473      Cuts: 56      664    0.43%
+      0     0        cutoff              0.4473                    679    0.00%
+Elapsed time = 0.54 sec. (482.12 ticks, tree = 0.01 MB, solutions = 2)
+
+Implied bound cuts applied:  23
+Mixed integer rounding cuts applied:  1
+Zero-half cuts applied:  2
+Lift and project cuts applied:  1
+Gomory fractional cuts applied:  2
+
+Root node processing (before b&c):
+  Real time             =    0.54 sec. (482.46 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.54 sec. (482.46 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:44:21 PM: Problem status: optimal
+(CVXPY) Oct 19 04:44:21 PM: Optimal value: 4.473e-01
+(CVXPY) Oct 19 04:44:21 PM: Compilation took 7.604e-02 seconds
+(CVXPY) Oct 19 04:44:21 PM: Solver (including time spent in interface) took 6.207e-01 seconds
+The optimal value is 0.4473404255319149
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Implement SAP Service Cloud (5.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 1 	 End Period: 1
+Activity: Outlining the Finance Overview in SAP S/4HANA (7.0) 	 Start Period: 1 	 End Period: 1
+Activity: Intrapreneurship – Employee-driven Innovation (4.0) 	 Start Period: 1 	 End Period: 1
+Activity: Product Compliance in a Nutshell (12.0) 	 Start Period: 1 	 End Period: 1
+Activity: SAP Environment, Health, and Safety for Operationa (12.0) 	 Start Period: 1 	 End Period: 2
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 2 	 End Period: 2
+Activity: Get Started with SAP Emarsys Customer Engagement (1.0) 	 Start Period: 2 	 End Period: 2
+Activity: Discover SAP Sales Cloud (6.0) 	 Start Period: 2 	 End Period: 2
+Activity: Bereit für die Digitalisierung? Digitales Talent M (10.0) 	 Start Period: 2 	 End Period: 2
+Activity: Manage Your External Workforce Program with SAP Fi (12.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.54
+Job affinity: 55.319
+Skills per Unit
+	 Initial Activity:
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
+		 Develop organisational methods or procedures
+		 Manage control system activities in organisations
+		 Inspect work environments to ensure safety
+		 Investigate safety of work environment
+		 Consult with others regarding health and safety associated with equipment or facilities
+		 Develop procedures to evaluate organisational activities
+		 Implement organisational process or policy changes
+		 Establish business management methods
+		 Prepare operational progress or status reports
+		 Develop operating strategies, plans or procedures
+		 Direct organisational operations, projects or services
+		 Prepare reports related to compliance matters
+		 Train employees on environmental awareness, conservation or safety topics
+		 Recommend organisational process or policy changes
+		 Develop organisational policies or programs
+		 Manage operations, research or logistics projects
+		 Assess risks to business operations
+		 Manage environmental sustainability projects
+		 Evaluate staff practices to ensure adherence to regulations
+		 Analyse data to inform operational decisions or activities
+		 Communicate organisational information to customers or other stakeholders
+	 Outlining the Finance Overview in SAP S/4HANA:
+		 Prepare financial documents, reports or budgets
+		 Direct financial operations
+		 Analyse financial records to improve budgeting or planning
+		 Prepare reports related to compliance matters
+		 Analyse financial records to improve efficiency
+		 Analyse business or financial data
+		 Prepare operational budgets
+	 Get Started with SAP Emarsys Customer Engagement:
+		 Develop marketing plans or strategies
+	 Discover SAP Sales Cloud:
+		 Direct sales, marketing or customer service activities
+		 Analyse data to inform operational decisions or activities
+		 Negotiate sales or lease agreements for goods or services
+		 Develop operating strategies, plans or procedures
+		 Negotiate contracts for transportation, distribution or logistics services
+		 Analyse data to assess operational or project effectiveness
+	 Implement SAP Service Cloud:
+		 Develop operating strategies, plans or procedures
+		 Direct administrative or support services
+		 Investigate system, equipment or product failures
+		 Direct organisational operations, projects or services
+		 Develop emergency procedures
+		 Establish organisational guidelines or policies
+		 Consult with others regarding health and safety associated with equipment or facilities
+	 Discover SAP S/4HANA Asset Management and SAP S/4HANA Service:
+		 Direct administrative or support services
+		 Direct organisational operations, projects or services
+		 Manage control system activities in organisations
+		 Establish business management methods
+		 Manage operations, research or logistics projects
+		 Develop operating strategies, plans or procedures
+		 Assess risks to business operations
+		 Advise others on business or operational matters
+		 Prepare operational budgets
+		 Determine resource needs
+		 Prepare operational progress or status reports
+		 Consult with others regarding health and safety associated with equipment or facilities
+		 Hire staff
+	 Product Compliance in a Nutshell:
+		 Determine operational compliance with regulations or standards
+		 Prepare reports related to compliance matters
+		 Monitor organisational compliance with regulations
+		 Establish organisational guidelines or policies
+		 Evaluate staff practices to ensure adherence to regulations
+	 Manage Your External Workforce Program with SAP Fieldglass:
+		 Conduct employee training programs
+		 Represent the organisation in external relations
+		 Coordinate operational activities with external stakeholders
+		 Direct organisational operations, projects or services
+		 Develop organisational policies or programs
+		 Communicate organisational information to customers or other stakeholders
+		 Evaluate training programs, instructors or materials
+	 SAP Environment, Health, and Safety for Operational Sustainability:
+		 Inspect work environments to ensure safety
+		 Investigate safety of work environment
+		 Consult with others regarding health and safety associated with equipment or facilities
+		 Train employees on environmental awareness, conservation or safety topics
+		 Advise communities or institutions regarding health or safety issues
+		 Evaluate staff practices to ensure adherence to regulations
+		 Manage environmental sustainability projects
+		 Investigate industrial or transportation accidents
+		 Assess risks to business operations
+	 Intrapreneurship – Employee-driven Innovation:
+		 Establish interpersonal business relationships to facilitate work activities
+		 Conduct employee training programs
+		 Develop operating strategies, plans or procedures
+		 Advise others on business or operational matters
+	 Bereit für die Digitalisierung? Digitales Talent Management:
+		 Advise others on human resources topics
+		 Manage human resources activities
+		 Conduct employee training programs
+		 Train managerial staff
+		 Analyse data to inform staffing decisions
+Skills for Job 132
+Develop organisational policies or programs
+Communicate organisational policies and procedures
+Direct financial operations
+Direct organisational operations, projects or services
+Implement organisational process or policy changes
+Direct sales, marketing or customer service activities
+Confer with peers to accomplish work
+Analyse data to assess operational or project effectiveness
+Manage human resources activities
+Analyse data to inform operational decisions or activities
+Manage construction activities
+Prepare staff schedules or work assignments
+Resolve employee or contractor problems
+Negotiate contracts for transportation, distribution or logistics services
+Direct administrative or support services
+Draft legislation or regulations
+Present information to the public
+Prepare operational budgets
+Advise others on legal or regulatory compliance matters
+Represent the organisation in external relations
+Liaise between departments or other groups to improve function or communication
+Coordinate special events or programs
+Prepare financial documents, reports or budgets
+Prepare operational progress or status reports
+Coordinate with external parties to exchange information
+Promote goods, services, or programs
+Advise communities or institutions regarding health or safety issues
+Analyse data to identify trends or relationships among variables
+Analyse operational data to evaluate operations, processes or products
+Consult with others regarding health and safety associated with equipment or facilities
+Design public or employee health programs
+Develop emergency procedures
+Inspect work environments to ensure safety
+Investigate safety of work environment
+Investigate system, equipment or product failures
+Train employees on environmental awareness, conservation or safety topics
+Provide basic information to guests, visitors, or clients
+Monitor performance of organisational members or partners
+Analyse financial records to improve efficiency
+Determine pricing or monetary policies
+Develop marketing plans or strategies
+Plan facility layouts or designs
+Develop organisational goals or objectives
+Manage environmental sustainability projects
+Conduct employee training programs
+Hire staff
+Recommend organisational process or policy changes
+Determine resource needs
+Coordinate operational activities with external stakeholders
+Develop operating strategies, plans or procedures
+Establish interpersonal business relationships to facilitate work activities
+Communicate organisational information to customers or other stakeholders
+Manage operations, research or logistics projects
+Develop organisational methods or procedures
+Recruit staff
+Evaluate employee performance
+Supervise employees
+Approve expenditures
+Prepare proposals or grant applications to obtain project funding
+Administer compensation or benefits programs
+Negotiate labour disputes
+Compile operational data
+Maintain staff records
+Interview employees, customers or others to collect information
+Maintain knowledge of current developments in area of expertise
+Analyse data to inform staffing decisions
+Estimate labour requirements
+Investigate industrial or transportation accidents
+Prepare reports related to compliance matters
+Advise others on career or personal development
+Negotiate sales or lease agreements for goods or services
+Advise others on business or operational matters
+Collect payments for goods or services
+Analyse business or financial data
+Monitor flow of cash or other resources
+Monitor organisational compliance with regulations
+Analyse financial records to improve budgeting or planning
+Manage control system activities in organisations
+Conduct financial or regulatory audits
+Advise others on human resources topics
+Arrange collective bargaining agreements
+Assess risks to business operations
+Establish business management methods
+Establish organisational guidelines or policies
+Evaluate staff practices to ensure adherence to regulations
+Measure effectiveness of business strategies or practices
+Negotiate agreements to resolve disputes
+Train managerial staff
+Update knowledge of legal or regulatory environments
+Conduct opinion surveys or needs assessments
+Determine operational compliance with regulations or standards
+Develop procedures to evaluate organisational activities
+Evaluate program effectiveness
+Evaluate training programs, instructors or materials

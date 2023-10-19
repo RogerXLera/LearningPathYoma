@@ -1,0 +1,198 @@
+Read instances: 0.23 s
+Generate matrices: 7.22 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 19 04:44:58 PM: Your problem has 4003 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 19 04:44:58 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 19 04:44:58 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 19 04:44:58 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:44:58 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 19 04:44:58 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 19 04:44:58 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 19 04:44:58 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 19 04:44:58 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 19 04:44:58 PM: Applying reduction CPLEX
+(CVXPY) Oct 19 04:44:58 PM: Finished problem compilation (took 7.386e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:44:58 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 4382 rows and 2206 columns.
+MIP Presolve modified 16022 coefficients.
+Aggregator did 32 substitutions.
+Reduced MIP has 3376 rows, 2382 columns, and 50136 nonzeros.
+Reduced MIP has 2381 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.11 sec. (141.66 ticks)
+Found incumbent of value 0.990000 after 0.12 sec. (149.89 ticks)
+Probing fixed 8 vars, tightened 0 bounds.
+Probing time = 0.03 sec. (29.56 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 21 rows and 8 columns.
+MIP Presolve modified 44 coefficients.
+Reduced MIP has 3355 rows, 2367 columns, and 49974 nonzeros.
+Reduced MIP has 2366 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.05 sec. (48.76 ticks)
+Probing time = 0.01 sec. (8.09 ticks)
+Clique table members: 22495.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.05 sec. (36.66 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.2700            72.73%
+      0     0        0.3574    62        0.9900        0.3574      204   63.89%
+*     0+    0                            0.3650        0.3574             2.07%
+      0     0        0.3625    43        0.3650      Cuts: 84      286    0.68%
+      0     0        cutoff              0.3650                    627    0.00%
+Elapsed time = 0.44 sec. (414.37 ticks, tree = 0.01 MB, solutions = 2)
+
+GUB cover cuts applied:  6
+Clique cuts applied:  5
+Implied bound cuts applied:  2
+Flow cuts applied:  1
+Mixed integer rounding cuts applied:  3
+Zero-half cuts applied:  16
+Lift and project cuts applied:  5
+Gomory fractional cuts applied:  7
+
+Root node processing (before b&c):
+  Real time             =    0.44 sec. (414.70 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.44 sec. (414.70 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:44:59 PM: Problem status: optimal
+(CVXPY) Oct 19 04:44:59 PM: Optimal value: 3.650e-01
+(CVXPY) Oct 19 04:44:59 PM: Compilation took 7.386e-02 seconds
+(CVXPY) Oct 19 04:44:59 PM: Solver (including time spent in interface) took 5.239e-01 seconds
+The optimal value is 0.365
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: SAP Environment, Health, and Safety for Operationa (12.0) 	 Start Period: 1 	 End Period: 1
+Activity: Implement SAP Service Cloud (5.0) 	 Start Period: 1 	 End Period: 1
+Activity: Explore Supply Chain Business Scenarios in SAP S/4 (10.0) 	 Start Period: 1 	 End Period: 1
+Activity: Product Compliance in a Nutshell (12.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 1 	 End Period: 2
+Activity: Get Started with SAP Emarsys Customer Engagement (1.0) 	 Start Period: 2 	 End Period: 2
+Activity: Discover SAP Sales Cloud (6.0) 	 Start Period: 2 	 End Period: 2
+Activity: Outlining the Finance Overview in SAP S/4HANA (7.0) 	 Start Period: 2 	 End Period: 2
+Activity: Confidential Communication in the Internet (10.0) 	 Start Period: 2 	 End Period: 2
+Activity: Hire to Retire – Strategy, Implementation, and Ope (9.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.45
+Job affinity: 63.636
+Skills per Unit
+	 Initial Activity:
+	 Outlining the Finance Overview in SAP S/4HANA:
+		 Maintain records of sales or other business transactions
+		 Prepare operational reports or records
+		 Prepare financial documents, reports or budgets
+	 Get Started with SAP Emarsys Customer Engagement:
+		 Develop marketing plans or strategies
+		 Coordinate sales campaigns
+	 Discover SAP Sales Cloud:
+		 Monitor sales activities
+		 Answer customer questions about goods or services
+		 Coordinate sales campaigns
+		 Train sales staff
+		 Maintain knowledge of business operations
+		 Supervise sales or support staff
+	 Implement SAP Service Cloud:
+		 Establish operational policies
+		 Direct administrative or support services
+		 Develop plans for programs or services
+		 Direct organisational operations, projects or services
+		 Answer customer questions about goods or services
+		 Inspect equipment to ensure proper functioning
+		 Maintain knowledge of business operations
+		 Supervise service workers
+	 Explore Supply Chain Business Scenarios in SAP S/4HANA Cloud, public edition:
+		 Procure stocks of merchandise or supplies
+		 Monitor inventories
+		 Evaluate employee performance
+		 Direct organisational operations, projects or services
+	 Discover SAP S/4HANA Asset Management and SAP S/4HANA Service:
+		 Direct administrative or support services
+		 Supervise service workers
+		 Direct organisational operations, projects or services
+		 Train service staff
+		 Resolve customer complaints or problems
+		 Establish operational policies
+		 Maintain knowledge of business operations
+		 Develop plans for programs or services
+		 Answer customer questions about goods or services
+		 Prepare operational progress or status reports
+		 Hire staff
+	 Product Compliance in a Nutshell:
+		 Explain regulations, policies or procedures
+	 Hire to Retire – Strategy, Implementation, and Operations:
+		 Perform human resources activities
+		 Conduct employee training programs
+	 Confidential Communication in the Internet:
+		 Coordinate with external parties to exchange information
+	 SAP Environment, Health, and Safety for Operational Sustainability:
+		 Clean work areas
+Skills for Job 142
+Establish operational policies
+Examine condition of property or products
+Supervise sales or support staff
+Assign duties or work schedules to employees
+Monitor sales activities
+Train sales staff
+Answer customer questions about goods or services
+Greet customers, patrons or visitors
+Monitor work areas to provide security
+Maintain records of sales or other business transactions
+Monitor inventories
+Set up merchandise displays
+Develop marketing plans or strategies
+Monitor market conditions or trends
+Clean work areas
+Sell goods or services
+Procure stocks of merchandise or supplies
+Prepare financial documents, reports or budgets
+Coordinate sales campaigns
+Direct organisational operations, projects or services
+Prepare staff schedules or work assignments
+Resolve customer complaints or problems
+Prepare operational progress or status reports
+Collect payments for goods or services
+Direct administrative or support services
+Provide basic information to guests, visitors, or clients
+Negotiate labour disputes
+Conduct employee training programs
+Hire staff
+Coordinate with external parties to exchange information
+Evaluate employee performance
+Supervise service workers
+Explain regulations, policies or procedures
+Provide attraction or event information to patrons
+Promote goods, services, or programs
+Maintain knowledge of business operations
+Develop plans for programs or services
+Order materials, supplies, or equipment
+Inspect equipment to ensure proper functioning
+Inspect facilities
+Prepare operational reports or records
+Perform human resources activities
+Train service staff
+Maintain professional knowledge or certifications

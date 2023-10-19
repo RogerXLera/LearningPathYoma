@@ -1,0 +1,276 @@
+Read instances: 0.19 s
+Generate matrices: 7.32 s
+===============================================================================
+                                     CVXPY                                     
+                                     v1.3.0                                    
+===============================================================================
+(CVXPY) Oct 19 04:45:18 PM: Your problem has 4039 variables, 19 constraints, and 0 parameters.
+(CVXPY) Oct 19 04:45:18 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Oct 19 04:45:18 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Oct 19 04:45:18 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:45:18 PM: Compiling problem (target solver=CPLEX).
+(CVXPY) Oct 19 04:45:18 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Oct 19 04:45:18 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Oct 19 04:45:18 PM: Applying reduction Qp2SymbolicQp
+(CVXPY) Oct 19 04:45:18 PM: Applying reduction QpMatrixStuffing
+(CVXPY) Oct 19 04:45:18 PM: Applying reduction CPLEX
+(CVXPY) Oct 19 04:45:18 PM: Finished problem compilation (took 7.306e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:45:18 PM: Invoking solver CPLEX  to obtain a solution.
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Read_DataCheck                          1
+CPXPARAM_TimeLimit                               30
+Tried aggregator 2 times.
+MIP Presolve eliminated 4478 rows and 2248 columns.
+MIP Presolve modified 16022 coefficients.
+Aggregator did 44 substitutions.
+Reduced MIP has 3376 rows, 2382 columns, and 50136 nonzeros.
+Reduced MIP has 2381 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.11 sec. (142.10 ticks)
+Found incumbent of value 0.990000 after 0.12 sec. (150.34 ticks)
+Probing fixed 8 vars, tightened 0 bounds.
+Probing time = 0.03 sec. (29.45 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 21 rows and 8 columns.
+MIP Presolve modified 44 coefficients.
+Reduced MIP has 3355 rows, 2367 columns, and 49974 nonzeros.
+Reduced MIP has 2366 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.05 sec. (48.70 ticks)
+Probing time = 0.01 sec. (8.10 ticks)
+Clique table members: 22497.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.13 sec. (91.30 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.9900        0.4014            59.46%
+      0     0        0.4684    87        0.9900        0.4684      634   52.69%
+*     0+    0                            0.4732        0.4684             1.03%
+      0     0        0.4700    66        0.4732     Cuts: 147      813    0.68%
+      0     0        0.4716    58        0.4732      Cuts: 32      835    0.35%
+
+Repeating presolve.
+Tried aggregator 2 times.
+MIP Presolve eliminated 3190 rows and 2218 columns.
+MIP Presolve modified 3308 coefficients.
+Aggregator did 2 substitutions.
+Reduced MIP has 155 rows, 123 columns, and 1505 nonzeros.
+Reduced MIP has 122 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (15.24 ticks)
+Probing fixed 10 vars, tightened 0 bounds.
+Probing changed sense of 12 constraints.
+Probing time = 0.00 sec. (0.39 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 62 rows and 36 columns.
+MIP Presolve modified 292 coefficients.
+Aggregator did 4 substitutions.
+Reduced MIP has 89 rows, 83 columns, and 893 nonzeros.
+Reduced MIP has 82 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.60 ticks)
+Probing time = 0.00 sec. (0.31 ticks)
+Cover probing fixed 0 vars, tightened 1 bounds.
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 15 rows and 1 columns.
+Reduced MIP has 74 rows, 82 columns, and 861 nonzeros.
+Reduced MIP has 82 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.65 ticks)
+Represolve time = 0.02 sec. (24.37 ticks)
+Probing time = 0.00 sec. (0.28 ticks)
+Clique table members: 232.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.00 sec. (0.44 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.4732        0.4716             0.35%
+      0     0        cutoff              0.4732                    868    0.00%
+
+GUB cover cuts applied:  5
+Clique cuts applied:  1
+Implied bound cuts applied:  4
+Flow cuts applied:  1
+Mixed integer rounding cuts applied:  1
+Zero-half cuts applied:  4
+Lift and project cuts applied:  1
+Gomory fractional cuts applied:  2
+
+Root node processing (before b&c):
+  Real time             =    0.66 sec. (528.53 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.66 sec. (528.53 ticks)
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Oct 19 04:45:19 PM: Problem status: optimal
+(CVXPY) Oct 19 04:45:19 PM: Optimal value: 4.732e-01
+(CVXPY) Oct 19 04:45:19 PM: Compilation took 7.306e-02 seconds
+(CVXPY) Oct 19 04:45:19 PM: Solver (including time spent in interface) took 7.441e-01 seconds
+The optimal value is 0.47324324324324324
+###############################################
+################## SCHEDULE ####################
+###############################################
+Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
+Activity: Explore Supply Chain Business Scenarios in SAP S/4 (10.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 1
+Activity: Getting Hired Course (13.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover SAP Sales Cloud (6.0) 	 Start Period: 1 	 End Period: 1
+Activity: Outlining the Finance Overview in SAP S/4HANA (7.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 1 	 End Period: 2
+Activity: Develop Full-Stack Applications Using Productivity (8.0) 	 Start Period: 2 	 End Period: 2
+Activity: Intrapreneurship – Employee-driven Innovation (4.0) 	 Start Period: 2 	 End Period: 2
+Activity: Intelligent Spend Management Using SAP Concur (Rep (8.0) 	 Start Period: 2 	 End Period: 2
+Activity: Product Compliance in a Nutshell (12.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.66
+Job affinity: 52.703
+Skills per Unit
+	 Initial Activity:
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
+		 Monitor organisational procedures to ensure proper functioning
+		 Implement organisational process or policy changes
+		 Direct organisational operations, projects or services
+		 Monitor external affairs or events affecting business operations
+		 Develop organisational policies or programs
+		 Assess risks to business operations
+		 Maintain data in information systems or databases
+		 Analyse data to inform operational decisions or activities
+		 Communicate organisational information to customers or other stakeholders
+	 Outlining the Finance Overview in SAP S/4HANA:
+		 Reconcile records of sales or other financial transactions
+		 Maintain records of sales or other business transactions
+		 Prepare financial documents, reports or budgets
+		 Examine financial records
+		 Direct financial operations
+		 Gather financial records
+		 Analyse business or financial data
+		 Present business-related information
+		 Execute sales or other financial transactions
+	 Discover SAP Sales Cloud:
+		 Prepare sales or other contracts
+		 Direct sales, marketing or customer service activities
+		 Analyse data to inform operational decisions or activities
+		 Monitor sales activities
+		 Execute sales or other financial transactions
+		 Negotiate prices or other sales terms
+		 Share sales-related or market information with colleagues
+		 Develop promotional materials
+		 Supervise sales or support staff
+	 Explore Supply Chain Business Scenarios in SAP S/4HANA Cloud, public edition:
+		 Evaluate employee performance
+		 Execute sales or other financial transactions
+		 Direct organisational operations, projects or services
+	 Discover SAP S/4HANA Asset Management and SAP S/4HANA Service:
+		 Direct organisational operations, projects or services
+		 Correspond with customers to answer questions or resolve complaints
+		 Confer with staff to coordinate business operations
+		 Assess risks to business operations
+		 Advise others on business or operational matters
+		 Hire staff
+	 Develop Full-Stack Applications Using Productivity Tools in SAP Business Application Studio:
+		 Develop software applications
+	 Getting Hired Course:
+		 Develop professional relationships or networks
+		 Conduct eligibility or selection interviews
+	 Product Compliance in a Nutshell:
+		 Determine operational compliance with regulations or standards
+		 Examine marketing materials to ensure compliance with policies or regulations
+		 Establish organisational guidelines or policies
+	 Intelligent Spend Management Using SAP Concur (Repeat):
+		 Implement financial decisions
+		 Prepare financial documents, reports or budgets
+		 Direct organisational operations, projects or services
+		 Approve expenditures
+	 Intrapreneurship – Employee-driven Innovation:
+		 Advise others on business or operational matters
+		 Develop business relationships
+Skills for Job 222
+Supervise employees
+Gather financial records
+Compute debt repayment schedules
+Interpret financial information for others
+Assess financial status of clients
+Interview clients to gather financial information
+Market goods, services or events
+Verify accuracy of financial information
+Authorise financial actions
+Negotiate agreements to resolve disputes
+Submit financial applications
+Develop financial plans for clients
+Update professional knowledge
+Maintain data in information systems or databases
+Examine financial records
+Correspond with customers to answer questions or resolve complaints
+Analyse market conditions or trends
+Confer with staff to coordinate business operations
+Establish organisational guidelines or policies
+Prepare financial documents, reports or budgets
+Recommend investments to clients
+Train staff to improve their skills
+Conduct eligibility or selection interviews
+Communicate with government agencies
+Execute sales or other financial transactions
+Supervise sales or support staff
+Monitor sales activities
+Prepare sales or other contracts
+Review accuracy of sales or other transactions
+Sell goods or services
+Negotiate prices or other sales terms
+Maintain records of sales or other business transactions
+Reconcile records of sales or other financial transactions
+Share sales-related or market information with colleagues
+Develop professional relationships or networks
+Monitor market conditions or trends
+Identify investment opportunities or strategies
+Direct financial operations
+Analyse data to inform operational decisions or activities
+Maintain knowledge of current developments in area of expertise
+Approve expenditures
+Advise others on business or operational matters
+Determine operational compliance with regulations or standards
+Communicate organisational information to customers or other stakeholders
+Examine financial records to ensure compliance with policies or regulations
+Monitor external affairs or events affecting business operations
+Direct sales, marketing or customer service activities
+Coordinate with external parties to exchange information
+Identify strategic business investment opportunities
+Monitor organisational procedures to ensure proper functioning
+Examine marketing materials to ensure compliance with policies or regulations
+Direct organisational operations, projects or services
+Evaluate employee performance
+Develop promotional materials
+Apply and maintain information security controls as required by policies or risk assessments
+Implement organisational process or policy changes
+Develop organisational policies or programs
+Hire staff
+Apply mathematical models of financial or business conditions
+Apply mathematical principles or statistical approaches to solve problems in scientific or applied fields
+Apply machine learning techniques to data
+Develop software applications
+Analyse business or financial data
+Determine the value of goods or services
+Analyse industry trends
+Advise others on financial matters
+Analyse risks related to investments in green technology
+Assess risks to business operations
+Confer with others about financial matters
+Present business-related information
+Develop business relationships
+Educate clients on financial planning topics
+Implement financial decisions
+Disburse funds from clients' accounts to creditors
