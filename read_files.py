@@ -152,10 +152,10 @@ def job_field_affinity(J,skills,n_jobs):
         for s in j.skills:
             if s.name in skills:
                 ja_counter += 1
-        jobs += [{'Jobs':j.name,'Skill Learning (%)':ja_counter/l_skills*100}]
+        jobs += [{'Jobs':j.name,'Percentage of Required Skills Acquired with this Pathway (%)':ja_counter/l_skills*100}]
 
     def order_dict(e):
-        return e['Skill Learning (%)']
+        return e['Percentage of Required Skills Acquired with this Pathway (%)']
     
     jobs.sort(reverse=False,key=order_dict)
 
