@@ -77,15 +77,15 @@ if 'dedication' in st.session_state.keys() and 'field' in st.session_state.keys(
 
     st.write(df)
 
-    st.write(f"#### Skill Learning: {fa:.0f} %")
+    st.write(f"#### Percentage of Required Skills Acquired with this Pathway: {fa:.0f} %")
 
-    df_fa = pd.DataFrame({'name':['Learnt','Not learnt'],'percentage':[fa,100-fa]})
-    pie = px.pie(df_fa, values='percentage', names='name', title='Skill Learning')
+    df_fa = pd.DataFrame({'name':['Skills Learnt','Skills Not learnt'],'percentage':[fa,100-fa]})
+    pie = px.pie(df_fa, values='percentage', names='name')
     st.plotly_chart(pie)
 
-    st.write(f"#### Field Jobs")
+    st.write(f"#### Best Covered Jobs within this Field")
     ja_df = job_field_affinity(J,skills,5)
-    bar = px.bar(ja_df, x='Skill Learning (%)', y='Jobs', title='Learning Jobs',orientation='h')
+    bar = px.bar(ja_df, x='Percentage of Required Skills Acquired with this Pathway (%)', y='Jobs', orientation='h')
     st.plotly_chart(bar)
 
 
