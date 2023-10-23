@@ -35,7 +35,7 @@ def process_line(line):
     fi = int(line.split(detect_ft)[1].split(' ')[1])
     h = float(line.split(')')[-2].split('(')[-1])
 
-    return name,st,fi,h
+    return name,st,fi,int(h)
 
 
 def read_path(file_path):
@@ -64,7 +64,7 @@ def read_path(file_path):
                 fa = float(row.split(detect_fa)[1].split(' ')[1])
                 
     
-    return pd.DataFrame({'Course':name[1:],'Start Week':st[1:],"End Week":fi[1:],"Dedication (h)":h[1:]}),fa
+    return pd.DataFrame({'Course':name[1:],'Start Week':st[1:],"End Week":fi[1:],"Study Time (h)":h[1:]}),fa
 
 def read_job(file_name):
     
@@ -152,10 +152,10 @@ def job_field_affinity(J,skills,n_jobs):
         for s in j.skills:
             if s.name in skills:
                 ja_counter += 1
-        jobs += [{'Jobs':j.name,'Percentage of Required Skills Acquired with this Pathway (%)':ja_counter/l_skills*100}]
+        jobs += [{'Jobs':j.name,'ja':ja_counter/l_skills*100}]
 
     def order_dict(e):
-        return e['Percentage of Required Skills Acquired with this Pathway (%)']
+        return e['ja']
     
     jobs.sort(reverse=False,key=order_dict)
 
