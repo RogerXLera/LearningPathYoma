@@ -7,6 +7,98 @@ import pandas as pd
 import os
 from definitions import *
 
+def skill_extraction(line_,a,object_="Activity"):
+    """
+        This function extracts the skills aquired and the prerequisites of a given activity
+            INPUT: line_ (of the dataframe)
+                    a (activity object)
+    """
+    # we start with the skills
+    if object_ == "Activity":
+        try:
+            #skills = line_['Skills Acquired'].split(',')
+            #skills_level = line_['Level Skills Acquired'].split(',')
+            skills = line_['Skills Acquired'].split(';;')
+            skills_level = line_['Prob Skills Acquired'].split(';;')
+        except:
+            skills = []
+            skills_level = []
+        try:
+            #prereq = line_['Skills Required'].split(',')
+            #prereq_level = line_['Level Skills Required'].split(',')
+            prereq = line_['Skills Required'].split(';;')
+            prereq_level = line_['Prob Skills Required'].split(';;')
+        except:
+            prereq = []
+            prereq_level = []
+    else:
+        try:
+            skills = line_['Skills Required'].split(';;')
+            skills_level = line_['Prob Skills Required'].split(';;')
+        except:
+            skills = []
+            skills_level = []
+        prereq = []
+        prereq_level = []
+    
+    if len(skills) != len(skills_level):
+        raise ValueError(f"Different number of skills ({len(skills)}) and levels {len(skills_level)} for activity {a.name}.")
+    for i in range(len(skills)):
+        s = Skill(name=skills[i],level=1,probability=float(skills_level[i])) #creating a skill object
+        s.add_skill(a.skills)
+
+    if len(prereq) != len(prereq_level):
+        raise ValueError(f"Different number of skills ({len(prereq)}) and levels {len(prereq_level)} for activity {a.name}.")
+    for i in range(len(prereq)):
+        s = Skill(name=prereq[i],level=1,probability=float(prereq_level[i])) #creating a skill object
+        s.add_skill(a.prerequisites)
+
+    return None
+
+def read_activities(file_path):
+    """
+        This function reads the file containing the activities and 
+    """
+    df = pd.read_csv(file_path,sep=',') #store file in pandas.DataFrame
+    provider = file_path.split('/')[-1].split('.')[0]
+    activities = []
+    for i in range(len(df)):
+
+        line_ = df.iloc[i] #df line
+        id_ = line_['ID']
+        name_ = line_['Title']
+        try:
+            time_ = float(line_['Hours dedicated'])
+        except:
+            time_ = 10.0
+        if type(line_['Money']) == str and len(line_['Money']) == 0:
+            cost_= 0.0
+        else:
+            cost_= float(line_['Money'])
+        url_ = line_['URL']
+        if cost_ <= 0:
+            course_ = True
+        else:
+            course_ = False
+        a = Activity(id=id_,name=name_,time=time_,cost=cost_,course=course_,url=url_,provider=provider) #create activity object
+        skill_extraction(line_,a)
+        activities.append(a)
+    
+    return activities
+
+def read_providers(folder_path):
+    """
+        This function saves all the activities from all providers
+    """
+    files = os.listdir(folder_path)
+    A = [Activity(id=0,name='Initial Activity',cost=0)]
+    for file in files:
+        file_path = os.path.join(folder_path,file)
+        activities = read_activities(file_path)
+        A += activities
+
+    return A
+
 
 def read_fields(field_path):
     """
@@ -35,10 +127,21 @@ def process_line(line):
     fi = int(line.split(detect_ft)[1].split(' ')[1])
     h = float(line.split(')')[-2].split('(')[-1])
 
-    return name,st,fi,int(h)
+    return name[1:-1],st,fi,int(h)
 
+def select_activity(name,A):
 
-def read_path(file_path):
+    len_ = len(name)
+    for a in A:
+        if name == a.name[:len_]:
+            return a
+
+    raise ValueError(f"{name} does not correspond to any activity.")
+
+def create_link(name,url):
+    return f'<a target="_blank" href="{url}">{name}</a>'
+
+def read_path(file_path,A):
     """
     This function reads the learning paths and returns a pd.Dataframe and the field affinity
     """
@@ -50,21 +153,37 @@ def read_path(file_path):
         st = []
         fi = []
         h = []
+        url = []
         fa = 0
         detect_act = "Activity:"
         detect_fa = "Job affinity:"
         for row in f_lines:
             if row[:len(detect_act)] == detect_act:
                 nam,s,fi_,h_ = process_line(row)
-                name += [nam]
+                a = select_activity(nam,A)
+                #name += [a.name]
+                link = create_link(a.name,a.url)
+                name += [link]
                 st += [s]
                 fi += [fi_]
                 h += [h_]
+                url += [a.url]
             elif row[:len(detect_fa)] == detect_fa:
                 fa = float(row.split(detect_fa)[1].split(' ')[1])
                 
     
+    #return pd.DataFrame({'Course':name[1:],'Start Week':st[1:],"End Week":fi[1:],"Study Time (h)":h[1:],"URL":url[1:]}),fa
     return pd.DataFrame({'Course':name[1:],'Start Week':st[1:],"End Week":fi[1:],"Study Time (h)":h[1:]}),fa
+    
+    #return {'Course':name[1:],'Start Week':st[1:],"End Week":fi[1:],"Study Time (h)":h[1:]},fa
+
+
+def print_dataframe(df):
+    """
+    This function prints the DataFrame
+    """
+    #col1,col2,col3,col4 = st.columns(4)
+    return None
 
 def read_job(file_name):
     

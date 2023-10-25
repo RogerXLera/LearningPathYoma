@@ -15,11 +15,16 @@ path_ = os.getcwd()
 wd_ = 'results'
 fields_path = os.path.join(path_,'field_dict.csv')
 results_path = os.path.join(path_,'results')
+courses_path = os.path.join(path_,'courses')
+
 
 try:
     field_dict = st.session_state['fields']
+    A = st.session_state['activities']
 except:
+    A = read_providers(courses_path)
     field_dict = read_fields(fields_path)
+    st.session_state['activities'] = A   
     st.session_state['fields'] = field_dict    
 
 
@@ -74,7 +79,7 @@ if 'dedication' in st.session_state.keys() and 'field' in st.session_state.keys(
 
     file_path = os.path.join(results_path,f"{field_dict[fie]}-{ded_dict[ded]}.stdout")
 
-    df,fa = read_path(file_path)
+    df,fa = read_path(file_path,A)
     J = read_field(f'{field_dict[fie]}')
     skills = read_skills(file_path)
 
@@ -93,7 +98,12 @@ if 'dedication' in st.session_state.keys() and 'field' in st.session_state.keys(
 
     # Display the DataFrame with custom styling
     st.markdown(css, unsafe_allow_html=True)
-    st.dataframe(df,hide_index=True)
+    #st.dataframe(df,hide_index=True)
+
+    styler = df.style.hide_index()
+    
+    st.write(styler.to_html(escape=False, index=False), unsafe_allow_html=True)
+
 
     st.write(f"##### Skills required by this employment category that you would acquire if you follow this learning pathway: {fa:.0f} %")
 
