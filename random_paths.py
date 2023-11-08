@@ -46,6 +46,19 @@ def random_path(A,seed,dedication_week=5,n_weeks=2):
     
     return pd.DataFrame({'Course':name,'Start Week':st,"End Week":fi,"Study Time (h)":h})
 
+def change_field(selected,fields,seed=0):
+
+    rd.seed(seed)
+    new_fields = []
+    i = 0
+    while i < len(selected):
+        index = rd.randint(0,len(fields)-1)
+        if fields[index] not in selected and fields[index] not in new_fields:
+            new_fields.append(fields[index])
+            i += 1
+
+    return new_fields
+
 
 
 if __name__ == '__main__':
@@ -58,4 +71,5 @@ if __name__ == '__main__':
 
     A = read_providers(courses_path)
     r = random_path(A,0,dedication_week=5,n_weeks=2)
+    r = change_field(list(range(3)),list(range(10)),seed=5)
     print(r)
