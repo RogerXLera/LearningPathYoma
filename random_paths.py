@@ -8,6 +8,7 @@ import os
 from definitions import *
 import numpy as np
 import random as rd
+from read_files import *
 
 def random_path(A,seed,dedication_week=5,n_weeks=2):
     """
@@ -33,14 +34,14 @@ def random_path(A,seed,dedication_week=5,n_weeks=2):
         dedication_counter += a.time
         dedication_counter_week += a.time
         link = create_link(a.name,a.url)
-        #name += [link]
-        name += [a.name]
+        name += [link]
+        #name += [a.name]
         st += [current_week]
         while dedication_counter_week >= dedication_week:
             dedication_counter_week -= dedication_week
             current_week += 1
         fi += [current_week]
-        h += [a.time]
+        h += [int(a.time)]
         if total_dedication == dedication_counter:
             break
     

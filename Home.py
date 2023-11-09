@@ -7,9 +7,52 @@ import numpy as np
 import time
 import csv
 from read_files import *
+from random_paths import *
 import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
+
+
+def load_secrets(id_):
+    user_info = st.secrets.user_db
+
+    if id_ in user_info.user_id:
+        index_ = user_info.user_id.index(id_)
+        name_ = user_info.user_name[index_]
+        group_ = user_info.user_group[index_]
+        field_ = user_info.user_field[index_]
+        return name_,group_,field_
+    else:
+        return None,None,None
+    
+def pie_chart(fa):
+    st.write(f"##### Skills required by this employment category that you would acquire if you follow this learning pathway: {fa:.0f} %")
+    df_fa = pd.DataFrame({'name':['Learnt Skills','Unlearnt Skills'],'percentage':[fa,100-fa]})
+    pie = px.pie(df_fa, values='percentage', names='name',color='name',
+                color_discrete_map={'Learnt Skills':'green',
+                                'Unlearnt Skills':'red'},
+                category_orders={'name':['Learnt Skills','Unlearnt Skills']})
+    pie = px.pie(df_fa, values='percentage', names='name',color='name',
+                category_orders={'name':['Learnt Skills','Unlearnt Skills']})
+    pie.update_layout(legend=dict(font=dict(size=16)),
+                    font_size=16)
+    
+    st.plotly_chart(pie)
+    return None
+
+def bar_chart(J,skills,n_jobs=5):
+    st.write(f"##### Jobs for which you would be more employable within this employment category")
+    ja_df = job_field_affinity(J,skills,n_jobs)
+    bar = px.bar(ja_df, x='ja', y='Jobs', orientation='h')
+    bar.update_xaxes(title_text = "Percentage of Required Skills Acquired with this Pathway (%)",
+                    range=[0, 100],
+                    tickfont=dict(size=14))
+    bar.update_yaxes(tickfont=dict(size=14))
+    bar.update_layout(yaxis=dict(title=dict(font=dict(size=16))),
+                    xaxis=dict(title=dict(font=dict(size=16))))
+    st.plotly_chart(bar)
+    return None
+
 
 path_ = os.getcwd()
 wd_ = 'results'
@@ -17,26 +60,6 @@ fields_path = os.path.join(path_,'field_dict.csv')
 results_path = os.path.join(path_,'results')
 courses_path = os.path.join(path_,'courses')
 
-
-try:
-    field_dict = st.session_state['fields']
-    A = st.session_state['activities']
-except:
-    A = read_providers(courses_path)
-    field_dict = read_fields(fields_path)
-    st.session_state['activities'] = A   
-    st.session_state['fields'] = field_dict    
-
-
-
-st.write("# Learning Path :books:")
-st.sidebar.selectbox(
-    "Select a employment category.",
-    field_dict.keys(),
-    #index=None,
-    #placeholder = "Unknown Field",
-    key = "field"
-)
 
 ded_dict = {"Low (10 h)":5,
             "Medium (20 h)":10,
@@ -63,72 +86,113 @@ ded_emoji = {5:':smiley:',
              20:':nerd_face:',
              40:':brain:'}
 
-st.sidebar.selectbox(
-    "Select the available time for study.",
-    ded_dict.keys(),
-    #index=None,
-    #placeholder = "Unknown Dedication",
-    key = 'dedication',
-)
 
-
-if 'dedication' in st.session_state.keys() and 'field' in st.session_state.keys():
+try:
+    field_dict = st.session_state['fields']
+    A = st.session_state['activities']
+    user_db = st.secrets.db_credentials
     
-    ded = st.session_state['dedication']
-    fie = st.session_state['field']
+except:
+    A = read_providers(courses_path)
+    field_dict = read_fields(fields_path)
+    st.session_state['activities'] = A   
+    st.session_state['fields'] = field_dict
 
-    file_path = os.path.join(results_path,f"{field_dict[fie]}-{ded_dict[ded]}.stdout")
+st.write("# Learning Path :books:")
 
-    df,fa = read_path(file_path,A)
-    J = read_field(f'{field_dict[fie]}')
-    skills = read_skills(file_path)
+st.sidebar.number_input(
+        "Introduce ID.",
+        min_value=1000,
+        max_value=9999,
+        key = "id"
+    )
 
-    st.write(f"## Employment Category: {fie}")
-    st.write(f"### Available time for study: {ded} {ded_emoji[ded_dict[ded]]}")
-
-
-    # Define custom CSS to increase font size
-    css = """
-    <style>
-    .stDataFrame th, .stDataFrame td {
-        font-size: 30px;
-    }
-    </style>
-    """
-
-    # Display the DataFrame with custom styling
-    st.markdown(css, unsafe_allow_html=True)
-    #st.dataframe(df,hide_index=True)
-
-    styler = df.style.hide_index()
+if 'id' in st.session_state.keys():
     
-    st.write(styler.to_html(escape=False, index=False), unsafe_allow_html=True)
+    name_,group_,field_list_ = load_secrets(int(st.session_state['id']))
+    if name_ == None:
+        st.error('Incorrect ID', icon='🚨')
+    else:
+        st.session_state['name'] = name_
+        st.session_state['group'] = group_
+        st.session_state['field_list'] = field_list_
+        
+
+        name = st.session_state['name']
+        group = st.session_state['group']
+        field_list = st.session_state['field_list']
+
+        st.sidebar.selectbox(
+            "Select a employment category.",
+            field_list,
+            #index=None,
+            #placeholder = "Unknown Field",
+            key = "field"
+        )
+
+        st.sidebar.selectbox(
+            "Select the available time for study.",
+            ded_dict.keys(),
+            #index=None,
+            #placeholder = "Unknown Dedication",
+            key = 'dedication',
+        )
 
 
-    st.write(f"##### Skills required by this employment category that you would acquire if you follow this learning pathway: {fa:.0f} %")
+        if 'dedication' in st.session_state.keys() and 'field' in st.session_state.keys():
+            
+            ded = st.session_state['dedication']
+            fie = st.session_state['field']
 
-    df_fa = pd.DataFrame({'name':['Learnt Skills','Unlearnt Skills'],'percentage':[fa,100-fa]})
-    pie = px.pie(df_fa, values='percentage', names='name',color='name',
-                 color_discrete_map={'Learnt Skills':'green',
-                                 'Unlearnt Skills':'red'},
-                category_orders={'name':['Learnt Skills','Unlearnt Skills']})
-    pie = px.pie(df_fa, values='percentage', names='name',color='name',
-                category_orders={'name':['Learnt Skills','Unlearnt Skills']})
-    pie.update_layout(legend=dict(font=dict(size=16)),
-                      font_size=16)
-    
-    st.plotly_chart(pie)
+            if group == 's' or group == 'm':
 
-    st.write(f"##### Jobs for which you would be more employable within this employment category")
-    ja_df = job_field_affinity(J,skills,5)
-    bar = px.bar(ja_df, x='ja', y='Jobs', orientation='h')
-    bar.update_xaxes(title_text = "Percentage of Required Skills Acquired with this Pathway (%)",
-                     range=[0, 100],
-                     tickfont=dict(size=14))
-    bar.update_yaxes(tickfont=dict(size=14))
-    bar.update_layout(yaxis=dict(title=dict(font=dict(size=16))),
-                      xaxis=dict(title=dict(font=dict(size=16))))
-    st.plotly_chart(bar)
+                file_path = os.path.join(results_path,f"{field_dict[fie]}-{ded_dict[ded]}.stdout")
+
+                df,fa = read_path(file_path,A)
+                J = read_field(f'{field_dict[fie]}')
+                skills = read_skills(file_path)
+
+            elif group == 'c':
+                index_fie = list(field_list).index(fie)
+                field_list_id = [field_dict[fie] for f in field_list]
+                new_fields = change_field(field_list_id,list(field_dict.values()),seed=st.session_state['id'])
+                fie_val = new_fields[index_fie]
+
+                file_path = os.path.join(results_path,f"{fie_val}-{ded_dict[ded]}.stdout")
+
+                df,fa = read_path(file_path,A)
+                J = read_field(f'{fie_val}')
+                skills = read_skills(file_path)
+
+            elif group == 'r':
+
+                file_path = os.path.join(results_path,f"{field_dict[fie]}-{ded_dict[ded]}.stdout")
+
+                df,fa = read_path(file_path,A)
+                J = read_field(f'{field_dict[fie]}')
+                skills = read_skills(file_path)
+                df = random_path(A,seed=st.session_state['id'],dedication_week=ded_dict[ded],n_weeks=2)
+
+            
+            st.write(f"### Hello {name},")
+            st.write(f"""From the #Job Safari questionnaire, we selected employment categories that might be interesting for you. 
+                        Explore the employment categories and take a look at the courses that we recommend you.
+                        Do you think that they help to increase your skills for those fields?
+                     """)
+
+            st.write(f"## Employment Category: {fie}")
+            st.write(f"### Available time for study: {ded} {ded_emoji[ded_dict[ded]]}")
+
+            styler = df.style.hide_index()
+            
+            st.write(styler.to_html(escape=False, index=False), unsafe_allow_html=True)
+
+            pie_chart(fa)
+
+            bar_chart(J,skills,n_jobs=5)
+
+else:
+    st.info("Introduce your personal ID to visualize the learning pathway.", icon='💡' )
 
 
     
