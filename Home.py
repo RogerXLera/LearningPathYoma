@@ -26,7 +26,7 @@ def load_secrets(id_):
         return None,None,None
     
 def pie_chart(fa):
-    st.write(f"##### Skills required by this employment category that you would acquire if you follow this learning pathway: {fa:.0f} %")
+    st.write(f"##### Skills required by this job field that you would acquire if you follow this learning pathway: {fa:.0f} %")
     df_fa = pd.DataFrame({'name':['Learnt Skills','Unlearnt Skills'],'percentage':[fa,100-fa]})
     pie = px.pie(df_fa, values='percentage', names='name',color='name',
                 color_discrete_map={'Learnt Skills':'green',
@@ -41,7 +41,7 @@ def pie_chart(fa):
     return None
 
 def bar_chart(J,skills,n_jobs=5):
-    st.write(f"##### Jobs for which you would be more employable within this employment category")
+    st.write(f"##### Jobs for which you would be more employable within this job field")
     ja_df = job_field_affinity(J,skills,n_jobs)
     bar = px.bar(ja_df, x='ja', y='Jobs', orientation='h')
     bar.update_xaxes(title_text = "Percentage of Required Skills Acquired with this Pathway (%)",
@@ -123,7 +123,7 @@ if 'id' in st.session_state.keys():
         field_list = st.session_state['field_list']
 
         st.sidebar.selectbox(
-            "Select a employment category.",
+            "Select a job field.",
             field_list,
             #index=None,
             #placeholder = "Unknown Field",
@@ -133,7 +133,7 @@ if 'id' in st.session_state.keys():
         st.sidebar.selectbox(
             "Select the available time for study.",
             ded_dict.keys(),
-            #index=None,
+            index=2,
             #placeholder = "Unknown Dedication",
             key = 'dedication',
         )
@@ -175,12 +175,12 @@ if 'id' in st.session_state.keys():
 
             
             st.write(f"### Hello {name},")
-            st.write(f"""From the #Job Safari questionnaire, we selected employment categories that might be interesting for you. 
-                        Explore the employment categories and take a look at the courses that we recommend you.
-                        Do you think that they help to increase your skills for those fields?
+            st.write(f"""From the #Job Safari questionnaire, we selected job fields that might be interesting for you. 
+                        Explore the job fields and take a look at the courses that we recommend you.
+                        Do you think that completing those courses might help you to increase the skills required for those job fields?
                      """)
 
-            st.write(f"## Employment Category: {fie}")
+            st.write(f"## Job Field: {fie}")
             st.write(f"### Available time for study: {ded} {ded_emoji[ded_dict[ded]]}")
 
             styler = df.style.hide_index()
