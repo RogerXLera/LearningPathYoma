@@ -1,0 +1,15 @@
+2023-11-20 09:49:26.976 WARNING streamlit.runtime.caching.cache_data_api: No runtime found, using MemoryCacheStorageManager
+2023-11-20 09:49:27.079 
+  [33m[1mWarning:[0m to view this Streamlit app on a browser, run it with the following
+  command:
+
+    streamlit run /home/roger/Desktop/doctorat/github/YomaCR/solve.py [ARGUMENTS]
+2023-11-20 09:49:27.079 No runtime found, using MemoryCacheStorageManager
+Traceback (most recent call last):
+  File "/home/roger/Desktop/doctorat/github/YomaCR/solve.py", line 523, in <module>
+    matrices = model_elements(A,P,J,usp,skills,max_level,topics)
+  File "/home/roger/Desktop/doctorat/github/YomaCR/solve.py", line 55, in model_elements
+    Z = Z_matrix(x_ind,A)
+  File "/home/roger/Desktop/doctorat/github/YomaCR/formalisation.py", line 187, in Z_matrix
+    if a.id == a_.id:
+KeyboardInterrupt
