@@ -15,7 +15,11 @@ import plotly.graph_objects as go
 
 def load_secrets(id_):
     user_info = st.secrets.user_db
-
+    try:
+        id_ = int(id_)
+    except:
+        return None,None,None
+    
     if id_ in user_info.user_id:
         index_ = user_info.user_id.index(id_)
         name_ = user_info.user_name[index_]
@@ -100,16 +104,21 @@ except:
 
 st.write("# Learning Path :books:")
 
-st.sidebar.number_input(
+#st.sidebar.number_input(
+#        "Introduce ID.",
+#        min_value=1000,
+#        max_value=9999,
+#        key = "id"
+#    )
+
+st.sidebar.text_input(
         "Introduce ID.",
-        min_value=1000,
-        max_value=9999,
         key = "id"
     )
 
 if 'id' in st.session_state.keys():
     
-    name_,group_,field_list_ = load_secrets(int(st.session_state['id']))
+    name_,group_,field_list_ = load_secrets(st.session_state['id'])
     if name_ == None:
         st.error('Incorrect ID', icon='🚨')
     else:
@@ -155,7 +164,7 @@ if 'id' in st.session_state.keys():
             elif group == 'c':
                 index_fie = list(field_list).index(fie)
                 field_list_id = [field_dict[fie] for f in field_list]
-                new_fields = change_field(field_list_id,list(field_dict.values()),seed=st.session_state['id'])
+                new_fields = change_field(field_list_id,list(field_dict.values()),seed=int(st.session_state['id']))
                 fie_val = new_fields[index_fie]
 
                 file_path = os.path.join(results_path,f"{fie_val}-{ded_dict[ded]}.stdout")
@@ -171,7 +180,7 @@ if 'id' in st.session_state.keys():
                 df,fa = read_path(file_path,A)
                 J = read_field(f'{field_dict[fie]}')
                 skills = read_skills(file_path)
-                df = random_path(A,seed=st.session_state['id'],dedication_week=ded_dict[ded],n_weeks=2)
+                df = random_path(A,seed=int(st.session_state['id'])*int(ded_dict[ded]),dedication_week=ded_dict[ded],n_weeks=2)
 
             
             st.write(f"### Hello {name},")
