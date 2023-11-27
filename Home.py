@@ -185,8 +185,9 @@ if 'id' in st.session_state.keys():
             
             st.write(f"### Hello {name},")
             st.write(f"""From the #Job Safari questionnaire, we selected job fields that might be interesting for you. 
-                        Explore the job fields and take a look at the courses that we recommend you.
-                        Do you think that completing those courses might help you to increase the skills required for those job fields?
+                        Then, we created learning pathways with a different study time (10, 20, 40 and 80 hours) for each selected job field.
+                        Explore the different learning pathways created for you and take a look at the courses that we recommend you.
+                        Once you finish looking at the learning pathways, complete the following [form](https://docs.google.com/forms/d/e/1FAIpQLSf7Ciho82zyAW2Z2UQA7hJFdYPC_ek6iszOcSgZzNSJqrGYAA/viewform?usp=sf_link).
                      """)
 
             st.write(f"## Job Field: {fie}")
@@ -195,6 +196,10 @@ if 'id' in st.session_state.keys():
             styler = df.style.hide_index()
             
             st.write(styler.to_html(escape=False, index=False), unsafe_allow_html=True)
+
+            """
+            
+            """
 
             pie_chart(fa)
 
