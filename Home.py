@@ -180,7 +180,7 @@ if 'id' in st.session_state.keys():
                 df,fa = read_path(file_path,A)
                 J = read_field(f'{field_dict[fie]}')
                 skills = read_skills(file_path)
-                df = random_path(A,seed=int(st.session_state['id'])*int(ded_dict[ded]),dedication_week=ded_dict[ded],n_weeks=2)
+                df = random_path(A,seed=int(st.session_state['id'])*int(field_dict[fie]),dedication_week=ded_dict[ded],n_weeks=2)
 
             
             st.write(f"### Hello {name},")
