@@ -1,145 +1,103 @@
-Read instances: 0.19 s
-Generate matrices: 7.15 s
+Read instances: 0.18 s
+Generate matrices: 6.82 s
 ===============================================================================
                                      CVXPY                                     
                                      v1.3.0                                    
 ===============================================================================
-(CVXPY) Oct 19 04:44:48 PM: Your problem has 4041 variables, 19 constraints, and 0 parameters.
-(CVXPY) Oct 19 04:44:48 PM: It is compliant with the following grammars: DCP, DQCP
-(CVXPY) Oct 19 04:44:48 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
-(CVXPY) Oct 19 04:44:48 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+(CVXPY) Nov 20 09:51:07 AM: Your problem has 3951 variables, 19 constraints, and 0 parameters.
+(CVXPY) Nov 20 09:51:08 AM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Nov 20 09:51:08 AM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Nov 20 09:51:08 AM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
 -------------------------------------------------------------------------------
                                   Compilation                                  
 -------------------------------------------------------------------------------
-(CVXPY) Oct 19 04:44:48 PM: Compiling problem (target solver=CPLEX).
-(CVXPY) Oct 19 04:44:48 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
-(CVXPY) Oct 19 04:44:48 PM: Applying reduction CvxAttr2Constr
-(CVXPY) Oct 19 04:44:48 PM: Applying reduction Qp2SymbolicQp
-(CVXPY) Oct 19 04:44:48 PM: Applying reduction QpMatrixStuffing
-(CVXPY) Oct 19 04:44:48 PM: Applying reduction CPLEX
-(CVXPY) Oct 19 04:44:48 PM: Finished problem compilation (took 7.264e-02 seconds).
+(CVXPY) Nov 20 09:51:08 AM: Compiling problem (target solver=CPLEX).
+(CVXPY) Nov 20 09:51:08 AM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Nov 20 09:51:08 AM: Applying reduction CvxAttr2Constr
+(CVXPY) Nov 20 09:51:08 AM: Applying reduction Qp2SymbolicQp
+(CVXPY) Nov 20 09:51:08 AM: Applying reduction QpMatrixStuffing
+(CVXPY) Nov 20 09:51:08 AM: Applying reduction CPLEX
+(CVXPY) Nov 20 09:51:08 AM: Finished problem compilation (took 6.886e-02 seconds).
 -------------------------------------------------------------------------------
                                 Numerical solver                               
 -------------------------------------------------------------------------------
-(CVXPY) Oct 19 04:44:48 PM: Invoking solver CPLEX  to obtain a solution.
+(CVXPY) Nov 20 09:51:08 AM: Invoking solver CPLEX  to obtain a solution.
 Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
 CPXPARAM_Read_DataCheck                          1
 CPXPARAM_TimeLimit                               30
 Tried aggregator 2 times.
-MIP Presolve eliminated 4455 rows and 2230 columns.
-MIP Presolve modified 16022 coefficients.
-Aggregator did 65 substitutions.
-Reduced MIP has 3384 rows, 2390 columns, and 50168 nonzeros.
-Reduced MIP has 2389 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.10 sec. (142.36 ticks)
-Found incumbent of value 0.990000 after 0.11 sec. (150.61 ticks)
+MIP Presolve eliminated 4420 rows and 2204 columns.
+MIP Presolve modified 15667 coefficients.
+Aggregator did 63 substitutions.
+Reduced MIP has 3291 rows, 2322 columns, and 48893 nonzeros.
+Reduced MIP has 2321 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.11 sec. (137.54 ticks)
+Found incumbent of value 0.990000 after 0.11 sec. (145.58 ticks)
 Probing fixed 8 vars, tightened 0 bounds.
-Probing time = 0.03 sec. (33.00 ticks)
+Probing time = 0.04 sec. (28.82 ticks)
 Tried aggregator 1 time.
 Detecting symmetries...
-MIP Presolve eliminated 29 rows and 8 columns.
+MIP Presolve eliminated 28 rows and 8 columns.
 MIP Presolve modified 44 coefficients.
-Reduced MIP has 3355 rows, 2367 columns, and 49974 nonzeros.
-Reduced MIP has 2366 binaries, 1 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.04 sec. (48.69 ticks)
-Probing time = 0.01 sec. (7.98 ticks)
-Clique table members: 22499.
+Reduced MIP has 3263 rows, 2300 columns, and 48703 nonzeros.
+Reduced MIP has 2299 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (47.31 ticks)
+Probing time = 0.01 sec. (8.64 ticks)
+Clique table members: 21901.
 MIP emphasis: balance optimality and feasibility.
 MIP search method: dynamic search.
 Parallel mode: deterministic, using up to 8 threads.
-Root relaxation solution time = 0.07 sec. (56.98 ticks)
+Root relaxation solution time = 0.12 sec. (73.99 ticks)
 
         Nodes                                         Cuts/
    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
 
-*     0+    0                            0.9900        0.3197            67.71%
-      0     0        0.4329    76        0.9900        0.4329      363   56.28%
-*     0+    0                            0.4381        0.4329             1.20%
-      0     0        0.4349    56        0.4381     Cuts: 124      444    0.74%
-      0     0        0.4352    51        0.4381      Cuts: 50      476    0.67%
-
-Repeating presolve.
-Tried aggregator 1 time.
-MIP Presolve eliminated 3140 rows and 2180 columns.
-MIP Presolve modified 3477 coefficients.
-Reduced MIP has 210 rows, 141 columns, and 1827 nonzeros.
-Reduced MIP has 140 binaries, 1 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.01 sec. (15.22 ticks)
-Probing fixed 12 vars, tightened 0 bounds.
-Probing changed sense of 12 constraints.
-Probing time = 0.00 sec. (0.66 ticks)
-Cover probing fixed 0 vars, tightened 10 bounds.
-Tried aggregator 2 times.
-MIP Presolve eliminated 81 rows and 40 columns.
-MIP Presolve modified 251 coefficients.
-Aggregator did 7 substitutions.
-Reduced MIP has 122 rows, 94 columns, and 1139 nonzeros.
-Reduced MIP has 93 binaries, 1 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (2.57 ticks)
-Probing time = 0.00 sec. (0.29 ticks)
-Cover probing fixed 0 vars, tightened 2 bounds.
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 15 rows and 0 columns.
-MIP Presolve modified 11 coefficients.
-Reduced MIP has 107 rows, 94 columns, and 1105 nonzeros.
-Reduced MIP has 93 binaries, 1 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.94 ticks)
-Represolve time = 0.02 sec. (25.61 ticks)
-Probing time = 0.00 sec. (0.26 ticks)
-Cover probing fixed 0 vars, tightened 1 bounds.
-Clique table members: 204.
-Tightened 1 constraints.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Root relaxation solution time = 0.00 sec. (0.69 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                            0.4381        0.4361             0.47%
-      0     0        cutoff              0.4381                    518    0.00%
+*     0+    0                            0.9900        0.3403            65.62%
+      0     0        0.4453    57        0.9900        0.4453      532   55.02%
+*     0+    0                            0.4484        0.4453             0.70%
+      0     0        0.4465    57        0.4484      Cuts: 85      631    0.42%
+      0     0        cutoff              0.4484                    639    0.00%
+Elapsed time = 0.50 sec. (444.93 ticks, tree = 0.01 MB, solutions = 2)
 
 GUB cover cuts applied:  2
-Clique cuts applied:  2
-Implied bound cuts applied:  12
-Zero-half cuts applied:  12
-Lift and project cuts applied:  1
-Gomory fractional cuts applied:  3
+Clique cuts applied:  3
+Implied bound cuts applied:  21
+Zero-half cuts applied:  2
+Gomory fractional cuts applied:  4
 
 Root node processing (before b&c):
-  Real time             =    0.58 sec. (518.87 ticks)
+  Real time             =    0.50 sec. (445.25 ticks)
 Parallel b&c, 8 threads:
   Real time             =    0.00 sec. (0.00 ticks)
   Sync time (average)   =    0.00 sec.
   Wait time (average)   =    0.00 sec.
                           ------------
-Total (root+branch&cut) =    0.58 sec. (518.87 ticks)
+Total (root+branch&cut) =    0.50 sec. (445.25 ticks)
 -------------------------------------------------------------------------------
                                     Summary                                    
 -------------------------------------------------------------------------------
-(CVXPY) Oct 19 04:44:49 PM: Problem status: optimal
-(CVXPY) Oct 19 04:44:49 PM: Optimal value: 4.381e-01
-(CVXPY) Oct 19 04:44:49 PM: Compilation took 7.264e-02 seconds
-(CVXPY) Oct 19 04:44:49 PM: Solver (including time spent in interface) took 6.603e-01 seconds
-The optimal value is 0.438125
+(CVXPY) Nov 20 09:51:08 AM: Problem status: optimal
+(CVXPY) Nov 20 09:51:08 AM: Optimal value: 4.484e-01
+(CVXPY) Nov 20 09:51:08 AM: Compilation took 6.886e-02 seconds
+(CVXPY) Nov 20 09:51:08 AM: Solver (including time spent in interface) took 5.812e-01 seconds
+The optimal value is 0.4484375
 ###############################################
 ################## SCHEDULE ####################
 ###############################################
 Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
-Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 1
+Activity: Product Compliance in a Nutshell (12.0) 	 Start Period: 1 	 End Period: 1
 Activity: Outlining the Record to Report Process in SAP S/4H (11.0) 	 Start Period: 1 	 End Period: 1
-Activity: Explore Product Engineering in SAP S/4HANA (4.0) 	 Start Period: 1 	 End Period: 1
 Activity: Performing Overhead Cost Controlling in SAP S/4HAN (9.0) 	 Start Period: 1 	 End Period: 1
-Activity: Explore Supply Chain Business Scenarios in SAP S/4 (10.0) 	 Start Period: 1 	 End Period: 1
-Activity: Performing Consolidation with SAP S/4HANA Cloud fo (8.0) 	 Start Period: 2 	 End Period: 2
+Activity: Intrapreneurship – Employee-driven Innovation (4.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 2
+Activity: Explore Product Engineering in SAP S/4HANA (4.0) 	 Start Period: 2 	 End Period: 2
+Activity: Discover SAP Sales Cloud (6.0) 	 Start Period: 2 	 End Period: 2
 Activity: Implement SAP Service Cloud (5.0) 	 Start Period: 2 	 End Period: 2
+Activity: Explore Supply Chain Business Scenarios in SAP S/4 (10.0) 	 Start Period: 2 	 End Period: 2
 Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 2 	 End Period: 2
-Activity: Bereit für die Digitalisierung? Digitales Talent M (10.0) 	 Start Period: 2 	 End Period: 2
-Activity: Product Compliance in a Nutshell (12.0) 	 Start Period: 2 	 End Period: 2
-Solve time: 0.58
-Job affinity: 56.250
+Activity: Performing Consolidation with SAP S/4HANA Cloud fo (8.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.50
+Job affinity: 55.208
 Skills per Unit
 	 Initial Activity:
 	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
@@ -167,6 +125,11 @@ Skills per Unit
 		 Estimate cost or material requirements
 		 Evaluate quality of materials or products
 		 Develop operating strategies, plans or procedures
+	 Discover SAP Sales Cloud:
+		 Analyse data to inform operational decisions or activities
+		 Negotiate sales or lease agreements for goods or services
+		 Develop operating strategies, plans or procedures
+		 Maintain knowledge of business operations
 	 Implement SAP Service Cloud:
 		 Perform basic equipment maintenance
 		 Report maintenance or equipment problems to appropriate personnel
@@ -230,11 +193,10 @@ Skills per Unit
 		 Explain regulations, policies or procedures
 		 Maintain regulatory or compliance documentation
 		 Enforce rules or regulations
-	 Bereit für die Digitalisierung? Digitales Talent Management:
-		 Manage human resources activities
+	 Intrapreneurship – Employee-driven Innovation:
 		 Conduct employee training programs
-		 Train staff
-		 Administer staff recruitment or hiring activities
+		 Develop operating strategies, plans or procedures
+		 Confer with co-workers or internal stakeholders to coordinate operational activities
 Skills for Job 141
 Monitor activities of individuals to ensure safety or compliance with rules
 Monitor resources

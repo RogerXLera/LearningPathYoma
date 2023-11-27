@@ -8,6 +8,7 @@ import os
 from definitions import *
 import numpy as np
 import random as rd
+from read_files import *
 
 def random_path(A,seed,dedication_week=5,n_weeks=2):
     """
@@ -33,18 +34,31 @@ def random_path(A,seed,dedication_week=5,n_weeks=2):
         dedication_counter += a.time
         dedication_counter_week += a.time
         link = create_link(a.name,a.url)
-        #name += [link]
-        name += [a.name]
+        name += [link]
+        #name += [a.name]
         st += [current_week]
         while dedication_counter_week >= dedication_week:
             dedication_counter_week -= dedication_week
             current_week += 1
         fi += [current_week]
-        h += [a.time]
+        h += [int(a.time)]
         if total_dedication == dedication_counter:
             break
     
     return pd.DataFrame({'Course':name,'Start Week':st,"End Week":fi,"Study Time (h)":h})
+
+def change_field(selected,fields,seed=0):
+
+    rd.seed(seed)
+    new_fields = []
+    i = 0
+    while i < len(selected):
+        index = rd.randint(0,len(fields)-1)
+        if fields[index] not in selected and fields[index] not in new_fields:
+            new_fields.append(fields[index])
+            i += 1
+
+    return new_fields
 
 
 
@@ -58,4 +72,5 @@ if __name__ == '__main__':
 
     A = read_providers(courses_path)
     r = random_path(A,0,dedication_week=5,n_weeks=2)
+    r = change_field(list(range(3)),list(range(10)),seed=5)
     print(r)

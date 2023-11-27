@@ -1,179 +1,145 @@
-Read instances: 0.18 s
-Generate matrices: 7.01 s
+Read instances: 0.21 s
+Generate matrices: 6.89 s
 ===============================================================================
                                      CVXPY                                     
                                      v1.3.0                                    
 ===============================================================================
-(CVXPY) Oct 18 08:24:14 PM: Your problem has 4209 variables, 19 constraints, and 0 parameters.
-(CVXPY) Oct 18 08:24:14 PM: It is compliant with the following grammars: DCP, DQCP
-(CVXPY) Oct 18 08:24:14 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
-(CVXPY) Oct 18 08:24:14 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+(CVXPY) Nov 20 09:51:36 AM: Your problem has 4119 variables, 19 constraints, and 0 parameters.
+(CVXPY) Nov 20 09:51:36 AM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Nov 20 09:51:36 AM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Nov 20 09:51:36 AM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
 -------------------------------------------------------------------------------
                                   Compilation                                  
 -------------------------------------------------------------------------------
-(CVXPY) Oct 18 08:24:14 PM: Compiling problem (target solver=CPLEX).
-(CVXPY) Oct 18 08:24:14 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
-(CVXPY) Oct 18 08:24:14 PM: Applying reduction CvxAttr2Constr
-(CVXPY) Oct 18 08:24:14 PM: Applying reduction Qp2SymbolicQp
-(CVXPY) Oct 18 08:24:14 PM: Applying reduction QpMatrixStuffing
-(CVXPY) Oct 18 08:24:15 PM: Applying reduction CPLEX
-(CVXPY) Oct 18 08:24:15 PM: Finished problem compilation (took 7.260e-02 seconds).
+(CVXPY) Nov 20 09:51:36 AM: Compiling problem (target solver=CPLEX).
+(CVXPY) Nov 20 09:51:36 AM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Nov 20 09:51:36 AM: Applying reduction CvxAttr2Constr
+(CVXPY) Nov 20 09:51:36 AM: Applying reduction Qp2SymbolicQp
+(CVXPY) Nov 20 09:51:36 AM: Applying reduction QpMatrixStuffing
+(CVXPY) Nov 20 09:51:36 AM: Applying reduction CPLEX
+(CVXPY) Nov 20 09:51:36 AM: Finished problem compilation (took 7.432e-02 seconds).
 -------------------------------------------------------------------------------
                                 Numerical solver                               
 -------------------------------------------------------------------------------
-(CVXPY) Oct 18 08:24:15 PM: Invoking solver CPLEX  to obtain a solution.
+(CVXPY) Nov 20 09:51:36 AM: Invoking solver CPLEX  to obtain a solution.
 Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
 CPXPARAM_Read_DataCheck                          1
 CPXPARAM_TimeLimit                               30
 Tried aggregator 2 times.
-MIP Presolve eliminated 5176 rows and 2621 columns.
-MIP Presolve modified 15082 coefficients.
-Aggregator did 118 substitutions.
-Reduced MIP has 3114 rows, 2210 columns, and 44890 nonzeros.
-Reduced MIP has 2209 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.12 sec. (160.55 ticks)
-Found incumbent of value 0.990000 after 0.13 sec. (166.04 ticks)
+MIP Presolve eliminated 5139 rows and 2596 columns.
+MIP Presolve modified 14725 coefficients.
+Aggregator did 116 substitutions.
+Reduced MIP has 3023 rows, 2143 columns, and 43629 nonzeros.
+Reduced MIP has 2142 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.13 sec. (155.26 ticks)
+Found incumbent of value 0.990000 after 0.14 sec. (160.60 ticks)
 Probing fixed 52 vars, tightened 0 bounds.
 Probing changed sense of 61 constraints.
-Probing time = 0.07 sec. (97.25 ticks)
+Probing time = 0.07 sec. (91.76 ticks)
 Tried aggregator 2 times.
 Detecting symmetries...
-MIP Presolve eliminated 129 rows and 56 columns.
+MIP Presolve eliminated 128 rows and 56 columns.
 MIP Presolve modified 315 coefficients.
 Aggregator did 12 substitutions.
-Reduced MIP has 2973 rows, 2128 columns, and 43695 nonzeros.
-Reduced MIP has 2127 binaries, 1 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.07 sec. (77.75 ticks)
-Probing time = 0.02 sec. (13.17 ticks)
-Clique table members: 2255.
+Reduced MIP has 2883 rows, 2062 columns, and 42438 nonzeros.
+Reduced MIP has 2061 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.07 sec. (75.58 ticks)
+Probing time = 0.02 sec. (13.37 ticks)
+Clique table members: 2173.
 MIP emphasis: balance optimality and feasibility.
 MIP search method: dynamic search.
 Parallel mode: deterministic, using up to 8 threads.
-Root relaxation solution time = 0.11 sec. (90.86 ticks)
+Root relaxation solution time = 0.06 sec. (35.22 ticks)
 
         Nodes                                         Cuts/
    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
 
-*     0+    0                            0.9900        0.5032            49.17%
-      0     0        0.7211    54        0.9900        0.7211      829   27.16%
+*     0+    0                            0.9900        0.5115            48.33%
+      0     0        0.7211    79        0.9900        0.7211      269   27.16%
 *     0+    0                            0.7269        0.7211             0.80%
-      0     0        0.7222    88        0.7269      Cuts: 66     1065    0.65%
-      0     0        0.7227    78        0.7269      Cuts: 87     1122    0.58%
+      0     0        0.7223    83        0.7269      Cuts: 85      464    0.63%
+      0     0        0.7227    61        0.7269      Cuts: 67      489    0.57%
 
 Repeating presolve.
+Tried aggregator 1 time.
+MIP Presolve eliminated 2707 rows and 1848 columns.
+MIP Presolve modified 2679 coefficients.
+Reduced MIP has 172 rows, 119 columns, and 1598 nonzeros.
+Reduced MIP has 118 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (14.62 ticks)
+Probing fixed 11 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (0.50 ticks)
+Cover probing fixed 0 vars, tightened 4 bounds.
 Tried aggregator 2 times.
-MIP Presolve eliminated 2718 rows and 1855 columns.
-MIP Presolve modified 2671 coefficients.
-Aggregator did 13 substitutions.
-Reduced MIP has 241 rows, 165 columns, and 2237 nonzeros.
-Reduced MIP has 164 binaries, 1 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.02 sec. (23.45 ticks)
-Probing fixed 18 vars, tightened 0 bounds.
-Probing changed sense of 2 constraints.
-Probing time = 0.00 sec. (0.94 ticks)
-Cover probing fixed 0 vars, tightened 7 bounds.
-Tried aggregator 2 times.
-MIP Presolve eliminated 76 rows and 34 columns.
-MIP Presolve modified 301 coefficients.
+MIP Presolve eliminated 46 rows and 18 columns.
+MIP Presolve modified 250 coefficients.
 Aggregator did 2 substitutions.
-Reduced MIP has 163 rows, 129 columns, and 1569 nonzeros.
-Reduced MIP has 128 binaries, 1 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (3.28 ticks)
-Probing time = 0.00 sec. (0.42 ticks)
+Reduced MIP has 124 rows, 99 columns, and 1173 nonzeros.
+Reduced MIP has 98 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.49 ticks)
+Probing time = 0.00 sec. (0.28 ticks)
 Tried aggregator 1 time.
 Detecting symmetries...
-MIP Presolve eliminated 4 rows and 0 columns.
-Reduced MIP has 159 rows, 129 columns, and 1537 nonzeros.
-Reduced MIP has 128 binaries, 1 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (1.20 ticks)
-Represolve time = 0.03 sec. (34.23 ticks)
-Probing time = 0.00 sec. (0.41 ticks)
-Clique table members: 292.
+MIP Presolve eliminated 1 rows and 0 columns.
+MIP Presolve modified 10 coefficients.
+Reduced MIP has 123 rows, 99 columns, and 1165 nonzeros.
+Reduced MIP has 98 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.99 ticks)
+Represolve time = 0.02 sec. (24.46 ticks)
+Probing time = 0.00 sec. (0.28 ticks)
+Clique table members: 192.
 MIP emphasis: balance optimality and feasibility.
 MIP search method: dynamic search.
 Parallel mode: deterministic, using up to 8 threads.
-Root relaxation solution time = 0.00 sec. (1.20 ticks)
+Root relaxation solution time = 0.00 sec. (1.47 ticks)
 
         Nodes                                         Cuts/
    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
 
-*     0+    0                            0.7269        0.7238             0.42%
-      0     0        0.7228    42        0.7269        0.7238     1180    0.42%
-      0     0        0.7244    13        0.7269   LiftProj: 1     1203    0.34%
-      0     0        0.7244    16        0.7269      Cuts: 24     1210    0.34%
-      0     0        0.7248     7        0.7269       Cuts: 2     1216    0.28%
+*     0+    0                            0.7269        0.7239             0.40%
+      0     0        0.7229    37        0.7269        0.7239      580    0.40%
+      0     0        0.7238    34        0.7269      Cuts: 22      598    0.40%
+      0     0        0.7238    31        0.7269      Cuts: 17      610    0.40%
+      0     0        0.7238    32        0.7269       Cuts: 8      615    0.40%
+      0     0        0.7238    36        0.7269   ZeroHalf: 4      629    0.40%
+      0     0        cutoff              0.7269                    629    0.00%
+Elapsed time = 0.60 sec. (580.34 ticks, tree = 0.01 MB, solutions = 2)
 
-Repeating presolve.
-Tried aggregator 2 times.
-MIP Presolve eliminated 67 rows and 38 columns.
-MIP Presolve modified 209 coefficients.
-Aggregator did 2 substitutions.
-Reduced MIP has 91 rows, 86 columns, and 888 nonzeros.
-Reduced MIP has 86 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (2.31 ticks)
-Probing time = 0.00 sec. (0.19 ticks)
-Tried aggregator 1 time.
-MIP Presolve eliminated 2 rows and 2 columns.
-MIP Presolve modified 2 coefficients.
-Reduced MIP has 89 rows, 84 columns, and 877 nonzeros.
-Reduced MIP has 84 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.88 ticks)
-Probing time = 0.00 sec. (0.19 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-Reduced MIP has 89 rows, 84 columns, and 877 nonzeros.
-Reduced MIP has 84 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.60 ticks)
-Represolve time = 0.01 sec. (6.33 ticks)
-Probing time = 0.00 sec. (0.19 ticks)
-Clique table members: 160.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Root relaxation solution time = 0.00 sec. (0.47 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                            0.7269        0.7252             0.23%
-      0     0        0.7248    10        0.7269        0.7252     1247    0.23%
-      0     0        cutoff              0.7269        0.7252     1247    0.23%
-Elapsed time = 0.70 sec. (677.06 ticks, tree = 0.01 MB, solutions = 2)
-
-GUB cover cuts applied:  4
-Cover cuts applied:  2
-Zero-half cuts applied:  1
+GUB cover cuts applied:  3
+Zero-half cuts applied:  9
+Lift and project cuts applied:  1
+Gomory fractional cuts applied:  4
 
 Root node processing (before b&c):
-  Real time             =    0.70 sec. (677.23 ticks)
+  Real time             =    0.61 sec. (580.51 ticks)
 Parallel b&c, 8 threads:
   Real time             =    0.00 sec. (0.00 ticks)
   Sync time (average)   =    0.00 sec.
   Wait time (average)   =    0.00 sec.
                           ------------
-Total (root+branch&cut) =    0.70 sec. (677.23 ticks)
+Total (root+branch&cut) =    0.61 sec. (580.51 ticks)
 -------------------------------------------------------------------------------
                                     Summary                                    
 -------------------------------------------------------------------------------
-(CVXPY) Oct 18 08:24:15 PM: Problem status: optimal
-(CVXPY) Oct 18 08:24:15 PM: Optimal value: 7.269e-01
-(CVXPY) Oct 18 08:24:15 PM: Compilation took 7.260e-02 seconds
-(CVXPY) Oct 18 08:24:15 PM: Solver (including time spent in interface) took 7.964e-01 seconds
+(CVXPY) Nov 20 09:51:37 AM: Problem status: optimal
+(CVXPY) Nov 20 09:51:37 AM: Optimal value: 7.269e-01
+(CVXPY) Nov 20 09:51:37 AM: Compilation took 7.432e-02 seconds
+(CVXPY) Nov 20 09:51:37 AM: Solver (including time spent in interface) took 6.944e-01 seconds
 The optimal value is 0.726875
 ###############################################
 ################## SCHEDULE ####################
 ###############################################
 Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
-Activity: Outlining the Finance Overview in SAP S/4HANA (7.0) 	 Start Period: 1 	 End Period: 1
 Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 1 	 End Period: 1
-Activity: Be Visual! Sketching Basics for IT Business (Editi (1.0) 	 Start Period: 1 	 End Period: 1
+Activity: Outlining the Finance Overview in SAP S/4HANA (7.0) 	 Start Period: 1 	 End Period: 1
 Activity: Basics of Design Testing (Edition Q2/2019) (5.0) 	 Start Period: 1 	 End Period: 1
-Activity: Databases Course (3.0) 	 Start Period: 1 	 End Period: 2
-Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 2 	 End Period: 2
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 2
 Activity: Get Started with SAP Emarsys Customer Engagement (1.0) 	 Start Period: 2 	 End Period: 2
 Activity: Discover SAP Sales Cloud (6.0) 	 Start Period: 2 	 End Period: 2
 Activity: Implement SAP Service Cloud (5.0) 	 Start Period: 2 	 End Period: 2
-Solve time: 0.70
+Activity: Databases Course (3.0) 	 Start Period: 2 	 End Period: 2
+Activity: Be Visual! Sketching Basics for IT Business (Editi (1.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.61
 Job affinity: 27.083
 Skills per Unit
 	 Initial Activity:

@@ -1,146 +1,109 @@
-Read instances: 0.20 s
-Generate matrices: 6.92 s
+Read instances: 0.19 s
+Generate matrices: 7.18 s
 ===============================================================================
                                      CVXPY                                     
                                      v1.3.0                                    
 ===============================================================================
-(CVXPY) Nov 20 09:50:58 AM: Your problem has 3951 variables, 19 constraints, and 0 parameters.
-(CVXPY) Nov 20 09:50:58 AM: It is compliant with the following grammars: DCP, DQCP
-(CVXPY) Nov 20 09:50:58 AM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
-(CVXPY) Nov 20 09:50:58 AM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+(CVXPY) Nov 20 09:49:14 AM: Your problem has 3951 variables, 19 constraints, and 0 parameters.
+(CVXPY) Nov 20 09:49:14 AM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Nov 20 09:49:14 AM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Nov 20 09:49:14 AM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
 -------------------------------------------------------------------------------
                                   Compilation                                  
 -------------------------------------------------------------------------------
-(CVXPY) Nov 20 09:50:58 AM: Compiling problem (target solver=CPLEX).
-(CVXPY) Nov 20 09:50:58 AM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
-(CVXPY) Nov 20 09:50:58 AM: Applying reduction CvxAttr2Constr
-(CVXPY) Nov 20 09:50:58 AM: Applying reduction Qp2SymbolicQp
-(CVXPY) Nov 20 09:50:58 AM: Applying reduction QpMatrixStuffing
-(CVXPY) Nov 20 09:50:58 AM: Applying reduction CPLEX
-(CVXPY) Nov 20 09:50:58 AM: Finished problem compilation (took 7.944e-02 seconds).
+(CVXPY) Nov 20 09:49:14 AM: Compiling problem (target solver=CPLEX).
+(CVXPY) Nov 20 09:49:14 AM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Nov 20 09:49:14 AM: Applying reduction CvxAttr2Constr
+(CVXPY) Nov 20 09:49:14 AM: Applying reduction Qp2SymbolicQp
+(CVXPY) Nov 20 09:49:14 AM: Applying reduction QpMatrixStuffing
+(CVXPY) Nov 20 09:49:14 AM: Applying reduction CPLEX
+(CVXPY) Nov 20 09:49:14 AM: Finished problem compilation (took 7.398e-02 seconds).
 -------------------------------------------------------------------------------
                                 Numerical solver                               
 -------------------------------------------------------------------------------
-(CVXPY) Nov 20 09:50:58 AM: Invoking solver CPLEX  to obtain a solution.
+(CVXPY) Nov 20 09:49:14 AM: Invoking solver CPLEX  to obtain a solution.
 Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
 CPXPARAM_Read_DataCheck                          1
 CPXPARAM_TimeLimit                               30
 Tried aggregator 2 times.
-MIP Presolve eliminated 4687 rows and 2397 columns.
-MIP Presolve modified 14724 coefficients.
+MIP Presolve eliminated 4378 rows and 2179 columns.
+MIP Presolve modified 15902 coefficients.
 Aggregator did 63 substitutions.
-Reduced MIP has 3024 rows, 2144 columns, and 43634 nonzeros.
-Reduced MIP has 2143 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.13 sec. (152.98 ticks)
-Found incumbent of value 0.990000 after 0.13 sec. (158.30 ticks)
-Probing fixed 52 vars, tightened 0 bounds.
-Probing changed sense of 61 constraints.
-Probing time = 0.07 sec. (92.71 ticks)
-Tried aggregator 2 times.
+Reduced MIP has 3333 rows, 2348 columns, and 49786 nonzeros.
+Reduced MIP has 2347 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.12 sec. (158.71 ticks)
+Found incumbent of value 0.990000 after 0.13 sec. (166.73 ticks)
+Probing time = 0.01 sec. (5.62 ticks)
+Tried aggregator 1 time.
 Detecting symmetries...
-MIP Presolve eliminated 129 rows and 56 columns.
-MIP Presolve modified 315 coefficients.
-Aggregator did 12 substitutions.
-Reduced MIP has 2883 rows, 2062 columns, and 42438 nonzeros.
-Reduced MIP has 2061 binaries, 1 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.07 sec. (75.59 ticks)
-Probing time = 0.02 sec. (13.37 ticks)
-Clique table members: 2173.
+MIP Presolve eliminated 16 rows and 1 columns.
+MIP Presolve modified 6 coefficients.
+Reduced MIP has 3317 rows, 2333 columns, and 49712 nonzeros.
+Reduced MIP has 2332 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.06 sec. (62.20 ticks)
+Probing time = 0.01 sec. (5.52 ticks)
+Clique table members: 18898.
 MIP emphasis: balance optimality and feasibility.
 MIP search method: dynamic search.
 Parallel mode: deterministic, using up to 8 threads.
-Root relaxation solution time = 0.06 sec. (43.59 ticks)
+Root relaxation solution time = 0.11 sec. (86.71 ticks)
 
         Nodes                                         Cuts/
    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
 
 *     0+    0                            0.9900        0.3403            65.62%
-      0     0        0.5412    50        0.9900        0.5412      316   45.33%
-*     0+    0                            0.5516        0.5412             1.88%
-      0     0        0.5466    88        0.5516      Cuts: 35      451    0.89%
-      0     0        0.5476    75        0.5516      Cuts: 65      497    0.72%
+      0     0        0.3783    84        0.9900        0.3783      529   61.79%
+*     0+    0                            0.3866        0.3783             2.15%
+      0     0        0.3840   142        0.3866     Cuts: 104      743    0.65%
+      0     0        cutoff              0.3866                    828    0.00%
+Elapsed time = 0.61 sec. (530.38 ticks, tree = 0.01 MB, solutions = 2)
 
-Repeating presolve.
-Tried aggregator 2 times.
-MIP Presolve eliminated 2700 rows and 1837 columns.
-MIP Presolve modified 2542 coefficients.
-Aggregator did 4 substitutions.
-Reduced MIP has 176 rows, 120 columns, and 1397 nonzeros.
-Reduced MIP has 119 binaries, 1 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.01 sec. (15.24 ticks)
-Probing changed sense of 2 constraints.
-Probing time = 0.00 sec. (0.70 ticks)
-Cover probing fixed 0 vars, tightened 1 bounds.
-Tried aggregator 1 time.
-MIP Presolve eliminated 27 rows and 19 columns.
-MIP Presolve modified 12 coefficients.
-Reduced MIP has 149 rows, 101 columns, and 1178 nonzeros.
-Reduced MIP has 100 binaries, 1 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (1.31 ticks)
-Probing time = 0.00 sec. (0.46 ticks)
-Tried aggregator 1 time.
-MIP Presolve eliminated 11 rows and 9 columns.
-Reduced MIP has 138 rows, 92 columns, and 1129 nonzeros.
-Reduced MIP has 91 binaries, 1 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (1.17 ticks)
-Probing time = 0.00 sec. (0.41 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-Reduced MIP has 138 rows, 92 columns, and 1129 nonzeros.
-Reduced MIP has 91 binaries, 1 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.79 ticks)
-Represolve time = 0.02 sec. (25.33 ticks)
-Probing time = 0.00 sec. (0.40 ticks)
-Clique table members: 361.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Root relaxation solution time = 0.00 sec. (1.31 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                            0.5516        0.5476             0.72%
-      0     0        0.5485    47        0.5516        0.5485      577    0.55%
-      0     0        cutoff              0.5516        0.5516      604    0.00%
-Elapsed time = 0.60 sec. (564.72 ticks, tree = 0.01 MB, solutions = 2)
-
-GUB cover cuts applied:  11
-Cover cuts applied:  1
-Implied bound cuts applied:  2
-Mixed integer rounding cuts applied:  7
-Zero-half cuts applied:  17
-Lift and project cuts applied:  4
+GUB cover cuts applied:  6
+Clique cuts applied:  7
+Implied bound cuts applied:  34
+Flow cuts applied:  1
+Mixed integer rounding cuts applied:  2
+Zero-half cuts applied:  16
 Gomory fractional cuts applied:  2
 
 Root node processing (before b&c):
-  Real time             =    0.60 sec. (564.88 ticks)
+  Real time             =    0.61 sec. (530.72 ticks)
 Parallel b&c, 8 threads:
   Real time             =    0.00 sec. (0.00 ticks)
   Sync time (average)   =    0.00 sec.
   Wait time (average)   =    0.00 sec.
                           ------------
-Total (root+branch&cut) =    0.60 sec. (564.88 ticks)
+Total (root+branch&cut) =    0.61 sec. (530.72 ticks)
 -------------------------------------------------------------------------------
                                     Summary                                    
 -------------------------------------------------------------------------------
-(CVXPY) Nov 20 09:50:59 AM: Problem status: optimal
-(CVXPY) Nov 20 09:50:59 AM: Optimal value: 5.516e-01
-(CVXPY) Nov 20 09:50:59 AM: Compilation took 7.944e-02 seconds
-(CVXPY) Nov 20 09:50:59 AM: Solver (including time spent in interface) took 6.839e-01 seconds
-The optimal value is 0.5515625
+(CVXPY) Nov 20 09:49:15 AM: Problem status: optimal
+(CVXPY) Nov 20 09:49:15 AM: Optimal value: 3.866e-01
+(CVXPY) Nov 20 09:49:15 AM: Compilation took 7.398e-02 seconds
+(CVXPY) Nov 20 09:49:15 AM: Solver (including time spent in interface) took 6.953e-01 seconds
+The optimal value is 0.38656250000000003
 ###############################################
 ################## SCHEDULE ####################
 ###############################################
 Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
-Activity: Product Compliance in a Nutshell (12.0) 	 Start Period: 1 	 End Period: 1
-Activity: Intrapreneurship – Employee-driven Innovation (4.0) 	 Start Period: 1 	 End Period: 1
-Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 2
-Activity: Explore Product Engineering in SAP S/4HANA (4.0) 	 Start Period: 2 	 End Period: 2
-Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 2 	 End Period: 2
-Activity: Performing Consolidation with SAP S/4HANA Cloud fo (8.0) 	 Start Period: 2 	 End Period: 2
-Solve time: 0.60
-Job affinity: 44.792
+Activity: Understanding Your Customer’s Journey (12.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 1
+Activity: Explore Product Engineering in SAP S/4HANA (4.0) 	 Start Period: 1 	 End Period: 1
+Activity: Implement SAP Service Cloud (5.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 1 	 End Period: 1
+Activity: Performing Consolidation with SAP S/4HANA Cloud fo (8.0) 	 Start Period: 1 	 End Period: 1
+Activity: Manage Your External Workforce Program with SAP Fi (12.0) 	 Start Period: 1 	 End Period: 1
+Activity: Human Experience Management (HXM) - The Next Phase (9.0) 	 Start Period: 1 	 End Period: 1
+Activity: SAP Environment, Health, and Safety for Operationa (12.0) 	 Start Period: 1 	 End Period: 2
+Activity: Outlining the Record to Report Process in SAP S/4H (11.0) 	 Start Period: 2 	 End Period: 2
+Activity: Discover SAP Sales Cloud (6.0) 	 Start Period: 2 	 End Period: 2
+Activity: Performing Overhead Cost Controlling in SAP S/4HAN (9.0) 	 Start Period: 2 	 End Period: 2
+Activity: Explore Supply Chain Business Scenarios in SAP S/4 (10.0) 	 Start Period: 2 	 End Period: 2
+Activity: Product Compliance in a Nutshell (12.0) 	 Start Period: 2 	 End Period: 2
+Activity: Research and Development in Discrete Industries (15.0) 	 Start Period: 2 	 End Period: 2
+Activity: Facilitate Remote Collaboration Like a Pro (Repeat (16.0) 	 Start Period: 2 	 End Period: 2
+Solve time: 0.61
+Job affinity: 61.458
 Skills per Unit
 	 Initial Activity:
 	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
@@ -156,10 +119,49 @@ Skills per Unit
 		 Maintain operational records
 		 Analyse data to inform operational decisions or activities
 		 Monitor facilities or operational systems
+	 Outlining the Record to Report Process in SAP S/4HANA:
+		 Prepare operational reports or records
+		 Maintain financial or account records
+		 Document organisational or operational procedures
+		 Develop operating strategies, plans or procedures
+		 Maintain operational records
+		 Record personnel information
+		 Record operational or production data
 	 Explore Product Engineering in SAP S/4HANA:
 		 Estimate cost or material requirements
 		 Evaluate quality of materials or products
 		 Develop operating strategies, plans or procedures
+	 Discover SAP Sales Cloud:
+		 Analyse data to inform operational decisions or activities
+		 Negotiate sales or lease agreements for goods or services
+		 Develop operating strategies, plans or procedures
+		 Maintain knowledge of business operations
+	 Implement SAP Service Cloud:
+		 Perform basic equipment maintenance
+		 Report maintenance or equipment problems to appropriate personnel
+		 Perform manual service or maintenance tasks
+		 Develop operating strategies, plans or procedures
+		 Maintain food, drink or equipment inventories
+		 Direct administrative or support services
+		 Direct facility maintenance or repair activities
+		 Inspect facilities, equipment or supplies to ensure conformance to standards
+		 Inspect condition, or functioning, of facilities or equipment
+		 Develop plans for programs or services
+		 Maintain knowledge of business operations
+		 Coordinate operational activities
+		 Supervise service workers
+	 Performing Overhead Cost Controlling in SAP S/4HANA:
+		 Develop operating strategies, plans or procedures
+		 Prepare operational reports or records
+		 Schedule activities or facility use
+		 Manage organisational or project budgets
+	 Explore Supply Chain Business Scenarios in SAP S/4HANA Cloud, public edition:
+		 Manage inventories of products or organisational resources
+		 Schedule product or material transportation
+		 Develop operating strategies, plans or procedures
+		 Monitor inventories
+		 Evaluate employee performance
+		 Maintain inventory records
 	 Discover SAP S/4HANA Asset Management and SAP S/4HANA Service:
 		 Direct administrative or support services
 		 Supervise service workers
@@ -191,16 +193,33 @@ Skills per Unit
 		 Develop operating strategies, plans or procedures
 		 Calculate financial data
 		 Maintain inventory records
+	 Facilitate Remote Collaboration Like a Pro (Repeat):
+		 Confer with peers to accomplish work
+		 Confer with co-workers or internal stakeholders to coordinate operational activities
 	 Product Compliance in a Nutshell:
 		 Inspect facilities, equipment or supplies to ensure conformance to standards
 		 Monitor organisational compliance with regulations
 		 Explain regulations, policies or procedures
 		 Maintain regulatory or compliance documentation
 		 Enforce rules or regulations
-	 Intrapreneurship – Employee-driven Innovation:
+	 Manage Your External Workforce Program with SAP Fieldglass:
 		 Conduct employee training programs
-		 Develop operating strategies, plans or procedures
-		 Confer with co-workers or internal stakeholders to coordinate operational activities
+		 Coordinate operational activities with external stakeholders
+		 Develop organisational policies or programs
+		 Develop plans for programs or services
+	 Understanding Your Customer’s Journey:
+		 Respond to customer inquiries
+		 Resolve customer complaints or problems
+	 SAP Environment, Health, and Safety for Operational Sustainability:
+		 Clean equipment or facilities
+		 Inspect facilities, equipment or supplies to ensure conformance to standards
+		 Monitor operational quality or safety
+		 Direct facility maintenance or repair activities
+	 Human Experience Management (HXM) - The Next Phase of HR:
+		 Manage human resources activities
+		 Conduct employee training programs
+	 Research and Development in Discrete Industries:
+		 Prepare research or technical reports
 Skills for Job 141
 Monitor activities of individuals to ensure safety or compliance with rules
 Monitor resources

@@ -1,120 +1,122 @@
-Read instances: 0.19 s
-Generate matrices: 6.71 s
+Read instances: 0.21 s
+Generate matrices: 6.84 s
 ===============================================================================
                                      CVXPY                                     
                                      v1.3.0                                    
 ===============================================================================
-(CVXPY) Oct 18 08:23:38 PM: Your problem has 4011 variables, 19 constraints, and 0 parameters.
-(CVXPY) Oct 18 08:23:38 PM: It is compliant with the following grammars: DCP, DQCP
-(CVXPY) Oct 18 08:23:38 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
-(CVXPY) Oct 18 08:23:38 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+(CVXPY) Nov 20 09:52:54 AM: Your problem has 3921 variables, 19 constraints, and 0 parameters.
+(CVXPY) Nov 20 09:52:54 AM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Nov 20 09:52:54 AM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Nov 20 09:52:54 AM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
 -------------------------------------------------------------------------------
                                   Compilation                                  
 -------------------------------------------------------------------------------
-(CVXPY) Oct 18 08:23:38 PM: Compiling problem (target solver=CPLEX).
-(CVXPY) Oct 18 08:23:38 PM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
-(CVXPY) Oct 18 08:23:38 PM: Applying reduction CvxAttr2Constr
-(CVXPY) Oct 18 08:23:38 PM: Applying reduction Qp2SymbolicQp
-(CVXPY) Oct 18 08:23:38 PM: Applying reduction QpMatrixStuffing
-(CVXPY) Oct 18 08:23:38 PM: Applying reduction CPLEX
-(CVXPY) Oct 18 08:23:38 PM: Finished problem compilation (took 6.988e-02 seconds).
+(CVXPY) Nov 20 09:52:54 AM: Compiling problem (target solver=CPLEX).
+(CVXPY) Nov 20 09:52:54 AM: Reduction chain: CvxAttr2Constr -> Qp2SymbolicQp -> QpMatrixStuffing -> CPLEX
+(CVXPY) Nov 20 09:52:54 AM: Applying reduction CvxAttr2Constr
+(CVXPY) Nov 20 09:52:54 AM: Applying reduction Qp2SymbolicQp
+(CVXPY) Nov 20 09:52:54 AM: Applying reduction QpMatrixStuffing
+(CVXPY) Nov 20 09:52:54 AM: Applying reduction CPLEX
+(CVXPY) Nov 20 09:52:54 AM: Finished problem compilation (took 6.892e-02 seconds).
 -------------------------------------------------------------------------------
                                 Numerical solver                               
 -------------------------------------------------------------------------------
-(CVXPY) Oct 18 08:23:38 PM: Invoking solver CPLEX  to obtain a solution.
+(CVXPY) Nov 20 09:52:54 AM: Invoking solver CPLEX  to obtain a solution.
 Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
 CPXPARAM_Read_DataCheck                          1
 CPXPARAM_TimeLimit                               30
 Tried aggregator 2 times.
-MIP Presolve eliminated 5555 rows and 2961 columns.
-MIP Presolve modified 11687 coefficients.
-Aggregator did 30 substitutions.
-Reduced MIP has 2229 rows, 1632 columns, and 30332 nonzeros.
-Reduced MIP has 1631 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.09 sec. (112.01 ticks)
-Found incumbent of value 0.990000 after 0.09 sec. (116.16 ticks)
+MIP Presolve eliminated 5516 rows and 2936 columns.
+MIP Presolve modified 11343 coefficients.
+Aggregator did 28 substitutions.
+Reduced MIP has 2140 rows, 1566 columns, and 29084 nonzeros.
+Reduced MIP has 1565 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.09 sec. (106.22 ticks)
+Found incumbent of value 0.990000 after 0.09 sec. (110.23 ticks)
 Probing fixed 135 vars, tightened 0 bounds.
 Probing changed sense of 145 constraints.
-Probing time = 0.07 sec. (105.37 ticks)
+Probing time = 0.07 sec. (95.94 ticks)
 Tried aggregator 2 times.
-Detecting symmetries...
 MIP Presolve eliminated 284 rows and 139 columns.
 MIP Presolve modified 1478 coefficients.
 Aggregator did 12 substitutions.
-Reduced MIP has 1933 rows, 1475 columns, and 27018 nonzeros.
-Reduced MIP has 1474 binaries, 1 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.04 sec. (45.74 ticks)
-Probing time = 0.01 sec. (10.72 ticks)
-Clique table members: 763.
+Reduced MIP has 1844 rows, 1409 columns, and 25771 nonzeros.
+Reduced MIP has 1408 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.03 sec. (39.03 ticks)
+Probing time = 0.02 sec. (10.26 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 1844 rows, 1409 columns, and 25771 nonzeros.
+Reduced MIP has 1408 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (16.23 ticks)
+Probing time = 0.01 sec. (10.26 ticks)
+Clique table members: 1064.
 MIP emphasis: balance optimality and feasibility.
 MIP search method: dynamic search.
 Parallel mode: deterministic, using up to 8 threads.
-Root relaxation solution time = 0.04 sec. (26.60 ticks)
+Root relaxation solution time = 0.04 sec. (31.24 ticks)
 
         Nodes                                         Cuts/
    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
 
-*     0+    0                            0.9900        0.3960            60.00%
-      0     0        0.6667    32        0.9900        0.6667      259   32.66%
-*     0+    0                            0.6782        0.6667             1.69%
-      0     0        cutoff              0.6782        0.6782      381    0.00%
-Elapsed time = 0.34 sec. (369.72 ticks, tree = 0.01 MB, solutions = 2)
+*     0+    0                            0.9900        0.4356            56.00%
+      0     0        0.6904    44        0.9900        0.6904      378   30.26%
+*     0+    0                            0.6980        0.6904             1.09%
+      0     0        cutoff              0.6980        0.6980      507    0.00%
+Elapsed time = 0.36 sec. (380.45 ticks, tree = 0.01 MB, solutions = 2)
 
-GUB cover cuts applied:  9
+GUB cover cuts applied:  11
 Clique cuts applied:  1
-Cover cuts applied:  1
-Flow cuts applied:  2
-Mixed integer rounding cuts applied:  7
+Mixed integer rounding cuts applied:  3
 Zero-half cuts applied:  13
-Lift and project cuts applied:  2
+Lift and project cuts applied:  1
 Gomory fractional cuts applied:  6
 
 Root node processing (before b&c):
-  Real time             =    0.34 sec. (369.99 ticks)
+  Real time             =    0.36 sec. (380.71 ticks)
 Parallel b&c, 8 threads:
   Real time             =    0.00 sec. (0.00 ticks)
   Sync time (average)   =    0.00 sec.
   Wait time (average)   =    0.00 sec.
                           ------------
-Total (root+branch&cut) =    0.34 sec. (369.99 ticks)
+Total (root+branch&cut) =    0.36 sec. (380.71 ticks)
 -------------------------------------------------------------------------------
                                     Summary                                    
 -------------------------------------------------------------------------------
-(CVXPY) Oct 18 08:23:38 PM: Problem status: optimal
-(CVXPY) Oct 18 08:23:38 PM: Optimal value: 6.782e-01
-(CVXPY) Oct 18 08:23:38 PM: Compilation took 6.988e-02 seconds
-(CVXPY) Oct 18 08:23:38 PM: Solver (including time spent in interface) took 4.184e-01 seconds
-The optimal value is 0.6781999999999999
+(CVXPY) Nov 20 09:52:55 AM: Problem status: optimal
+(CVXPY) Nov 20 09:52:55 AM: Optimal value: 6.980e-01
+(CVXPY) Nov 20 09:52:55 AM: Compilation took 6.892e-02 seconds
+(CVXPY) Nov 20 09:52:55 AM: Solver (including time spent in interface) took 4.522e-01 seconds
+The optimal value is 0.698
 ###############################################
 ################## SCHEDULE ####################
 ###############################################
 Activity: Initial Activity (1) 	 Start Period: 0 	 End Period: 0
-Activity: Bereit für die Digitalisierung? Digitales Talent M (10.0) 	 Start Period: 1 	 End Period: 1
+Activity: Discover the Environment, Health & Safety modules  (6.0) 	 Start Period: 1 	 End Period: 1
+Activity: Hire to Retire – Strategy, Implementation, and Ope (9.0) 	 Start Period: 1 	 End Period: 2
 Activity: Basics of Design Testing (Edition Q2/2019) (5.0) 	 Start Period: 2 	 End Period: 2
-Activity: Discover SAP S/4HANA Asset Management and SAP S/4H (5.0) 	 Start Period: 2 	 End Period: 2
-Solve time: 0.34
-Job affinity: 32.000
+Solve time: 0.37
+Job affinity: 30.000
 Skills per Unit
 	 Initial Activity:
-	 Discover SAP S/4HANA Asset Management and SAP S/4HANA Service:
-		 Establish business management methods
-		 Assess risks to business operations
-		 Advise others on business or operational matters
-		 Analyse data to identify or resolve operational problems
-		 Prepare operational budgets
+	 Discover the Environment, Health & Safety modules in SAP S/4HANA:
 		 Prepare operational reports
+		 Develop procedures to evaluate organisational activities
+		 Establish business management methods
+		 Analyse data to identify or resolve operational problems
+		 Assess risks to business operations
+		 Evaluate staff practices to ensure adherence to regulations
+		 Maintain data in information systems or databases
+	 Hire to Retire – Strategy, Implementation, and Operations:
+		 Manage human resources activities
+		 Advise others on human resources topics
+		 Coordinate recruitment activities
+		 Conduct employee training programs
 	 Basics of Design Testing (Edition Q2/2019):
 		 Evaluate training programs, instructors or materials
 		 Develop training materials
 		 Develop instructional materials
 		 Create technology-based learning materials
-	 Bereit für die Digitalisierung? Digitales Talent Management:
-		 Advise others on human resources topics
-		 Manage human resources activities
-		 Conduct employee training programs
-		 Train managerial staff
-		 Train staff to improve their skills
-		 Administer staff recruitment or hiring activities
 Skills for Job 223
 Advise educators on curricula, instructional methods or policies
 Assess educational needs of students
