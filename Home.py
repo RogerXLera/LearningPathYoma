@@ -111,7 +111,13 @@ st.write("# Learning Path :books:")
 #        key = "id"
 #    )
 
-st.sidebar.text_input(
+#st.sidebar.text_input(
+#        "Introduce ID.",
+#        placeholder='0000',
+#        key = "id"
+#    )
+
+st.text_input(
         "Introduce ID.",
         placeholder='0000',
         key = "id"
@@ -134,7 +140,21 @@ if 'id' in st.session_state.keys():
         group = st.session_state['group']
         field_list = st.session_state['field_list']
 
-        st.sidebar.selectbox(
+        st.write(f"### Hello {name},")
+        st.write(f"""From the results of the #Job Safari questionnaire, we selected job fields that might be interesting for you. 
+                        Then, we created learning pathways with a different study time (10, 20, 40 and 80 hours) for each selected job field.
+                        Explore the different learning pathways created for you and take a look at the courses that we recommend you.
+                        Once you finish looking at the learning pathways, complete the following [form](https://docs.google.com/forms/d/e/1FAIpQLSf7Ciho82zyAW2Z2UQA7hJFdYPC_ek6iszOcSgZzNSJqrGYAA/viewform?usp=sf_link).
+                     """)
+
+        #st.sidebar.selectbox(
+        #    "Select a job field.",
+        #    field_list,
+            #index=None,
+            #placeholder = "Unknown Field",
+        #    key = "field"
+        #)
+        st.selectbox(
             "Select a job field.",
             field_list,
             #index=None,
@@ -142,7 +162,15 @@ if 'id' in st.session_state.keys():
             key = "field"
         )
 
-        st.sidebar.selectbox(
+        #st.sidebar.selectbox(
+        #    "Select the available time for study.",
+        #    ded_dict.keys(),
+        #    index=2,
+            #placeholder = "Unknown Dedication",
+        #    key = 'dedication',
+        #)
+
+        st.selectbox(
             "Select the available time for study.",
             ded_dict.keys(),
             index=2,
@@ -186,12 +214,7 @@ if 'id' in st.session_state.keys():
                 df = random_path(A,seed=int(st.session_state['id'])*int(field_dict[fie]),dedication_week=ded_dict[ded],n_weeks=2)
 
             
-            st.write(f"### Hello {name},")
-            st.write(f"""From the results of the #Job Safari questionnaire, we selected job fields that might be interesting for you. 
-                        Then, we created learning pathways with a different study time (10, 20, 40 and 80 hours) for each selected job field.
-                        Explore the different learning pathways created for you and take a look at the courses that we recommend you.
-                        Once you finish looking at the learning pathways, complete the following [form](https://docs.google.com/forms/d/e/1FAIpQLSf7Ciho82zyAW2Z2UQA7hJFdYPC_ek6iszOcSgZzNSJqrGYAA/viewform?usp=sf_link).
-                     """)
+            
 
             st.write(f"## Job Field: {fie}")
             st.write(f"### Available time for study: {ded} {ded_emoji[ded_dict[ded]]}")
