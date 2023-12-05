@@ -113,13 +113,16 @@ st.write("# Learning Path :books:")
 
 st.sidebar.text_input(
         "Introduce ID.",
+        placeholder='0000',
         key = "id"
     )
 
 if 'id' in st.session_state.keys():
     
     name_,group_,field_list_ = load_secrets(st.session_state['id'])
-    if name_ == None:
+    if name_ == None and st.session_state['id'] == '':
+        st.info("Introduce your personal ID to visualize the learning pathway.", icon='💡' )
+    elif name_ == None:
         st.error('Incorrect ID', icon='🚨')
     else:
         st.session_state['name'] = name_
